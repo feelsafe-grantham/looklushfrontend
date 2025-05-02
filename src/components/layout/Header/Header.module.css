@@ -5,8 +5,10 @@
   gap: 10px;
   padding: 10px 0px;
 }
-/* .logoContainer {
-  } */
+/*
+.logoContainer {
+} 
+*/
 .logo {
   margin-left: 10px;
 }
@@ -135,19 +137,16 @@
     justify-content: center;
     text-align: center;
   }
-
   .headerLink {
+    width: 100%;
     font-size: 16px;
     transition: color 0.3s ease;
     padding: 10px 20px;
-    width: 100%;
-    border-bottom: 1px solid var(--primary-text);
+    border-bottom: 1px solid var(--text-dark-color);
   }
-
   .logoContainer {
     order: 2;
   }
-
   .offerStripContainer {
     order: 3;
     margin-right: 10px;
@@ -160,7 +159,6 @@
     transition: color 0.3s ease;
     padding: 10px 20px;
     width: 100%;
-    border-bottom: 1px solid var(--primary-text);
   }
   .logoheight {
     height: 80px;
