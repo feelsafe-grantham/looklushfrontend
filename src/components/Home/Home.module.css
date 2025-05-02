@@ -8,25 +8,7 @@
   justify-content: space-between;
   gap: 20px;
 }
-/* .homeCard {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid var(--text-theme-color);
-  border-radius: var(--standard-border-radius);
-  position: relative;
-}
-.homeCardImage {
-  border-radius: var(--standard-border-radius);
-}
-.homeCardTitle {
-  position: absolute;
-  color: var(--text-white-color);
-  text-align: center;
-  width: 80%;
-  font-size: 28px;
-  font-weight: 700;
-} */
+/* Home Card starts */
 .homeCard {
   display: flex;
   overflow: hidden;
@@ -63,21 +45,220 @@
   color: var(--text-white-color);
   text-align: center;
   width: 80%;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
-  z-index: 3;
   pointer-events: none;
+  z-index: 3;
 }
 
-/* Different colors for different home cards */
 .homeCard:nth-child(1)::before {
   background: rgba(123, 170, 191, 0.3); /* Red */
+  background: linear-gradient(
+    to top,
+    rgba(80, 132, 154, 1),
+    rgba(125, 172, 192, 0.3)
+  );
 }
 
 .homeCard:nth-child(2)::before {
   background: rgba(233, 131, 155, 0.3); /* Green */
+  background: linear-gradient(
+    to top,
+    rgba(165, 72, 90, 1),
+    rgba(231, 131, 156, 0.3)
+  );
 }
 
 .homeCard:nth-child(3)::before {
-  background: rgba(120, 100, 187, 0.3); /* Blue */
+  background: rgba(120, 100, 187, 0.3);
+  background: linear-gradient(
+    to top,
+    rgba(122, 100, 191, 1),
+    rgba(127, 119, 173, 0.3)
+  );
 }
+
+/* Home Card ends */
+
+/* heading starts here */
+.sectionHeadingContainer {
+  position: relative;
+}
+.sectionHeading {
+  text-align: center;
+  color: var(--text-light-color);
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+  font-family: var(--font-sour-gummy);
+}
+.sectionHeadingImage {
+  z-index: -1;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: -10px;
+}
+/* section heading ends */
+/* celebrity container stars */
+.celebrityContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  max-width: var(--max-width-container);
+}
+.celebrityText {
+  margin: 0px auto;
+  font-size: 16px;
+  font-weight: 500;
+  max-width: 900px;
+  line-height: 35px;
+  text-align: center;
+  color: var(--text-light-color);
+}
+.celebrityImage {
+  margin: 0px auto;
+}
+/* celebrity container ends */
+
+/* heart card starts */
+.reelCardContainer {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  background-color: #eeeeee;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.oneCard {
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  padding: 0 10px;
+  color: white;
+  font-size: 14px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: black;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #d63384;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.liveTag {
+  background: #d63384;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.viewCount {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.hostImage {
+  width: 500px;
+  aspect-ratio: 9/16;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.commentBox {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 10;
+  color: white;
+  font-size: 13px;
+}
+
+.comment {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 4px 8px;
+  border-radius: 12px;
+  max-width: 80%;
+}
+
+.user {
+  font-weight: bold;
+  margin-right: 4px;
+  color: #ffdc73;
+}
+
+.hearts {
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  animation: floatUp 2s ease-in forwards;
+  font-size: 18px;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(1);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-20px) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-150px) scale(1);
+  }
+}
+
+/* heart card ends */
+
+/* Experience video section starts */
+.videoContainer {
+  max-width: 900px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  z-index: -1;
+  margin: auto;
+  border-radius: var(--standard-border-radius);
+}
+.video {
+  border-radius: var(--standard-border-radius);
+  margin: auto;
+  aspect-ratio: 16/9;
+}
+/* video ends */
