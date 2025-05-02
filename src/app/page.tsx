@@ -1,7 +1,6 @@
+import HomeComp from "@/components/Home";
 export default function Home() {
   return (
-    <div >
-      Looklush Beauty
-    </div>
+    <HomeComp />
   );
 }
