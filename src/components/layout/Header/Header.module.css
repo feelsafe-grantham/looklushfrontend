@@ -1,0 +1,202 @@
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 0px;
+}
+/* .logoContainer {
+  } */
+.logo {
+  margin-left: 10px;
+}
+.logoheight {
+  height: 100px;
+}
+
+.headerLinksContainer {
+  display: flex;
+  gap: 30px;
+}
+
+.headerLink {
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.linkActive {
+  font-weight: 600;
+  color: var(--text-theme-color);
+  /* border-bottom: 3px solid var(--text-dark-color); */
+}
+/* .offerStripContainer::before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  width: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 80px;
+  z-index: -1;
+  background-color: var(--text-theme-color);
+} */
+
+.offerStripContainer {
+  border-radius: 5px;
+  display: grid;
+  background-color: var(--bg-theme-color);
+  padding: 5px 5px;
+  margin-right: 50px;
+}
+.fitContent {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+.offerStripContact {
+  color: var(--text-white-color);
+}
+.borderBottom {
+  border-bottom: 1px solid var(--text-light-color);
+}
+
+.offerStripCta {
+  padding: 2px 5px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-family: var(--font-sour-gummy);
+  background-color: var(--bg-primary-color);
+}
+
+.offerStrip {
+  order: 2;
+}
+
+.hamburgerContainer {
+  display: none;
+}
+
+@media (max-width: 1370px) {
+  .offerStripCta {
+    padding: 2px 5px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .logoheight {
+    height: 90px;
+  }
+  .headerContainer {
+    gap: 0px;
+  }
+  .headerLinksContainer {
+    gap: 15px;
+  }
+  .headerLink {
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+}
+
+/* phone view starts here */
+@media (max-width: 1100px) {
+  .headerContainer {
+    justify-content: space-between;
+  }
+  .hamburgerContainer {
+    display: flex;
+    margin-right: 30px;
+  }
+  .headerContainer {
+    border-bottom: 1px solid var(--primary-text);
+    padding-bottom: 7px;
+    position: relative;
+  }
+  .hamburger {
+    margin-left: 10px;
+    height: 45px;
+  }
+  .headerLinksContainer {
+    z-index: 1;
+    order: 1;
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    gap: 0px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .headerLink {
+    font-size: 16px;
+    transition: color 0.3s ease;
+    padding: 10px 20px;
+    width: 100%;
+    border-bottom: 1px solid var(--primary-text);
+  }
+
+  .logoContainer {
+    order: 2;
+  }
+
+  .offerStripContainer {
+    order: 3;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .headerLink {
+    font-size: 14px;
+    transition: color 0.3s ease;
+    padding: 10px 20px;
+    width: 100%;
+    border-bottom: 1px solid var(--primary-text);
+  }
+  .logoheight {
+    height: 80px;
+  }
+  .hamburger {
+    margin-left: 5px;
+    height: 40px;
+  }
+  .offerStripContact {
+    font-size: 14px;
+  }
+  .offerStripCta {
+    padding: 0;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo {
+    margin-left: 0px;
+  }
+  .logoheight {
+    height: 60px;
+  }
+  .hamburgerContainer {
+    margin-right: 0px;
+  }
+  .hamburger {
+    margin-left: 5px;
+    height: 35px;
+  }
+  .offerStripContact {
+    font-size: 12px;
+  }
+  .offerStripCta {
+    padding: 0;
+    font-size: 8px;
+  }
+}
