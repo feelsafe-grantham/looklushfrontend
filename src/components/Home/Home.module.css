@@ -84,6 +84,7 @@
 .sectionHeadingContainer {
   position: relative;
 }
+
 .sectionHeading {
   text-align: center;
   color: var(--text-light-color);
@@ -92,6 +93,7 @@
   font-weight: 700;
   font-family: var(--font-sour-gummy);
 }
+
 .sectionHeadingImage {
   z-index: -1;
   height: 20px;
@@ -256,9 +258,152 @@
   margin: auto;
   border-radius: var(--standard-border-radius);
 }
+
 .video {
   border-radius: var(--standard-border-radius);
   margin: auto;
   aspect-ratio: 16/9;
 }
 /* video ends */
+/* Compare Slider */
+
+.compareSliderContainer {
+  display: flex;
+  margin: 0px auto;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0px;
+  background: url("/images/bg.png");
+
+  gap: 20px;
+}
+/* price table starts here */
+.priceTableContainer {
+}
+
+.priceTable {
+  margin: 0px auto;
+  width: var(--max-width-container);
+  border-radius: var(--standard-border-radius);
+}
+
+.tableHeaderRow {
+  border-radius: var(--standard-border-radius);
+}
+
+.topLeftRadius {
+  border-top-left-radius: var(--standard-border-radius);
+}
+
+.topRightRadius {
+  border-top-right-radius: var(--standard-border-radius);
+}
+
+.tableHeader {
+  width: fit-content;
+  padding: 10px 20px;
+  background: var(--bg-theme-color);
+  color: var(--text-white-color);
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.tableData {
+  color: var(--text-dark-color);
+  padding: 10px 20px;
+  width: fit-content;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.value {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.bookButton {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-theme-color);
+  cursor: pointer;
+}
+
+/* faq section / Form section  */
+.servicesContainer {
+  display: grid;
+  margin: 0px auto;
+  max-width: var(--max-width-container);
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 5px 0px;
+}
+.serviesLinksContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0px auto;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.serviceLink {
+  cursor: pointer;
+  padding: 5px 50px;
+  border-radius: var(--standard-border-radius2);
+  border: 1px solid var(--text-light-color);
+  color: var(--text-light-color);
+}
+.serviceLink:hover {
+  background: var(--bg-theme-color);
+  color: var(--text-white-color);
+  border: 1px solid var(--bg-theme-color);
+}
+.serviceLinkActive {
+  background: var(--bg-theme-color);
+  color: var(--text-white-color);
+  border: 1px solid var(--bg-theme-color);
+}
+/* form section */
+.form {
+  background: var(--bg-primary-color);
+  padding: 10px 5px;
+  display: grid;
+  gap: 10px;
+}
+.formInput {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: var(--standard-border-radius2);
+  border: 1px solid var(--text-light-color);
+  color: var(--text-dark-color);
+  background-color: rgb(218, 215, 215);
+  font-size: 16px;
+  font-weight: 500;
+}
+.formSelect {
+  background: var(--bg-theme-color);
+  color: var(--text-white-color);
+}
+.option {
+  background: var(--bg-primary-color);
+  color: var(--text-light-color);
+}
+.formTextArea {
+  height: 100px;
+}
+.formButton {
+  border: 2px solid var(--bg-theme-color);
+  background: var(--bg-theme-color);
+  color: var(--text-white-color);
+  padding: 10px 20px;
+  border-radius: var(--standard-border-radius2);
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.formButton:hover {
+  background: var(--text-white-color);
+  color: var(--bg-theme-color);
+}

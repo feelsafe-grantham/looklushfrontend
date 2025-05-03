@@ -1,6 +1,10 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
 import styles from "./Home.module.css";
+import CompareSlider from "../common/CompareSlider";
+import CompareCard from "../common/CompareCard";
+import { link } from "fs";
+import SwiperCard from "../common/SwiperCard";
 const Home = () => {
     const homeCards = [
         { image: "/images/homeCard1.png", title: "USFDA Approved Equipment" },
@@ -41,6 +45,71 @@ const Home = () => {
             clearTimeout(timeout);
         };
     }, []);
+    // price data
+    const priceData = [
+        {
+            service: "Acne Star",
+            marketPrice: "₹999",
+            ourPrice: "₹699",
+            diff: "₹300",
+            value: "300+ Customers",
+            achievement: "Book Appointment"
+        },
+        {
+            service: "Glow Facial",
+            marketPrice: "₹1200",
+            ourPrice: "₹850",
+            diff: "₹350",
+            value: "500+ Customers",
+            achievement: "Book Appointment"
+        },
+        {
+            service: "Hair Spa",
+            marketPrice: "₹1500",
+            ourPrice: "₹999",
+            diff: "₹501",
+            value: "250+ Customers",
+            achievement: "Book Appointment"
+        },
+        {
+            service: "Acne Star",
+            marketPrice: "₹999",
+            ourPrice: "₹699",
+            diff: "₹300",
+            value: "300+ Customers",
+            achievement: "Book Appointment"
+        },
+        {
+            service: "Glow Facial",
+            marketPrice: "₹1200",
+            ourPrice: "₹850",
+            diff: "₹350",
+            value: "500+ Customers",
+            achievement: "Book Appointment"
+        },
+        {
+            service: "Hair Spa",
+            marketPrice: "₹1500",
+            ourPrice: "₹999",
+            diff: "₹501",
+            value: "250+ Customers",
+            achievement: "Book Appointment"
+        }
+    ];
+    // services data
+    const links = [
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+    ]
+
+
     return (
         <div className={`${styles.homeContainer}`}>
             <div>
@@ -138,7 +207,7 @@ const Home = () => {
 
             </div>
             {/* heart card ends */}
-            {/* vddie starts */}
+            {/* video starts */}
             <div className={`${styles.sectionHeadingContainer}`}>
                 <h3 className={`${styles.sectionHeading}`}>
                     Experience the art of Caring <br />
@@ -158,9 +227,9 @@ const Home = () => {
                     <video
                         className={`${styles.video}`}
                         ref={videoRef}
-                        autoPlay
                         loop
                         muted
+                        autoPlay
                         playsInline
                         poster="/images/homeFallback.jpg"
                         preload="auto"
@@ -172,7 +241,101 @@ const Home = () => {
 
             </div>
             {/* video ends */}
-            <div className="h-96 w-full  border-2 border-red-900"></div>
+            {/* Comparison Slider */}
+            <div className={`${styles.compareSliderContainer}`}>
+                <CompareCard />
+                <CompareCard />
+                <CompareCard />
+            </div>
+            {/* comparison slider ends */}
+            {/* price table stars */}
+            <div className={`${styles.sectionHeadingContainer}`}>
+                <h3 className={`${styles.sectionHeading}`}>
+                    Nothing Complex Here
+                </h3>
+                <img
+                    alt="pink decorative sign"
+                    src="/images/pink-sign.png"
+                    className={`${styles.sectionHeadingImage}`}
+                />
+            </div>
+            <div className={`${styles.celebrityContainer}`}>
+                <p className={`${styles.celebrityText}`}>
+                    Looklust clinic treats each patient with empathy and discretion. A patient arriving at Looklust Clinic is educated about their condition prior to treatment.
+                </p>
+            </div>
+            <div className={`${styles.priceTableContainer}`}>
+                <table className={`${styles.priceTable}`}>
+                    <thead>
+                        <tr className={`  ${styles.tableHeaderRow}`}>
+                            <th className={` ${styles.topLeftRadius} ${styles.tableHeader}`}>Service</th>
+                            <th className={`${styles.tableHeader}`}>Market Price</th>
+                            <th className={`${styles.tableHeader}`}>Our Price  </th>
+                            <th className={`${styles.tableHeader}`}>Diff </th>
+                            <th className={`${styles.tableHeader}`}>Value </th>
+                            <th className={`${styles.topRightRadius} ${styles.tableHeader}`}>Achivement </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {priceData.map((item, index) => (
+                            <tr key={index}>
+                                <td className={styles.tableData}>{item.service}</td>
+                                <td className={styles.tableData}>{item.marketPrice}</td>
+                                <td className={styles.tableData}>{item.ourPrice}</td>
+                                <td className={styles.tableData}>{item.diff}</td>
+                                <td className={`${styles.tableData} ${styles.value}`} > {item.value.split(" ")[0]}<br />{item.value.split(" ").slice(1).join(" ")}</td>
+                                <td className={styles.tableData}>
+                                    <button className={styles.bookButton}>{item.achievement}</button>
+                                </td>
+                            </tr>
+                        ))}
+
+                    </tbody>
+
+                </table>
+            </div>
+            {/* price table ends */}
+            {/* faq section / Form section  */}
+            <div className={`${styles.sectionHeadingContainer}`}>
+                <h3 className={`${styles.sectionHeading}`}>
+                    Welcome to Looklush Asthetic <br />
+                    & Laser Center
+                </h3>
+                <img
+                    alt="pink decorative sign"
+                    src="/images/pink-sign.png"
+                    className={`${styles.sectionHeadingImage}`}
+                />
+            </div>
+            <div className={`${styles.servicesContainer}`}>
+                <div className={`${styles.serviesLinksContainer}`}>
+                    {links.map((link, index) => (
+                        <span key={index} className={`${styles.serviceLink}`}>
+                            {link.label}
+                        </span>
+                    ))}
+                </div>
+                <SwiperCard />
+                <div className={`${styles.formContainer}`}>
+                    <form className={`${styles.form}`}>
+                        <input type="text" placeholder="Name" className={`${styles.formInput}`} />
+                        <input type="text" placeholder="Email" className={`${styles.formInput}`} />
+                        <input type="tel" placeholder="Phone" className={`${styles.formInput}`} />
+                        <select className={`${styles.formInput} ${styles.formSelect}`}>
+                            <option className={`${styles.option}`} value="select">Select</option>
+                            <option className={`${styles.option}`} value="select">Select</option>
+                            <option className={`${styles.option}`} value="select">Select</option>
+                            <option className={`${styles.option}`} value="select">Select</option>
+                        </select>
+
+                        <textarea placeholder="Message" className={`${styles.formInput} ${styles.formTextArea}`} />
+                        <button type="submit" className={`${styles.formButton}`}>Submit</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div className="h-96 w-full border-2 border-red-900"></div>
         </div>
     );
 }

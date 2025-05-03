@@ -1,0 +1,28 @@
+.compareCardContainer {
+  max-width: 400px;
+  gap: 5px;
+  padding: 15px;
+  display: grid;
+  place-items: center;
+  background: var(--bg-primary-color);
+  border: 1px solid var(--text-light-color);
+  border-radius: var(--standard-border-radius);
+}
+.clientName {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  color: var(--text-dark-color);
+}
+.clientStarContainer {
+  display: flex;
+}
+.clientText {
+  width: 95%;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+}
+.compareImageContainer {
+}
