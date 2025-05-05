@@ -15,12 +15,21 @@
   --standard-border-radius2: 5px;
 }
 
-@theme inline {
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+&::-webkit-scrollbar {
+  display: none;
+}
+
+/* @theme inline {
   --color-background: var(--bg-primary-color);
   --color-foreground: var(--text-primary-color);
   --font-sans: var(--font-montserrat);
   --font-mono: var(--font-sour-gummy);
-}
+} */
 
 /* @media (prefers-color-scheme: dark) {
   :root {

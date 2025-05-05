@@ -15,26 +15,26 @@ const SwiperCard = () => {
     const [isDragging, setIsDragging] = useState(false);
     const [translate, setTranslate] = useState({ x: 0, y: 0 });
 
-    const cardRef = useRef<HTMLDivElement | null>(null);
     const startPos = useRef({ x: 0, y: 0 });
 
-    // Handle mouse/touch move globally
     useEffect(() => {
         const handleMove = (e: MouseEvent | TouchEvent) => {
             if (!isDragging) return;
             const clientX = "touches" in e ? e.touches[0].clientX : (e as MouseEvent).clientX;
             const clientY = "touches" in e ? e.touches[0].clientY : (e as MouseEvent).clientY;
 
-            const deltaX = clientX - startPos.current.x;
-            const deltaY = clientY - startPos.current.y;
-            setTranslate({ x: deltaX, y: deltaY });
+            setTranslate({
+                x: clientX - startPos.current.x,
+                y: clientY - startPos.current.y,
+            });
         };
 
         const handleEnd = () => {
+            if (!isDragging) return;
             setIsDragging(false);
 
-            if (Math.abs(translate.x) > 150) {
-                // Swipe threshold passed — rotate to back
+            if (Math.abs(translate.x) > 100) {
+                // Loop the card
                 setCards((prev) => {
                     const lastCard = prev[prev.length - 1];
                     const rest = prev.slice(0, -1);
@@ -42,10 +42,7 @@ const SwiperCard = () => {
                 });
             }
 
-            // Reset swipe
             setTranslate({ x: 0, y: 0 });
-
-
         };
 
         window.addEventListener("mousemove", handleMove);
@@ -77,10 +74,9 @@ const SwiperCard = () => {
                 return (
                     <div
                         key={card.name}
-                        ref={isTop ? cardRef : null}
+                        className={styles.card}
                         onMouseDown={isTop ? handleStart : undefined}
                         onTouchStart={isTop ? handleStart : undefined}
-                        className={styles.card}
                         style={{
                             backgroundImage: `url(${card.image})`,
                             transform: isTop
@@ -90,7 +86,12 @@ const SwiperCard = () => {
                             transition: isDragging ? "none" : "transform 0.3s ease",
                         }}
                     >
-                        <div className={styles.nameLabel}>{card.name}</div>
+                        <div className={styles.overlay}>
+                            <div className={styles.actions}>
+                                <div className={styles.icon}>❤️ Likes</div>
+                                <div className={styles.icon}>👍 Impression</div>
+                            </div>
+                        </div>
                     </div>
                 );
             })}

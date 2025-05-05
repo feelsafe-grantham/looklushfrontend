@@ -107,6 +107,23 @@ const Home = () => {
         { label: "Home", value: "/", },
         { label: "Home", value: "/", },
         { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
+        { label: "Home", value: "/", },
     ]
 
 
@@ -308,7 +325,7 @@ const Home = () => {
                 />
             </div>
             <div className={`${styles.servicesContainer}`}>
-                <div className={`${styles.serviesLinksContainer}`}>
+                <div className={`scrollbar-hide ${styles.serviesLinksContainer}`}>
                     {links.map((link, index) => (
                         <span key={index} className={`${styles.serviceLink}`}>
                             {link.label}
@@ -332,7 +349,6 @@ const Home = () => {
                         <button type="submit" className={`${styles.formButton}`}>Submit</button>
                     </form>
                 </div>
-
             </div>
 
             <div className="h-96 w-full border-2 border-red-900"></div>
