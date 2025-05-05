@@ -1,0 +1,121 @@
+.footerWrapper {
+  background-color: var(--bg-theme-color);
+  color: var(--text-white-color);
+  padding-top: 20px;
+}
+.footerContent {
+  margin: 0px auto;
+  max-width: var(--max-width-container);
+}
+.footerMain {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 450px 1fr;
+}
+
+.footer {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  border: 2px solid red;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr 1fr 1fr; /* md:grid-cols-3 */
+  }
+}
+
+.menuSection {
+  /* Left Section */
+}
+
+.heading {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: bold;
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.menuList {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.menuList li {
+  margin-bottom: 0.5rem; /* space-y-2 */
+}
+
+.followSection {
+  /* Middle Section */
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem; /* space-x-4 */
+  margin-bottom: 1.5rem; /* mb-6 */
+}
+
+.subHeading {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 600; /* font-semibold */
+}
+
+.instagramGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem; /* gap-4 */
+}
+
+.instagramImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 8rem; /* h-32 */
+  background-color: #e5e7eb; /* bg-gray-200 */
+}
+
+.instagramImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.instagramOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instagramIcon {
+  width: 1.5rem; /* w-6 */
+  height: 1.5rem; /* h-6 */
+}
+
+.tagsWrapper {
+  width: 100%;
+  border: 2px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.tag {
+  background-color: #f472b6;
+  color: white;
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.footerBottomBar {
+  background-color: var(--bg-theme-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0px;
+  font-size: 18px;
+  font-weight: 600;
+}

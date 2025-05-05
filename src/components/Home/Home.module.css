@@ -369,50 +369,7 @@
   border: 1px solid var(--bg-theme-color);
 }
 /* form section */
-.form {
-  background: var(--bg-primary-color);
-  padding: 10px 5px;
-  display: grid;
-  gap: 10px;
-}
-.formInput {
-  width: 100%;
-  padding: 10px 20px;
-  border-radius: var(--standard-border-radius2);
-  border: 1px solid var(--text-light-color);
-  color: var(--text-dark-color);
-  background-color: rgb(218, 215, 215);
-  font-size: 16px;
-  font-weight: 500;
-}
-.formSelect {
-  background: var(--bg-theme-color);
-  color: var(--text-white-color);
-}
-.option {
-  background: var(--bg-primary-color);
-  color: var(--text-light-color);
-}
-.formTextArea {
-  height: 230px;
-}
-.formButton {
-  border: 2px solid var(--bg-theme-color);
-  background: var(--bg-theme-color);
-  color: var(--text-white-color);
-  padding: 10px 20px;
-  border-radius: var(--standard-border-radius2);
-  font-size: 16px;
-  font-weight: 600;
-  width: 100%;
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
-}
-.formButton:hover {
-  background: var(--text-white-color);
-  color: var(--bg-theme-color);
-}
-/* ends */
+
 /* faq section starts */
 .faqContainer {
   display: flex;

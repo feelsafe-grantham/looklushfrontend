@@ -5,6 +5,7 @@ import CompareSlider from "../common/CompareSlider";
 import CompareCard from "../common/CompareCard";
 import { link } from "fs";
 import SwiperCard from "../common/SwiperCard";
+import Form from "../common/Form";
 const Home = () => {
     const homeCards = [
         { image: "/images/homeCard1.png", title: "USFDA Approved Equipment" },
@@ -351,20 +352,7 @@ const Home = () => {
                 </div>
                 <SwiperCard />
                 <div className={`${styles.formContainer}`}>
-                    <form className={`${styles.form}`}>
-                        <input type="text" placeholder="Name" className={`${styles.formInput}`} />
-                        <input type="text" placeholder="Email" className={`${styles.formInput}`} />
-                        <input type="tel" placeholder="Phone" className={`${styles.formInput}`} />
-                        <select className={`${styles.formInput} ${styles.formSelect}`}>
-                            <option className={`${styles.option}`} value="select">Select</option>
-                            <option className={`${styles.option}`} value="select">Select</option>
-                            <option className={`${styles.option}`} value="select">Select</option>
-                            <option className={`${styles.option}`} value="select">Select</option>
-                        </select>
-
-                        <textarea placeholder="Message" className={`${styles.formInput} ${styles.formTextArea}`} />
-                        <button type="submit" className={`${styles.formButton}`}>Submit</button>
-                    </form>
+                    <Form />
                 </div>
             </div>
             {/* service section / Form section  ends */}
@@ -407,7 +395,7 @@ const Home = () => {
                     <img className={`${styles.qnaImage}`} src="/images/qnaImage.gif" alt="qna image" />
                 </div>
             </div>
-            <div className="h-96 w-full border-2 border-red-900"></div>
+            {/* <div className="h-96 w-full border-2 border-red-900"></div> */}
         </div>
     );
 }
