@@ -16,15 +16,9 @@
 .footer {
   padding: 2rem;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100px 1fr 1fr;
   gap: 2rem;
   border: 2px solid red;
-}
-
-@media (min-width: 768px) {
-  .footer {
-    grid-template-columns: 1fr 1fr 1fr; /* md:grid-cols-3 */
-  }
 }
 
 .menuSection {
@@ -94,8 +88,8 @@
 }
 
 .tagsWrapper {
+  grid-area: 2 / 1 / 4 / 4;
   width: 100%;
-  border: 2px solid red;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -103,7 +97,7 @@
 }
 
 .tag {
-  background-color: #f472b6;
+  background-color: var(--bg-theme-dark);
   color: white;
   border-radius: 9999px;
   padding: 0.5rem 1rem;
