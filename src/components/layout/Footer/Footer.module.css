@@ -3,10 +3,12 @@
   color: var(--text-white-color);
   padding-top: 20px;
 }
+
 .footerContent {
   margin: 0px auto;
   max-width: var(--max-width-container);
 }
+
 .footerMain {
   display: grid;
   gap: 20px;
@@ -14,57 +16,93 @@
 }
 
 .footer {
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: 100px 1fr 1fr;
-  gap: 2rem;
-  border: 2px solid red;
+  /* display: grid;
+  grid-template-columns: 100px 1.2fr 0.8fr;
+  gap: 10px;
+  padding: 16px 5px; */
 }
-
+.contentSection {
+  display: grid;
+  grid-template-columns: 100px 1.2fr 0.8fr;
+  gap: 10px;
+  padding: 16px 5px;
+}
 .menuSection {
   /* Left Section */
 }
 
 .heading {
-  font-size: 1.25rem; /* text-xl */
-  font-weight: bold;
-  margin-bottom: 1rem; /* mb-4 */
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text-white-color);
 }
 
 .menuList {
   list-style-type: none;
   padding-left: 0;
+  display: flex;
+  height: 85%;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.menuList li {
-  margin-bottom: 0.5rem; /* space-y-2 */
+.menuItem {
 }
 
 .followSection {
-  /* Middle Section */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .socialIcons {
   display: flex;
-  gap: 1rem; /* space-x-4 */
-  margin-bottom: 1.5rem; /* mb-6 */
+  gap: 1rem;
+  margin-bottom: 10px;
+}
+
+.iconWrapper {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--text-white-color);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  padding: 0px;
+}
+
+.icon {
+  color: var(--text-white-color);
+}
+
+.iconWrapper:hover {
+  background-color: var(--text-white-color);
+  color: var(--bg-theme-color);
+  transition: all 0.1s ease-in-out;
+}
+
+.iconWrapper:hover .icon {
+  color: var(--bg-theme-color);
 }
 
 .subHeading {
   font-size: 1.125rem; /* text-lg */
   font-weight: 600; /* font-semibold */
 }
+.address {
+  font-size: 12px;
+}
 
 .instagramGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem; /* gap-4 */
+  gap: 5px;
 }
 
 .instagramImageWrapper {
   position: relative;
   width: 100%;
-  height: 8rem; /* h-32 */
   background-color: #e5e7eb; /* bg-gray-200 */
 }
 
@@ -88,20 +126,20 @@
 }
 
 .tagsWrapper {
-  grid-area: 2 / 1 / 4 / 4;
-  width: 100%;
+  gap: 10px;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 2rem;
 }
 
 .tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--bg-theme-dark);
-  color: white;
-  border-radius: 9999px;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  color: var(--text-white-color);
+
+  padding: 5px 30px;
+  border-radius: 30px;
 }
 
 .footerBottomBar {
