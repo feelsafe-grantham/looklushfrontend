@@ -1,0 +1,48 @@
+.priceTable {
+  margin: 0px auto;
+  width: var(--max-width-container);
+  border-radius: var(--standard-border-radius);
+}
+
+.tableHeaderRow {
+  border-radius: var(--standard-border-radius);
+}
+
+.topLeftRadius {
+  border-top-left-radius: var(--standard-border-radius);
+}
+
+.topRightRadius {
+  border-top-right-radius: var(--standard-border-radius);
+}
+
+.tableHeader {
+  width: fit-content;
+  padding: 10px 20px;
+  background: var(--bg-theme-color);
+  color: var(--text-white-color);
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.tableData {
+  color: var(--text-dark-color);
+  padding: 10px 20px;
+  width: fit-content;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.value {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.bookButton {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-theme-color);
+  cursor: pointer;
+}

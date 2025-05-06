@@ -1,7 +1,7 @@
 "use client";
 import styles from "./Home.module.css";
 import Form from "../common/Form";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 import CompareCard from "../common/CompareCard";
 import SwiperCard from "../common/SwiperCard";
 import ExpertCard from "../common/ExpertCard";
@@ -9,6 +9,7 @@ import SectionHeading from "../common/SectionHeading";
 import SectionHeadPara from "../common/SectionHeadPara";
 import ReelCard from "./ReelCard";
 import Faqs from "../common/Faqs";
+import PriceTabel from "../common/PriceTable";
 const Home = () => {
     const comments = [
         { user: "freyjalalila_", message: "OMG 😳😳😳" },
@@ -67,7 +68,6 @@ const Home = () => {
             imageAlt: "",
         },
     ];
-
     // video urls
     const videoUrl = "/videos/homeVideo1.mp4";
     const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -82,58 +82,7 @@ const Home = () => {
             clearTimeout(timeout);
         };
     }, []);
-    // price data
-    const priceData = [
-        {
-            service: "Acne Star",
-            marketPrice: "₹999",
-            ourPrice: "₹699",
-            diff: "₹300",
-            value: "300+ Customers",
-            achievement: "Book Appointment",
-        },
-        {
-            service: "Glow Facial",
-            marketPrice: "₹1200",
-            ourPrice: "₹850",
-            diff: "₹350",
-            value: "500+ Customers",
-            achievement: "Book Appointment",
-        },
-        {
-            service: "Hair Spa",
-            marketPrice: "₹1500",
-            ourPrice: "₹999",
-            diff: "₹501",
-            value: "250+ Customers",
-            achievement: "Book Appointment",
-        },
-        {
-            service: "Acne Star",
-            marketPrice: "₹999",
-            ourPrice: "₹699",
-            diff: "₹300",
-            value: "300+ Customers",
-            achievement: "Book Appointment",
-        },
-        {
-            service: "Glow Facial",
-            marketPrice: "₹1200",
-            ourPrice: "₹850",
-            diff: "₹350",
-            value: "500+ Customers",
-            achievement: "Book Appointment",
-        },
-        {
-            service: "Hair Spa",
-            marketPrice: "₹1500",
-            ourPrice: "₹999",
-            diff: "₹501",
-            value: "250+ Customers",
-            achievement: "Book Appointment",
-        },
-    ];
-    // services data
+
     const links = [
         { label: "Home", value: "/" },
         { label: "Home", value: "/" },
@@ -162,8 +111,6 @@ const Home = () => {
         { label: "Home", value: "/" },
         { label: "Home", value: "/" },
     ];
-
-
     return (
         <div className={`${styles.homeContainer}`}>
             <div>
@@ -230,45 +177,7 @@ const Home = () => {
             <SectionHeading line1="Nothing Complex Here" />
             <SectionHeadPara para="Looklust clinic treats each patient with empathy and discretion. A patient arriving at Looklust Clinic is educated about their condition prior to treatment." />
 
-            <div className={`${styles.priceTableContainer}`}>
-                <table className={`${styles.priceTable}`}>
-                    <thead>
-                        <tr className={`  ${styles.tableHeaderRow}`}>
-                            <th className={` ${styles.topLeftRadius} ${styles.tableHeader}`}>
-                                Service
-                            </th>
-                            <th className={`${styles.tableHeader}`}>Market Price</th>
-                            <th className={`${styles.tableHeader}`}>Our Price </th>
-                            <th className={`${styles.tableHeader}`}>Diff </th>
-                            <th className={`${styles.tableHeader}`}>Value </th>
-                            <th className={`${styles.topRightRadius} ${styles.tableHeader}`}>
-                                Achivement{" "}
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {priceData.map((item, index) => (
-                            <tr key={index}>
-                                <td className={styles.tableData}>{item.service}</td>
-                                <td className={styles.tableData}>{item.marketPrice}</td>
-                                <td className={styles.tableData}>{item.ourPrice}</td>
-                                <td className={styles.tableData}>{item.diff}</td>
-                                <td className={`${styles.tableData} ${styles.value}`}>
-                                    {" "}
-                                    {item.value.split(" ")[0]}
-                                    <br />
-                                    {item.value.split(" ").slice(1).join(" ")}
-                                </td>
-                                <td className={styles.tableData}>
-                                    <button className={styles.bookButton}>
-                                        {item.achievement}
-                                    </button>
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
+            <PriceTabel />
             {/* price table ends */}
             {/* service section / Form section  */}
             <SectionHeading
