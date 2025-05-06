@@ -17,9 +17,7 @@ const Footer = () => {
                 <div className={`${styles.footerForm}`}>
                     <Form />
                 </div>
-                <footer className={styles.footer}>
-
-
+                <div className={styles.footer}>
                     <div className={`${styles.contentSection}`}>
                         {/* Left Section - Menu */}
                         <div className={styles.menuSection}>
@@ -82,13 +80,11 @@ const Footer = () => {
                             </span>
                         ))}
                     </div>
-                </footer>
-
-
+                </div>
             </div>
-            <div className={`${styles.footerBottomBar}`}>
-                &copy; 2025 Looklush . All rights reserved.
-            </div>
+        </div>
+        <div className={`${styles.footerBottomBar}`}>
+            &copy; 2025 Looklush . All rights reserved.
         </div>
     </footer>;
 };

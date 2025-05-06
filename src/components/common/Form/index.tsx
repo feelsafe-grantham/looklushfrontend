@@ -1,9 +1,7 @@
-"use client"
-import { useState } from "react";
 import styles from "./Form.module.css";
 const Form = () => {
     return (
-        <form className={`${styles.form}`}>
+        <form className={`${styles.form} ${styles.formBg}`}>
             <input type="text" placeholder="Name" className={`${styles.formInput}`} />
             <input type="text" placeholder="Email" className={`${styles.formInput}`} />
             <input type="tel" placeholder="Phone" className={`${styles.formInput}`} />
