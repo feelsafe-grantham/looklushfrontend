@@ -1,0 +1,9 @@
+.sectionHeadPara {
+  margin: 0px auto;
+  font-size: 16px;
+  font-weight: 500;
+  max-width: 900px;
+  line-height: 35px;
+  text-align: center;
+  color: var(--text-light-color);
+}

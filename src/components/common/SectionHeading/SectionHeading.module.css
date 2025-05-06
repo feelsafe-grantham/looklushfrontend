@@ -1,0 +1,21 @@
+.sectionHeadingContainer {
+  position: relative;
+}
+
+.sectionHeading {
+  text-align: center;
+  color: var(--text-light-color);
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+  font-family: var(--font-sour-gummy);
+}
+
+.sectionHeadingImage {
+  z-index: -1;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: -10px;
+}

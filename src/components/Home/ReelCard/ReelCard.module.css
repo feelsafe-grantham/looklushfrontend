@@ -1,0 +1,111 @@
+.oneCard {
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  padding: 0 10px;
+  color: white;
+  font-size: 14px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: black;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #d63384;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.liveTag {
+  background: #d63384;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.viewCount {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.hostImage {
+  width: 500px;
+  aspect-ratio: 9/16;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.commentBox {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 10;
+  color: white;
+  font-size: 13px;
+}
+
+.comment {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 4px 8px;
+  border-radius: 12px;
+  max-width: 80%;
+}
+
+.user {
+  font-weight: bold;
+  margin-right: 4px;
+  color: #ffdc73;
+}
+
+.hearts {
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  animation: floatUp 2s ease-in forwards;
+  font-size: 18px;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(1);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-20px) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-150px) scale(1);
+  }
+}

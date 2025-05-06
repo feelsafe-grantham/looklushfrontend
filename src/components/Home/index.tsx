@@ -1,37 +1,73 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
 import styles from "./Home.module.css";
-import CompareSlider from "../common/CompareSlider";
-import CompareCard from "../common/CompareCard";
-import { link } from "fs";
-import SwiperCard from "../common/SwiperCard";
 import Form from "../common/Form";
+import { useEffect, useState, useRef } from "react";
+import CompareCard from "../common/CompareCard";
+import SwiperCard from "../common/SwiperCard";
+import ExpertCard from "../common/ExpertCard";
+import SectionHeading from "../common/SectionHeading";
+import SectionHeadPara from "../common/SectionHeadPara";
+import ReelCard from "./ReelCard";
+import Faqs from "../common/Faqs";
 const Home = () => {
-    const homeCards = [
-        { image: "/images/homeCard1.png", title: "USFDA Approved Equipment" },
-        { image: "/images/homeCard2.png", title: "Leading in Corporates" },
-        { image: "/images/homeCard3.png", title: "Well Trained Experts" },
-    ]
-    const [hearts, setHearts] = useState([]);
     const comments = [
-        { user: 'freyjalalila_', message: 'OMG 😳😳😳' },
-        { user: 'user420', message: 'awesome 👍' },
-        { user: 'catlover88', message: 'this is so wholesome 🐱' },
-        { user: 'techjunkie', message: 'audio is perfect 🔊' },
-        { user: 'nina_artz', message: 'what a great smile! 😊' },
+        { user: "freyjalalila_", message: "OMG 😳😳😳" },
+        { user: "user420", message: "awesome 👍" },
+        { user: "catlover88", message: "this is so wholesome 🐱" },
+        { user: "techjunkie", message: "audio is perfect 🔊" },
+        { user: "nina_artz", message: "what a great smile! 😊" },
     ];
-    const arr = ["a", "b", "c"]
-    useEffect(() => {
-        const interval = setInterval(() => {
-            const newHeart = {
-                id: Date.now(),
-                left: Math.random() * 80 + 10,
-                color: ['#ff3366', '#ffffff'][Math.floor(Math.random() * 2)],
-            };
-            setHearts((prev) => [...prev.slice(-10), newHeart]);
-        }, 500);
-        return () => clearInterval(interval);
-    }, []);
+    const Reel = [
+        {
+            username: "amanpandey_11",
+            viewers: 120,
+            comments: comments,
+            videoUrl: "/videos/reel.mp4",
+        },
+        {
+            username: "_amanpandey_11",
+            viewers: 120,
+            comments: comments,
+            videoUrl: "/videos/reel.mp4",
+        },
+        {
+            username: "_aman11",
+            viewers: 120,
+            comments: comments,
+            videoUrl: "/videos/reel.mp4",
+        },
+    ];
+
+    const compareData = [
+        {
+            clientName: "Client Name Here",
+            starRating: 5,
+            clientText:
+                "Lorem, ipsum dolor sit amet consectetur adipisicing elit.t consectetur adipisict consectetur adipisicing elit.",
+            imageBefore: "/images/before2.png",
+            imageAfter: "/images/after2.png",
+            imageAlt: "",
+        },
+        {
+            clientName: "Client Name Here",
+            starRating: 5,
+            clientText:
+                "Lorem, ipsum dolor sit amet consectetur adipisicing elit.t consectetur adipisict consectetur adipisicing elit.",
+            imageBefore: "/images/before2.png",
+            imageAfter: "/images/after2.png",
+            imageAlt: "",
+        },
+        {
+            clientName: "Client Name Here",
+            starRating: 5,
+            clientText:
+                "Lorem, ipsum dolor sit amet consectetur adipisicing elit.t consectetur adipisict consectetur adipisicing elit.",
+            imageBefore: "/images/before2.png",
+            imageAfter: "/images/after2.png",
+            imageAlt: "",
+        },
+    ];
+
     // video urls
     const videoUrl = "/videos/homeVideo1.mp4";
     const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -54,7 +90,7 @@ const Home = () => {
             ourPrice: "₹699",
             diff: "₹300",
             value: "300+ Customers",
-            achievement: "Book Appointment"
+            achievement: "Book Appointment",
         },
         {
             service: "Glow Facial",
@@ -62,7 +98,7 @@ const Home = () => {
             ourPrice: "₹850",
             diff: "₹350",
             value: "500+ Customers",
-            achievement: "Book Appointment"
+            achievement: "Book Appointment",
         },
         {
             service: "Hair Spa",
@@ -70,7 +106,7 @@ const Home = () => {
             ourPrice: "₹999",
             diff: "₹501",
             value: "250+ Customers",
-            achievement: "Book Appointment"
+            achievement: "Book Appointment",
         },
         {
             service: "Acne Star",
@@ -78,7 +114,7 @@ const Home = () => {
             ourPrice: "₹699",
             diff: "₹300",
             value: "300+ Customers",
-            achievement: "Book Appointment"
+            achievement: "Book Appointment",
         },
         {
             service: "Glow Facial",
@@ -86,7 +122,7 @@ const Home = () => {
             ourPrice: "₹850",
             diff: "₹350",
             value: "500+ Customers",
-            achievement: "Book Appointment"
+            achievement: "Book Appointment",
         },
         {
             service: "Hair Spa",
@@ -94,56 +130,39 @@ const Home = () => {
             ourPrice: "₹999",
             diff: "₹501",
             value: "250+ Customers",
-            achievement: "Book Appointment"
-        }
+            achievement: "Book Appointment",
+        },
     ];
     // services data
     const links = [
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-        { label: "Home", value: "/", },
-    ]
-    // faq
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+        { label: "Home", value: "/" },
+    ];
 
-    const faq = [
-        { text: "Acne Star", image: "/images/problem1.png" },
-        { text: "Hydrafacial", image: "/images/problem2.png" },
-        { text: "Laser Hair Removal", image: "/images/problem3.png" },
-        { text: "Hifu Facial", image: "/images/problem4.png" },
-        { text: "Lip Lightening", image: "/images/problem5.png" },
-    ]
-    //faqs
-
-    const qna = [
-        { question: "I am best coder in the world", answer: "   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat itaque cupiditate iure adipisci soluta pariatur, consequuntur placeat quisquam deleniti necessitatibus?" },
-        { question: "I am best coder in the world", answer: "   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat itaque cupiditate iure adipisci soluta pariatur, consequuntur placeat quisquam deleniti necessitatibus?" },
-        { question: "I am best coder in the world", answer: "   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat itaque cupiditate iure adipisci soluta pariatur, consequuntur placeat quisquam deleniti necessitatibus?" },
-        { question: "I am best coder in the world", answer: "   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat itaque cupiditate iure adipisci soluta pariatur, consequuntur placeat quisquam deleniti necessitatibus?" },
-        { question: "I am best coder in the world", answer: "   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat itaque cupiditate iure adipisci soluta pariatur, consequuntur placeat quisquam deleniti necessitatibus?" },
-    ]
 
     return (
         <div className={`${styles.homeContainer}`}>
@@ -154,161 +173,77 @@ const Home = () => {
                     className={`${styles.homeImage}`}
                 />
             </div>
-            <div className={`${styles.homeCardContainer}`}>
-                {homeCards.map((card, index) =>
-                    <div key={index} className={`${styles.homeCard}`}>
-                        <img
-                            alt={card.title}
-                            src={card.image}
-                            className={`${styles.homeCardImage}`}
-                        />
-                        <div className={`${styles.homeCardTitle}`}>
-                            {card.title}
-                        </div>
-                    </div>)}
-            </div>
-            <div className={`${styles.sectionHeadingContainer}`}>
-                <h3 className={`${styles.sectionHeading}`}>
-                    Our Celebrity Clients
-                </h3>
-                <img
-                    alt="pink decorative sign"
-                    src="/images/pink-sign.png"
-                    className={`${styles.sectionHeadingImage}`}
-                />
-            </div>
-            <div className={`${styles.celebrityContainer}`}>
-                <p className={`${styles.celebrityText}`}>
-                    Looklust clinic treats each patient with empathy and discretion. A patient arriving at Looklust Clinic is educated about their condition prior to treatment.
-                </p>
-                <img
-                    alt="Celebrity"
-                    src="/images/celebrity.png"
-                    className={`${styles.celebrityImage}`}
-                />
-            </div>
-            {/* new  */}
-            <div className={`${styles.sectionHeadingContainer}`}>
-                <h3 className={`${styles.sectionHeading}`}>
-                    20 years of Experience
-                </h3>
-                <img
-                    alt="pink decorative sign"
-                    src="/images/pink-sign.png"
-                    className={`${styles.sectionHeadingImage}`}
-                />
-            </div>
-            <div className={`${styles.celebrityContainer}`}>
-                <p className={`${styles.celebrityText}`}>
-                    Looklust clinic treats each patient with empathy and discretion. A patient arriving at Looklust Clinic is educated about their condition prior to treatment.
-                </p>
-                <img
-                    alt="Celebrity"
-                    src="/images/20-years.png"
-                    className={`${styles.celebrityImage}`}
-                />
-            </div>
+            <ExpertCard />
+            <SectionHeading line1="Our Celebrity Clients" />
+            <SectionHeadPara para="Looklust clinic treats each patient with empathy and discretion. A patient arriving at Looklust Clinic is educated about their condition prior to treatment." />
+            <img
+                alt="Celebrity"
+                src="/images/celebrity.png"
+                className={`${styles.celebrityImage}`}
+            />
+            {/* new starts */}
+            <SectionHeading line1="20 years of Experience" />
+            <SectionHeadPara para="Looklust clinic treats each patient with empathy and discretion. A patient arriving at Looklust Clinic is educated about their condition prior to treatment." />
+            <img
+                alt="Celebrity"
+                src="/images/20-years.png"
+                className={`${styles.celebrityImage}`}
+            />
             {/* new ends */}
             {/* heart card */}
             <div className={`${styles.reelCardContainer}`}>
-
-                {arr.map((c) =>
-                    <div key={c} className={styles.oneCard}>
-                        <div className={styles.header}>
-                            <div className={styles.profile}><span className={styles.dot}></span> ig.celebram</div>
-                            <div className={styles.liveTag}>LIVE</div>
-                            <div className={styles.viewCount}><span className={styles.eye}>👁</span> 420</div>
-                            <div>
-                                ❌
-                            </div>
-                        </div>
-                        <img src="/images/user1.png" alt="Live Host" className={styles.hostImage} />
-                        <div className={styles.commentBox}>
-                            {comments.map((c, i) => (
-                                <div key={i} className={styles.comment}><span className={styles.user}>{c.user}</span> {c.message}</div>
-                            ))}
-                        </div>
-                        <div className={styles.hearts}>
-                            {hearts.map((heart) => (
-                                <span
-                                    key={heart.id}
-                                    className={styles.heart}
-                                    style={{ left: `${heart.left}%`, backgroundColor: heart.color }}
-                                >❤️</span>
-                            ))}
-                        </div>
-                    </div>
-                )}
-
+                {Reel.map((reel, index) => (
+                    <ReelCard key={index} Reel={reel} />
+                ))}
             </div>
             {/* heart card ends */}
             {/* video starts */}
-            <div className={`${styles.sectionHeadingContainer}`}>
-                <h3 className={`${styles.sectionHeading}`}>
-                    Experience the art of Caring <br />
-                    with Dr. Poonam Patel
-                </h3>
-                <img
-                    alt="pink decorative sign"
-                    src="/images/pink-sign.png"
-                    className={`${styles.sectionHeadingImage}`}
-                />
-            </div>
-            <div className={`${styles.celebrityContainer}`}>
-                <p className={`${styles.celebrityText}`}>
-                    Looklust clinic treats each patient with empathy and discretion. A patient arriving at Looklust Clinic is educated about their condition prior to treatment.
-                </p>
-                <div className={styles.videoContainer}>
-                    <video
-                        className={`${styles.video}`}
-                        ref={videoRef}
-                        loop
-                        muted
-                        autoPlay
-                        playsInline
-                        poster="/images/homeFallback.jpg"
-                        preload="auto"
-                    >
-                        {/* <source src={"/home/video/videoBag.mp4"} type="video/mp4" /> */}
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
 
+            <SectionHeading
+                line1="Experience the art of Caring"
+                line2="with Dr. Poonam Patel"
+            />
+            <SectionHeadPara para="  Looklust clinic treats each patient with empathy and discretion. A patient arriving at Looklust Clinic is educated about their condition prior to treatment." />
+            <div className={styles.videoContainer}>
+                <video
+                    className={`${styles.video}`}
+                    ref={videoRef}
+                    loop
+                    muted
+                    autoPlay
+                    playsInline
+                    poster="/images/homeFallback.jpg"
+                    preload="auto"
+                >
+                    {/* <source src={"/home/video/videoBag.mp4"} type="video/mp4" /> */}
+                    Your browser does not support the video tag.
+                </video>
             </div>
             {/* video ends */}
             {/* Comparison Slider */}
             <div className={`${styles.compareSliderContainer}`}>
-                <CompareCard />
-                <CompareCard />
-                <CompareCard />
+                {compareData.map((compare, index) => <CompareCard CompareCard={compare} key={index} />
+                )}
             </div>
             {/* comparison slider ends */}
             {/* price table stars */}
-            <div className={`${styles.sectionHeadingContainer}`}>
-                <h3 className={`${styles.sectionHeading}`}>
-                    Nothing Complex Here
-                </h3>
-                <img
-                    alt="pink decorative sign"
-                    src="/images/pink-sign.png"
-                    className={`${styles.sectionHeadingImage}`}
-                />
-            </div>
-            <div className={`${styles.celebrityContainer}`}>
-                <p className={`${styles.celebrityText}`}>
-                    Looklust clinic treats each patient with empathy and discretion. A patient arriving at Looklust Clinic is educated about their condition prior to treatment.
-                </p>
-            </div>
+            <SectionHeading line1="Nothing Complex Here" />
+            <SectionHeadPara para="Looklust clinic treats each patient with empathy and discretion. A patient arriving at Looklust Clinic is educated about their condition prior to treatment." />
+
             <div className={`${styles.priceTableContainer}`}>
                 <table className={`${styles.priceTable}`}>
                     <thead>
                         <tr className={`  ${styles.tableHeaderRow}`}>
-                            <th className={` ${styles.topLeftRadius} ${styles.tableHeader}`}>Service</th>
+                            <th className={` ${styles.topLeftRadius} ${styles.tableHeader}`}>
+                                Service
+                            </th>
                             <th className={`${styles.tableHeader}`}>Market Price</th>
-                            <th className={`${styles.tableHeader}`}>Our Price  </th>
+                            <th className={`${styles.tableHeader}`}>Our Price </th>
                             <th className={`${styles.tableHeader}`}>Diff </th>
                             <th className={`${styles.tableHeader}`}>Value </th>
-                            <th className={`${styles.topRightRadius} ${styles.tableHeader}`}>Achivement </th>
+                            <th className={`${styles.topRightRadius} ${styles.tableHeader}`}>
+                                Achivement{" "}
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -318,30 +253,28 @@ const Home = () => {
                                 <td className={styles.tableData}>{item.marketPrice}</td>
                                 <td className={styles.tableData}>{item.ourPrice}</td>
                                 <td className={styles.tableData}>{item.diff}</td>
-                                <td className={`${styles.tableData} ${styles.value}`} > {item.value.split(" ")[0]}<br />{item.value.split(" ").slice(1).join(" ")}</td>
+                                <td className={`${styles.tableData} ${styles.value}`}>
+                                    {" "}
+                                    {item.value.split(" ")[0]}
+                                    <br />
+                                    {item.value.split(" ").slice(1).join(" ")}
+                                </td>
                                 <td className={styles.tableData}>
-                                    <button className={styles.bookButton}>{item.achievement}</button>
+                                    <button className={styles.bookButton}>
+                                        {item.achievement}
+                                    </button>
                                 </td>
                             </tr>
                         ))}
-
                     </tbody>
-
                 </table>
             </div>
             {/* price table ends */}
             {/* service section / Form section  */}
-            <div className={`${styles.sectionHeadingContainer}`}>
-                <h3 className={`${styles.sectionHeading}`}>
-                    Welcome to Looklush Asthetic <br />
-                    & Laser Center
-                </h3>
-                <img
-                    alt="pink decorative sign"
-                    src="/images/pink-sign.png"
-                    className={`${styles.sectionHeadingImage}`}
-                />
-            </div>
+            <SectionHeading
+                line1="Welcome to Looklush Asthetic"
+                line2="& Laser Center"
+            />
             <div className={`${styles.servicesContainer}`}>
                 <div className={`scrollbar-hide ${styles.serviesLinksContainer}`}>
                     {links.map((link, index) => (
@@ -357,46 +290,10 @@ const Home = () => {
             </div>
             {/* service section / Form section  ends */}
             {/* Faq section starts */}
-            <div className={`${styles.sectionHeadingContainer}`}>
-                <h3 className={`${styles.sectionHeading}`}>
-                    Frequenntly Asked <br />
-                    Questions
-                </h3>
-                <img
-                    alt="pink decorative sign"
-                    src="/images/pink-sign.png"
-                    className={`${styles.sectionHeadingImage}`}
-                />
-            </div>
-            <div className={`${styles.faqContainer}`}>
-                {faq.map((faq, index) =>
-                    <div key={index} className={styles.iconWrapper}>
-                        <div className={styles.imageContainer}>
-                            <img src={faq.image} className={styles.faqImage} />
-                            <img src="/images/faqborder.png" alt={faq.text} className={styles.border} />
-                        </div>
-                        <p className={styles.label}>{faq.text}</p>
-                    </div>
-                )}
+            <SectionHeading line1="Frequently Asked Questions" line2="& Answers" />
+            <Faqs />
 
-            </div>
-            {/* faqs */}
-            <div className={`${styles.qnaContainer}`}>
-                <ul className={`${styles.questionsContainer}`} >
-                    {qna.map((item, index) => (
-                        <li key={index} className={styles.card}>
-                            <span className={styles.number}> {(index + 1).toString().padStart(2, '0')}</span>
-                            <p className={styles.text}>{item.question}</p>
-                        </li>
-                    ))}
-                </ul>
-                <div className={`${styles.answerContainer}`}>
-                    <p className={styles.answer}>{qna[0].answer}</p>
-                    <img className={`${styles.qnaImage}`} src="/images/qnaImage.gif" alt="qna image" />
-                </div>
-            </div>
-            {/* <div className="h-96 w-full border-2 border-red-900"></div> */}
         </div>
     );
-}
+};
 export default Home;

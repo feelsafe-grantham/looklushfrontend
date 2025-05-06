@@ -10,7 +10,8 @@ interface CompareCardProps {
     imageAfter: string;
     imageAlt?: string;
 }
-const CompareCard = ({ clientName = "Client Name Here", starRating = 5, clientText = "Lorem, ipsum dolor sit amet consectetur adipisicing elit.t consectetur adipisict consectetur adipisicing elit.", imageBefore = "/images/before2.png", imageAfter = "/images/after2.png", imageAlt }: CompareCardProps) => {
+const CompareCard = ({ CompareCard }: { CompareCard: CompareCardProps }) => {
+    const { clientName = "Client Name Here", starRating = 5, clientText = "Lorem, ipsum dolor sit amet consectetur adipisicing elit.t consectetur adipisict consectetur adipisicing elit.", imageBefore = "/images/before2.png", imageAfter = "/images/after2.png", imageAlt } = CompareCard || {};
     return (
         <div className={styles.compareCardContainer}>
             <h5 className={styles.clientName}>{clientName}</h5>
