@@ -38,6 +38,7 @@ const Footer = () => {
                         </p>
                     </div>
 
+
                     {/* Right Section - Instagram Grid */}
                     <div className={styles.instagramGrid}>
                         {Array(4).fill(0).map((_, idx) => (
