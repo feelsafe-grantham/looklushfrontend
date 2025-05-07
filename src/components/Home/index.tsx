@@ -122,7 +122,7 @@ const Home = () => {
             </div>
             <ExpertCard />
             <SectionHeading line1="Our Celebrity Clients" />
-            <SectionHeadPara para="Looklust clinic treats each patient with empathy and discretion. A patient arriving at Looklust Clinic is educated about their condition prior to treatment." />
+            <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
             <img
                 alt="Celebrity"
                 src="/images/celebrity.png"
@@ -130,7 +130,7 @@ const Home = () => {
             />
             {/* new starts */}
             <SectionHeading line1="20 years of Experience" />
-            <SectionHeadPara para="Looklust clinic treats each patient with empathy and discretion. A patient arriving at Looklust Clinic is educated about their condition prior to treatment." />
+            <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
             <img
                 alt="Celebrity"
                 src="/images/20-years.png"
@@ -150,7 +150,7 @@ const Home = () => {
                 line1="Experience the art of Caring"
                 line2="with Dr. Poonam Patel"
             />
-            <SectionHeadPara para="  Looklust clinic treats each patient with empathy and discretion. A patient arriving at Looklust Clinic is educated about their condition prior to treatment." />
+            <SectionHeadPara para="  Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
             <div className={styles.videoContainer}>
                 <video
                     className={`${styles.video}`}
@@ -175,7 +175,7 @@ const Home = () => {
             {/* comparison slider ends */}
             {/* price table stars */}
             <SectionHeading line1="Nothing Complex Here" />
-            <SectionHeadPara para="Looklust clinic treats each patient with empathy and discretion. A patient arriving at Looklust Clinic is educated about their condition prior to treatment." />
+            <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
 
             <PriceTabel />
             {/* price table ends */}

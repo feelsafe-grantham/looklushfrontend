@@ -1,0 +1,239 @@
+.aboutContainer {
+  display: grid;
+  gap: 20px;
+}
+.aboutImage {
+  width: 100%;
+}
+.locationContainer {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+/* line */
+.experienceContainer {
+  max-width: var(--max-width-container);
+  margin: 0px auto;
+  position: relative;
+}
+.leafImage {
+  right: 0;
+  top: 10px;
+  height: 350px;
+  position: absolute;
+  z-index: -1;
+}
+.headingcontainer {
+  text-align: center;
+  padding: 20px;
+  font-size: 3em;
+}
+.experienceLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.years {
+  font-weight: bold;
+  color: var(--text-theme-color);
+  font-size: 2.5em;
+  line-height: 1;
+}
+.experienceText {
+  display: flex;
+  flex-direction: column;
+}
+.para {
+  color: var(--text-light-color);
+  font-size: 1em;
+  line-height: 1.2em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.experience {
+  letter-spacing: normal;
+  color: var(--text-light-color);
+  font-size: 0.9em;
+  font-weight: 700;
+}
+.pinkSign {
+  z-index: -1;
+  height: 0.7em;
+  position: absolute;
+  bottom: 0;
+  left: 48%;
+  transform: translateX(-50%);
+}
+
+.subText {
+  font-family: var(--font-sour-gummy);
+  margin: 0px auto;
+  margin-top: 10px;
+  max-width: 450px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+/* heading container ends here */
+/* list */
+.featureList {
+  padding: 0;
+  list-style: none;
+  margin: 0px auto;
+  max-width: var(--max-width-container);
+}
+
+.featureItem {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+.emoji {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+.title {
+  font-weight: 700;
+  color: var(--text-theme-color);
+  margin-right: 0.3rem;
+}
+.description {
+  color: var(--text-dark-color);
+}
+/* vison */
+.visionContainer {
+  max-width: 600px;
+  margin: 0px auto;
+}
+.visionHeading {
+  color: var(--text-theme-color);
+  font-family: var(--font-sour-gummy);
+  letter-spacing: 0em;
+  font-size: 2.5em;
+  line-height: 1em;
+  font-weight: 500;
+  text-align: center;
+}
+.visionText {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  font-weight: 400;
+  text-align: center;
+}
+/* cards */
+.cardsContainer {
+  max-width: var(--max-width-container);
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.cardContainer {
+  background-color: var(--bg-theme-color2);
+  border-radius: var(--standard-border-radius);
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  flex-direction: column;
+}
+.cardImage {
+  height: 100px;
+  width: 100px;
+}
+.cardText {
+  color: var(--text-dark-color);
+  font-weight: 500;
+  text-align: center;
+}
+/* social media section */
+.socialContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.socialImage {
+  width: 150px;
+  height: 150px;
+}
+/* asdfj */
+.servicesContainer {
+  background-color: var(--bg-section-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.card {
+  background: var(--bg-primary-color);
+  border-radius: 12px;
+  max-width: 350px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-align: left;
+}
+.serviceHeadContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  border-bottom: 1px solid var(--text-light-color);
+}
+.serviceCardImage {
+  width: 150px;
+  height: 75px;
+  border-radius: var(--standard-border-radius2);
+}
+
+.title {
+  color: var(--text-dark-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 5px 20px;
+  color: var(--text-light-color);
+}
+
+.details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-light-color);
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px solid var(--text-light-color);
+  padding-bottom: 10px;
+}
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.icon {
+  height: 20px;
+}
+.viewMore {
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-theme-color);
+  margin-top: auto;
+  display: block;
+  padding-bottom: 20px;
+}

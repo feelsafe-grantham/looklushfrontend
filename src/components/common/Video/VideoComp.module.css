@@ -1,0 +1,15 @@
+.videoContainer {
+  max-width: 900px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  z-index: -1;
+  margin: auto;
+  border-radius: var(--standard-border-radius);
+}
+
+.video {
+  border-radius: var(--standard-border-radius);
+  margin: auto;
+  aspect-ratio: 16/9;
+}
