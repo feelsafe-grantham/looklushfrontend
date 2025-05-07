@@ -1,0 +1,138 @@
+.faqContainer {
+  display: grid;
+  gap: 20px;
+}
+.faqSearchBarContainer {
+  max-width: var(--max-width-container);
+  margin: 0px auto;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.faqSearchBarWrapper {
+  display: flex;
+  position: relative;
+}
+.faqSearchBar {
+  border: 1px solid var(--text-light-color);
+  padding: 0px 5px;
+  padding-left: 26px;
+}
+.faqSearchIcon {
+  position: absolute;
+  left: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100px;
+}
+.faqSearchBar:focus {
+  outline: none;
+}
+.faqSearchButton {
+  background-color: var(--bg-theme-color);
+  color: var(--text-white-color);
+  padding: 10px 20px;
+}
+/* problem */
+/* faq section starts */
+.faqProblemContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.iconWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.imageContainer {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.faqImage {
+  margin: auto auto;
+  height: 110px;
+  border-radius: 50%;
+}
+.faqText {
+  font-size: 16px;
+  font-weight: 500;
+}
+/* faqs */
+.qnaContainer {
+  margin: 0px auto;
+  max-width: var(--max-width-container);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 20px;
+}
+
+.questionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0px auto;
+  overflow-y: auto;
+  width: 100%;
+  max-height: 700px;
+}
+.card {
+  position: relative;
+  padding: 30px 40px;
+  background-color: var(--bg-primary-color);
+  border-radius: var(--standard-border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+}
+.number {
+  position: absolute;
+  left: 20px;
+  font-size: 70px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.1); /* faded text */
+  z-index: 0;
+}
+.text {
+  position: relative;
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  z-index: 1;
+  text-align: center;
+}
+.answerContainer {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: var(--standard-border-radius);
+}
+.answer {
+  height: 350px;
+  padding: 20px 40px;
+  overflow-y: scroll;
+  border-radius: var(--standard-border-radius);
+  color: var(--text-light-color);
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 500;
+}
+.qnaImage {
+  height: 350px;
+  margin: auto;
+}

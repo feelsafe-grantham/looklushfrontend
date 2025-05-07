@@ -12,14 +12,15 @@
 }
 /* line */
 .experienceContainer {
-  max-width: var(--max-width-container);
-  margin: 0px auto;
+  /* max-width: var(--max-width-container);
+  margin: 0px auto; */
   position: relative;
 }
 .leafImage {
   right: 0;
   top: 10px;
   height: 350px;
+  height: 25vw;
   position: absolute;
   z-index: -1;
 }
