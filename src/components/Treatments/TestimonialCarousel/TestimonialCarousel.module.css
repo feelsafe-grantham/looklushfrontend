@@ -1,0 +1,126 @@
+.carouselWrapper {
+  position: relative;
+  overflow: hidden;
+}
+.treatmentLeafRight {
+  top: -110%;
+  right: -24%;
+  position: absolute;
+}
+.treatmentLeafLeft {
+  /* height: 640px; */
+  bottom: -40%;
+  left: -25%;
+  position: absolute;
+}
+
+.carouselContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+}
+
+.testimonialSection {
+  flex: 1;
+  max-width: 40%;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+.avatarCircle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 4px solid var(--text-theme-color);
+  overflow: hidden;
+  margin: 0 auto 1rem;
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.testimonialText {
+  font-family: var(--font-sour-gummy);
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  font-weight: 500;
+  color: var(--text-dark-color);
+}
+
+.stars {
+  color: #ffc107;
+
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ratingControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+}
+
+.ratingControls button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.rating {
+  font-weight: bold;
+  color: var(--text-dark-color);
+}
+
+.imageSection {
+  position: relative;
+  flex: 1;
+  max-width: 40%;
+}
+
+.blurredImg {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.imageNav {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+}
+
+.imageNav button {
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .carouselContainer {
+    flex-direction: column;
+  }
+
+  .testimonialSection,
+  .imageSection {
+    max-width: 90%;
+  }
+}

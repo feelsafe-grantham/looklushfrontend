@@ -1,5 +1,9 @@
+import PriceTabel from "../common/PriceTable";
 import SectionHeading from "../common/SectionHeading";
 import SectionHeadPara from "../common/SectionHeadPara";
+import Faqs from "@/components/common/Faqs";
+import ResultsSection from "./ResultsSection";
+import TestimonialCarousel from "./TestimonialCarousel";
 import styles from "./Treatments.module.css"
 const Treatments = () => {
     const images = [
@@ -234,7 +238,14 @@ const Treatments = () => {
                     </div>)}
 
             </div>
-        </div >
+            <TestimonialCarousel />
+            <ResultsSection />
+            <SectionHeading line1="Pricing List" />
+            <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
+            <PriceTabel />
+            <SectionHeading line1="Frequently Asked " line2="Questions" />
+            <Faqs />
+        </div>
 
     )
 }

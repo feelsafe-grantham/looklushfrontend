@@ -1,0 +1,65 @@
+.container {
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.6fr 0.4fr;
+}
+
+.textSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.description {
+  width: 80%;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0px auto;
+  text-align: center;
+  color: var(--text-dark-color);
+}
+
+.imageCarousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.imagesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.imageCarousel img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.dots {
+  display: flex;
+  gap: 5px;
+  margin-left: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.videoContainer {
+  height: 100%;
+  width: 90%;
+  margin: auto;
+}
+
+.video {
+  max-width: 65%;
+}
