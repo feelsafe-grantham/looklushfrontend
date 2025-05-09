@@ -49,7 +49,6 @@
   background-color: var(--bg-white-color);
   color: var(--text-theme-color);
   font-family: var(--font-sour-gummy);
-  /* border: 1px solid var(--text-light-color); */
   align-self: flex-end;
   font-weight: bold;
   border-radius: 25px;
