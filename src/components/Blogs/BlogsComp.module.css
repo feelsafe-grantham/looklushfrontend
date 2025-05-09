@@ -1,0 +1,30 @@
+.reelContainer {
+  max-width: var(--max-width-container);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 40px auto;
+  place-items: center;
+}
+.blogTopicsContainer {
+  max-width: var(--max-width-container);
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.blogTopic {
+  padding: 5px 20px;
+  text-align: center;
+  background-color: var(--bg-theme-dark);
+  color: var(--text-white-color);
+  cursor: pointer;
+  border: 2px solid var(--bg-theme-dark);
+  border-radius: var(--standard-border-radius);
+}
+.blogTopic:hover {
+  background-color: var(--bg-white-color);
+  color: var(--text-theme-color);
+  text-align: center;
+  padding: 5px 20px;
+}

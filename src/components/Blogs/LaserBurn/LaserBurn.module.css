@@ -1,0 +1,84 @@
+.container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.imageWrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+}
+
+.navArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  font-size: 24px;
+  padding: 8px 12px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navArrow:first-of-type {
+  left: 10px;
+}
+
+.navArrow:last-of-type {
+  right: 10px;
+}
+
+.title {
+  margin-top: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.buttonGroup {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.infoButton {
+  background-color: #ec407a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.infoButton:hover {
+  background-color: #d81b60;
+}
+.checkoutButton {
+  margin: 20px auto;
+  background-color: var(--bg-white-color);
+  color: var(--text-theme-color);
+  font-family: var(--font-sour-gummy);
+  align-self: flex-end;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 5px 30px;
+  cursor: pointer;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
