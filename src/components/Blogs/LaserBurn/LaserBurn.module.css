@@ -7,7 +7,7 @@
   position: relative;
   display: inline-block;
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--max-width-container);
   border-radius: 20px;
   overflow: hidden;
 }
@@ -22,7 +22,6 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: white;
   border: none;
   font-size: 24px;
   padding: 8px 12px;
@@ -44,7 +43,7 @@
   margin-top: 30px;
   font-size: 2rem;
   font-weight: bold;
-  color: #333;
+  color: var(--text-dark-color);
 }
 
 .buttonGroup {
@@ -56,20 +55,22 @@
 }
 
 .infoButton {
-  background-color: #ec407a;
-  color: white;
-  border: none;
+  border: 2px solid var(--bg-theme-dark);
+  background-color: var(--bg-theme-dark);
+  color: var(--text-white-color);
   padding: 10px 20px;
   border-radius: 8px;
   font-size: 0.95rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.1s ease;
 }
 
 .infoButton:hover {
-  background-color: #d81b60;
+  background-color: var(--bg-white-color);
+  color: var(--bg-theme-dark);
 }
+
 .checkoutButton {
   margin: 20px auto;
   background-color: var(--bg-white-color);
