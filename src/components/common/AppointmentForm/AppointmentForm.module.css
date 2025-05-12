@@ -1,0 +1,38 @@
+.appointmentFormContainer {
+}
+.formInputContainer {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.formInput {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  color: var(--text-dark-color);
+  cursor: pointer;
+  background-color: rgb(218, 215, 215);
+}
+.formSelect {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.option {
+  font-weight: 500;
+  color: var(--text-dark-color);
+}
+
+.bookButton {
+  background-color: var(--bg-theme-dark);
+  color: var(--text-white-color);
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
