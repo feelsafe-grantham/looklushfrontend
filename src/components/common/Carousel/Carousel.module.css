@@ -16,7 +16,7 @@
   opacity: 0;
   object-fit: contain;
   box-sizing: border-box;
-  transition: opacity 1s linear;
+  transition: opacity 0.5s linear;
   position: absolute;
   width: 100%;
 }

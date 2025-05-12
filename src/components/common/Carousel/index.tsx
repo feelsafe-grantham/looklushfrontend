@@ -48,7 +48,7 @@ function Carousel({ children, showButtons = false }: CarouselProps) {
                 setActiveSlide(newIndex);
                 return newIndex;
             });
-        }, 3000);
+        }, 2000);
     };
 
     const stopSlider = () => {
