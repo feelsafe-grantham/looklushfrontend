@@ -2,43 +2,11 @@
   display: grid;
   gap: 20px;
 }
-.homeImage {
-  width: 100%;
-}
 
 .celebrityImage {
   margin: 0px auto;
 }
 
-/* heart card starts */
-.reelCardContainer {
-  padding-top: 20px;
-  padding-bottom: 30px;
-  background-color: #eeeeee;
-  margin: 0px auto;
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-}
-/* heart card ends */
-
-/* Experience video section starts */
-.videoContainer {
-  max-width: 900px;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  z-index: -1;
-  margin: auto;
-  border-radius: var(--standard-border-radius);
-}
-
-.video {
-  border-radius: var(--standard-border-radius);
-  margin: auto;
-  aspect-ratio: 16/9;
-}
-/* video ends */
 /* Compare Slider */
 
 .compareSliderContainer {

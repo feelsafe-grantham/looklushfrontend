@@ -5,41 +5,12 @@ import SwiperCard from "../common/SwiperCard";
 import ExpertCard from "../common/ExpertCard";
 import SectionHeading from "../common/SectionHeading";
 import SectionHeadPara from "../common/SectionHeadPara";
-import ReelCard from "./ReelCard";
 import Faqs from "../common/Faqs";
 import PriceTabel from "../common/PriceTable";
 import Carousel from "../common/Carousel";
 import VideoComp from "../common/Video";
 import ReelContainer from "./ReelContainer";
 const Home = () => {
-    const comments = [
-        { user: "freyjalalila_", message: "OMG 😳😳😳" },
-        { user: "user420", message: "awesome 👍" },
-        { user: "catlover88", message: "this is so wholesome 🐱" },
-        { user: "techjunkie", message: "audio is perfect 🔊" },
-        { user: "nina_artz", message: "what a great smile! 😊" },
-    ];
-    const Reel = [
-        {
-            username: "amanpandey_11",
-            viewers: 120,
-            comments: comments,
-            videoUrl: "/videos/reel.mp4",
-        },
-        {
-            username: "_amanpandey_11",
-            viewers: 120,
-            comments: comments,
-            videoUrl: "/videos/reel.mp4",
-        },
-        {
-            username: "_aman11",
-            viewers: 120,
-            comments: comments,
-            videoUrl: "/videos/reel.mp4",
-        },
-    ];
-
     const compareData = [
         {
             clientName: "Client Name Here",
@@ -69,9 +40,7 @@ const Home = () => {
             imageAlt: "",
         },
     ];
-    // video urls
     const videoUrl = "/videos/video.mp4";
-
     const links = [
         { label: "Home", value: "/" },
         { label: "Home", value: "/" },
@@ -113,13 +82,12 @@ const Home = () => {
             </div>
             <ExpertCard />
             <SectionHeading line1="Our Celebrity Clients" />
-            <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
+            {/*<SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
             <img
                 alt="Celebrity"
                 src="/images/celebrity.png"
                 className={`${styles.celebrityImage}`}
             />
-            {/* new starts */}
             <SectionHeading line1="20 years of Experience" />
             <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
             <img
@@ -127,30 +95,20 @@ const Home = () => {
                 src="/images/20-years.png"
                 className={`${styles.celebrityImage}`}
             />
-
             <ReelContainer />
-
-
             <SectionHeading
                 line1="Experience the art of Caring"
                 line2="with Dr. Poonam Patel"
             />
             <SectionHeadPara para="  Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
             <VideoComp videoUrl={videoUrl} />
-            {/* video ends */}
-            {/* Comparison Slider */}
             <div className={`${styles.compareSliderContainer}`}>
                 {compareData.map((compare, index) => <CompareCard CompareCard={compare} key={index} />
                 )}
             </div>
-            {/* comparison slider ends */}
-            {/* price table stars */}
             <SectionHeading line1="Nothing Complex Here" />
             <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
-
             <PriceTabel />
-            {/* price table ends */}
-            {/* service section / Form section  */}
             <SectionHeading
                 line1="Welcome to Looklush Asthetic"
                 line2="& Laser Center"
@@ -168,10 +126,8 @@ const Home = () => {
                     <Form />
                 </div>
             </div>
-            {/* service section / Form section  ends */}
-            {/* Faq section starts */}
             <SectionHeading line1="Frequently Asked Questions" line2="& Answers" />
-            <Faqs />
+            <Faqs /> */}
 
         </div>
     );

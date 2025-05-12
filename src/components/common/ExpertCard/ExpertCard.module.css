@@ -1,8 +1,8 @@
 .homeCardContainer {
   margin: 0px auto;
   max-width: var(--max-width-container);
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -14,7 +14,7 @@
   justify-content: center;
   border-radius: var(--standard-border-radius);
   width: 400px;
-  height: 200px;
+  aspect-ratio: 2/1;
 }
 
 .homeCardImage {
@@ -73,4 +73,24 @@
     rgba(122, 100, 191, 1),
     rgba(127, 119, 173, 0.3)
   );
+}
+
+@media (max-width: 1300px) {
+  .homeCardContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .homeCardContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .homeCard {
+    width: 300px;
+  }
+  .homeCardTitle {
+    width: 90%;
+    font-size: 24px;
+  }
 }

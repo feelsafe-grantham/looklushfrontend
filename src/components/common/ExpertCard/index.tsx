@@ -17,7 +17,8 @@ const ExpertCard = () => {
                     <div className={`${styles.homeCardTitle}`}>
                         {card.title}
                     </div>
-                </div>)}
+                </div>
+            )}
         </div>
     )
 }
