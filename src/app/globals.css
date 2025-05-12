@@ -3,6 +3,7 @@
 :root {
   --bg-theme-color: #f47795;
   --bg-theme-dark: #d54b6c;
+  --text-theme-dark: var(--bg-theme-dark);
   --bg-theme-color2: #fdf1f3;
   --bg-section-color: #fff0f4;
   --bg-primary-color: #ffffff;

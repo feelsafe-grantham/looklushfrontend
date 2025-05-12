@@ -11,5 +11,5 @@
 .video {
   border-radius: var(--standard-border-radius);
   margin: auto;
-  aspect-ratio: 16/9;
+  aspect-ratio: 2/1;
 }

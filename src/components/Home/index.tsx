@@ -1,7 +1,5 @@
-"use client";
 import styles from "./Home.module.css";
 import Form from "../common/Form";
-import { useEffect, useRef } from "react";
 import CompareCard from "../common/CompareCard";
 import SwiperCard from "../common/SwiperCard";
 import ExpertCard from "../common/ExpertCard";
@@ -11,6 +9,8 @@ import ReelCard from "./ReelCard";
 import Faqs from "../common/Faqs";
 import PriceTabel from "../common/PriceTable";
 import Carousel from "../common/Carousel";
+import VideoComp from "../common/Video";
+import ReelContainer from "./ReelContainer";
 const Home = () => {
     const comments = [
         { user: "freyjalalila_", message: "OMG 😳😳😳" },
@@ -70,19 +70,7 @@ const Home = () => {
         },
     ];
     // video urls
-    const videoUrl = "/videos/homeVideo1.mp4";
-    const videoRef = useRef<HTMLVideoElement | null>(null);
-    useEffect(() => {
-        const timeout = setTimeout(() => {
-            if (videoRef.current) {
-                videoRef.current.src = videoUrl;
-            }
-        }, 300);
-
-        return () => {
-            clearTimeout(timeout);
-        };
-    }, []);
+    const videoUrl = "/videos/video.mp4";
 
     const links = [
         { label: "Home", value: "/" },
@@ -115,11 +103,6 @@ const Home = () => {
     return (
         <div className={`${styles.homeContainer}`}>
             <div>
-                {/* <img
-                    alt="Home"
-                    src="/images/carousel1.png"
-                    className={`${styles.homeImage}`}
-                /> */}
                 <Carousel>
                     <img src="/images/carousel1.png" alt="Image 1" />
                     <img src="/images/carousel2.png" alt="Image 1" />
@@ -144,36 +127,16 @@ const Home = () => {
                 src="/images/20-years.png"
                 className={`${styles.celebrityImage}`}
             />
-            {/* new ends */}
-            {/* heart card */}
-            <div className={`${styles.reelCardContainer}`}>
-                {Reel.map((reel, index) => (
-                    <ReelCard key={index} Reel={reel} />
-                ))}
-            </div>
-            {/* heart card ends */}
-            {/* video starts */}
+
+            <ReelContainer />
+
 
             <SectionHeading
                 line1="Experience the art of Caring"
                 line2="with Dr. Poonam Patel"
             />
             <SectionHeadPara para="  Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
-            <div className={styles.videoContainer}>
-                <video
-                    className={`${styles.video}`}
-                    ref={videoRef}
-                    loop
-                    muted
-                    autoPlay
-                    playsInline
-                    poster="/images/homeFallback.jpg"
-                    preload="auto"
-                >
-                    {/* <source src={"/home/video/videoBag.mp4"} type="video/mp4" /> */}
-                    Your browser does not support the video tag.
-                </video>
-            </div>
+            <VideoComp videoUrl={videoUrl} />
             {/* video ends */}
             {/* Comparison Slider */}
             <div className={`${styles.compareSliderContainer}`}>

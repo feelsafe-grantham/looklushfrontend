@@ -15,7 +15,7 @@
   justify-content: space-between;
   z-index: 10;
   padding: 0 10px;
-  color: white;
+  color: var(--text-white-color);
   font-size: 14px;
 }
 
@@ -23,19 +23,19 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  color: black;
+  color: var(--text-dark-color);
 }
 
 .dot {
   width: 10px;
   height: 10px;
-  background: #d63384;
+  background: var(--text-theme-dark);
   border-radius: 50%;
   display: inline-block;
 }
 
 .liveTag {
-  background: #d63384;
+  background: var(--text-theme-dark);
   padding: 2px 8px;
   border-radius: 12px;
   font-weight: bold;
@@ -64,7 +64,7 @@
   flex-direction: column;
   gap: 6px;
   z-index: 10;
-  color: white;
+  color: var(--text-white-color);
   font-size: 13px;
 }
 
@@ -78,7 +78,8 @@
 .user {
   font-weight: bold;
   margin-right: 4px;
-  color: #ffdc73;
+  color: var(--text-theme-color);
+  color: yellow;
 }
 
 .hearts {

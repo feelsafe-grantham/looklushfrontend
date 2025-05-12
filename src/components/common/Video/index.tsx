@@ -1,7 +1,7 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import styles from "./VideoComp.module.css"
-const VideoComp = ({ videoUrl = "/videos/homeVideo1.mp4" }: { videoUrl?: string }) => {
+const VideoComp = ({ videoUrl = "/videos/homeVideo1.mp4", fallback = "/images/homeFallback.png" }: { videoUrl?: string, fallback?: string }) => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
     useEffect(() => {
         const timeout = setTimeout(() => {
@@ -23,7 +23,7 @@ const VideoComp = ({ videoUrl = "/videos/homeVideo1.mp4" }: { videoUrl?: string 
                 muted
                 autoPlay
                 playsInline
-                poster="/images/homeFallback.jpg"
+                poster={fallback}
                 preload="auto"
             >
                 {/* <source src={"/home/video/videoBag.mp4"} type="video/mp4" /> */}
