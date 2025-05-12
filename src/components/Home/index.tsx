@@ -82,7 +82,7 @@ const Home = () => {
             </div>
             <ExpertCard />
             <SectionHeading line1="Our Celebrity Clients" />
-            {/*<SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
+            <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
             <img
                 alt="Celebrity"
                 src="/images/celebrity.png"
@@ -127,7 +127,7 @@ const Home = () => {
                 </div>
             </div>
             <SectionHeading line1="Frequently Asked Questions" line2="& Answers" />
-            <Faqs /> */}
+            <Faqs />  {/**/}
 
         </div>
     );

@@ -4,6 +4,7 @@ import SectionHeading from "../common/SectionHeading";
 import SectionHeadPara from "../common/SectionHeadPara";
 import VideoComp from "../common/Video";
 import styles from "./LocationComp.module.css";
+import ReviewSummary from "./ReviewSummary";
 const LocationComp = () => {
   const mapSrc =
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3292.4847807215533!2d72.8392009!3d19.1756447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7dc98e75a79%3A0xea9792c966002d43!2sLooklush!5e1!3m2!1sen!2sin!4v1746534743597!5m2!1sen!2sin";
@@ -30,6 +31,7 @@ const LocationComp = () => {
       <SectionHeading line1="Visit Us" />
       <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
       <VideoComp />
+      <ReviewSummary />
       <SectionHeading line1="Frequently Asked " line2="Questions" />
       <Faqs />
     </div>

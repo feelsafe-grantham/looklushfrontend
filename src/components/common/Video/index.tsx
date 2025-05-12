@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import styles from "./VideoComp.module.css"
-const VideoComp = ({ videoUrl = "/videos/homeVideo1.mp4", fallback = "/images/homeFallback.png" }: { videoUrl?: string, fallback?: string }) => {
+const VideoComp = ({ videoUrl = "/videos/video.mp4", fallback = "/images/homeFallback.png" }: { videoUrl?: string, fallback?: string }) => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
     useEffect(() => {
         const timeout = setTimeout(() => {
