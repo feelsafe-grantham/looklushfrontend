@@ -1,0 +1,96 @@
+.carousel {
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.box {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 1;
+  width: 100%;
+}
+
+.img {
+  opacity: 0;
+  object-fit: contain;
+  box-sizing: border-box;
+  transition: opacity 1s linear;
+  position: absolute;
+  width: 100%;
+}
+
+.img[data-active="true"] {
+  opacity: 1;
+}
+
+.img[data-active="false"] {
+  opacity: 0;
+}
+
+.button {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.next,
+.prev {
+  top: 50%;
+  font-size: 50px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.next {
+  right: 0;
+}
+
+.prev {
+  left: 0;
+}
+
+.stepper {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  gap: 8px;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carouselDot {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: var(--text-light-color);
+}
+.active {
+  background-color: var(--bg-theme-color);
+}
+/* Optional animations */
+@keyframes showAnimation {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes hideAnimation {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}

@@ -1,6 +1,6 @@
-import TopBar from "@/components/common/TopBar";
 import "./globals.css";
 import type { Metadata } from "next";
+import TopBar from "@/components/common/TopBar";
 import { Montserrat, Sour_Gummy } from "next/font/google"
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";

@@ -10,6 +10,7 @@ import SectionHeadPara from "../common/SectionHeadPara";
 import ReelCard from "./ReelCard";
 import Faqs from "../common/Faqs";
 import PriceTabel from "../common/PriceTable";
+import Carousel from "../common/Carousel";
 const Home = () => {
     const comments = [
         { user: "freyjalalila_", message: "OMG 😳😳😳" },
@@ -114,11 +115,18 @@ const Home = () => {
     return (
         <div className={`${styles.homeContainer}`}>
             <div>
-                <img
+                {/* <img
                     alt="Home"
                     src="/images/carousel1.png"
                     className={`${styles.homeImage}`}
-                />
+                /> */}
+                <Carousel>
+                    <img src="/images/carousel1.png" alt="Image 1" />
+                    <img src="/images/carousel2.png" alt="Image 1" />
+                    <img src="/images/carousel3.png" alt="Image 1" />
+                    <img src="/images/carousel4.png" alt="Image 1" />
+                    <img src="/images/carousel5.png" alt="Image 1" />
+                </Carousel>
             </div>
             <ExpertCard />
             <SectionHeading line1="Our Celebrity Clients" />
