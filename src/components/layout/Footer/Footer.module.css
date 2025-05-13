@@ -155,3 +155,37 @@
   font-size: 18px;
   font-weight: 600;
 }
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1000px) {
+  .footerMain {
+    grid-template-columns: 1fr;
+  }
+  .footerForm {
+    position: relative;
+    bottom: 0rem;
+    left: 0rem;
+    scale: 1;
+    margin-bottom: 0rem;
+  }
+  .footerForm,
+  .footer {
+    width: 90%;
+    margin: 0px auto;
+  }
+  .tagsWrapper {
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 700px) {
+  .contentSection {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 400px) {
+  .contentSection {
+    grid-template-columns: 1fr;
+  }
+}
