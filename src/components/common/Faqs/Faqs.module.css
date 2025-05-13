@@ -106,3 +106,21 @@
   bottom: 0;
   right: 0;
 }
+.qnaContainerMobile {
+  display: none;
+}
+@media (max-width: 1250px) {
+  .qnaContainer {
+    display: none;
+  }
+  .qnaContainerMobile {
+    display: block;
+  }
+}
+
+@media (max-width: 1150px) {
+  .faqContainer {
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+}

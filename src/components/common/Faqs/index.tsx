@@ -1,4 +1,5 @@
 
+import AccordionFaq from "../AccordiaFaq";
 import styles from "./Faqs.module.css";
 const Faqs = () => {
     // faq
@@ -77,6 +78,11 @@ const Faqs = () => {
                     />
                 </div>
             </div>
+            <div className={`${styles.qnaContainerMobile}`}>
+
+                <AccordionFaq qna={qna} />
+            </div>
+
         </>
     );
 }
