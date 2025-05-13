@@ -46,3 +46,13 @@
   color: var(--text-theme-color);
   cursor: pointer;
 }
+
+@media (max-width: 1240px) {
+  .priceTableContainer {
+    width: 100%;
+    max-width: 95%;
+    margin: auto auto;
+    overflow-x: scroll;
+    border-radius: var(--standard-border-radius);
+  }
+}

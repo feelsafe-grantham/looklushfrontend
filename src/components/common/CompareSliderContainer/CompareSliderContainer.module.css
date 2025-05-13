@@ -1,8 +1,8 @@
-.reelWrapper {
+.compareWrapper {
   background-color: var(--bg-section-color);
   padding: 50px 0;
 }
-.reelContainer {
+.compareContainer {
   max-width: var(--max-width-container);
   margin: 0px auto;
   display: grid;
@@ -10,13 +10,13 @@
   place-items: center;
   gap: 50px 20px;
 }
-@media (max-width: 940px) {
-  .reelContainer {
+@media (max-width: 1230px) {
+  .compareContainer {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media (max-width: 640px) {
-  .reelContainer {
+@media (max-width: 940px) {
+  .compareContainer {
     grid-template-columns: 1fr;
   }
 }

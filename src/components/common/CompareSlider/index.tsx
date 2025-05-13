@@ -4,7 +4,7 @@ import styles from './CompareSlider.module.css'
 const CompareSlider = ({ before = "/images/before1.png", after = "/images/after1.png" }) => {
     const [sliderValue, setSliderValue] = useState(50);
 
-    const handleSlide = (e) => {
+    const handleSlide = (e: any) => {
         setSliderValue(e.target.value);
     };
 

@@ -49,8 +49,10 @@ const ReelContainer = async () => {
     const Reel = await fetchReels();
 
     return (
-        <div className={`${styles.reelContainer}`}>
-            {Reel.map((reel, index) => <ReelCard key={index} Reel={reel} />)}
+        <div className={`${styles.reelWrapper}`}>
+            <div className={`${styles.reelContainer}`}>
+                {Reel.map((reel, index) => <ReelCard key={index} Reel={reel} />)}
+            </div>
         </div>
     )
 }

@@ -3,14 +3,13 @@
   overflow: hidden;
   height: 100%;
   width: 100%;
-
   display: flex;
   justify-content: center;
 }
 
 .card {
   height: 100%;
-  width: 90%;
+  width: 95%;
   margin: auto;
   position: absolute;
   background-size: cover;
@@ -38,7 +37,7 @@
 }
 
 .icon {
-  background-color: white;
+  background-color: var(--bg-white-color);
   border-radius: 20px;
   padding: 6px 12px;
   font-size: 14px;

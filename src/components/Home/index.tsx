@@ -1,6 +1,5 @@
 import styles from "./Home.module.css";
 import Form from "../common/Form";
-import CompareCard from "../common/CompareCard";
 import SwiperCard from "../common/SwiperCard";
 import ExpertCard from "../common/ExpertCard";
 import SectionHeading from "../common/SectionHeading";
@@ -10,36 +9,9 @@ import PriceTabel from "../common/PriceTable";
 import Carousel from "../common/Carousel";
 import VideoComp from "../common/Video";
 import ReelContainer from "./ReelContainer";
+import CompareSliderContainer from "../common/CompareSliderContainer";
 const Home = () => {
-    const compareData = [
-        {
-            clientName: "Client Name Here",
-            starRating: 5,
-            clientText:
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit.t consectetur adipisict consectetur adipisicing elit.",
-            imageBefore: "/images/before2.png",
-            imageAfter: "/images/after2.png",
-            imageAlt: "",
-        },
-        {
-            clientName: "Client Name Here",
-            starRating: 5,
-            clientText:
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit.t consectetur adipisict consectetur adipisicing elit.",
-            imageBefore: "/images/before2.png",
-            imageAfter: "/images/after2.png",
-            imageAlt: "",
-        },
-        {
-            clientName: "Client Name Here",
-            starRating: 5,
-            clientText:
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit.t consectetur adipisict consectetur adipisicing elit.",
-            imageBefore: "/images/before2.png",
-            imageAfter: "/images/after2.png",
-            imageAlt: "",
-        },
-    ];
+
     const videoUrl = "/videos/video.mp4";
     const links = [
         { label: "Home", value: "/" },
@@ -102,10 +74,7 @@ const Home = () => {
             />
             <SectionHeadPara para="  Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
             <VideoComp videoUrl={videoUrl} />
-            <div className={`${styles.compareSliderContainer}`}>
-                {compareData.map((compare, index) => <CompareCard CompareCard={compare} key={index} />
-                )}
-            </div>
+            <CompareSliderContainer />
             <SectionHeading line1="Nothing Complex Here" />
             <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
             <PriceTabel />
@@ -127,7 +96,7 @@ const Home = () => {
                 </div>
             </div>
             <SectionHeading line1="Frequently Asked Questions" line2="& Answers" />
-            <Faqs />  {/**/}
+            <Faqs />
 
         </div>
     );
