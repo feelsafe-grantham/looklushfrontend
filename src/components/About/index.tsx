@@ -166,9 +166,10 @@ const About = () => {
                     {features.map((item, index) => (
                         <li key={index} className={styles.featureItem}>
                             <span className={styles.emoji}>🍓</span>
-                            <span className={styles.title}>{item.title}</span>
-                            <span className={styles.description}>: {item.description}</span>
-                        </li>
+                            <div className={styles.textWrapper}>
+                                <span className={styles.title}>{item.title}</span>
+                                <span className={styles.description}>: {item.description}</span>
+                            </div></li>
                     ))}
                 </ul>
             </div>

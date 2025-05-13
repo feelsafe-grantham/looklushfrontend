@@ -8,12 +8,11 @@
 .locationContainer {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 50px;
 }
 /* line */
 .experienceContainer {
-  /* max-width: var(--max-width-container);
-  margin: 0px auto; */
   position: relative;
 }
 .leafImage {
@@ -85,19 +84,26 @@
 }
 
 .featureItem {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: flex-start;
+  column-gap: 10px;
+  margin-bottom: 10px;
 }
 .emoji {
-  margin-right: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.textWrapper {
+  display: inline;
+  font-size: 16px;
+  line-height: 1.5;
+  word-break: break-word;
 }
 .title {
   font-weight: 700;
-  color: var(--text-theme-color);
   margin-right: 0.3rem;
+  color: var(--text-theme-color);
 }
 .description {
   color: var(--text-dark-color);
@@ -155,6 +161,7 @@
 .socialContainer {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
 }
 .socialImage {
@@ -237,4 +244,17 @@
   margin-top: auto;
   display: block;
   padding-bottom: 20px;
+}
+
+@media (max-width: 1000px) {
+}
+@media (max-width: 576px) {
+  .headingcontainer {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 376px) {
+  .headingcontainer {
+    font-size: 1rem;
+  }
 }
