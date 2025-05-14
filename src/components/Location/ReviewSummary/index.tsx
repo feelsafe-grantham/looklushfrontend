@@ -18,7 +18,6 @@ const ReviewSummary = () => {
     return (
         <div className={styles.reviewSummary}>
 
-
             <div className={styles.container}>
                 {/* Average Rating */}
                 <div className={styles.average}>

@@ -58,8 +58,19 @@
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 .map {
-  border-radius: var(--standard-border-radius);
-  margin: auto;
   width: 90%;
+  margin: auto;
   height: 100%;
+  border-radius: var(--standard-border-radius);
+}
+
+@media (max-width: 768px) {
+  .addressContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px;
+  }
+  .address {
+    margin: 0px auto;
+  }
 }
