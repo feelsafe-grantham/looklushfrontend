@@ -15,9 +15,9 @@
   position: relative;
 }
 .faqSearchBar {
-  border: 1px solid var(--text-light-color);
   padding: 0px 5px;
   padding-left: 26px;
+  border: 1px solid var(--text-light-color);
 }
 .faqSearchIcon {
   position: absolute;
@@ -39,6 +39,7 @@
 .faqProblemContainer {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 100px;
 }
@@ -82,7 +83,6 @@
   grid-template-columns: 1fr 1fr;
   gap: 0px 20px;
 }
-
 .questionsContainer {
   display: flex;
   flex-direction: column;
@@ -135,4 +135,29 @@
 .qnaImage {
   height: 350px;
   margin: auto;
+}
+.qnaMobileContainer {
+  display: none;
+}
+@media (max-width: 768px) {
+  .faqProblemContainer {
+    gap: 20px;
+  }
+  .qnaContainer {
+    display: none;
+  }
+  .qnaMobileContainer {
+    display: block;
+  }
+}
+@media (max-width: 400px) {
+  .faqSearchBarContainer {
+    padding: 70px 0px;
+  }
+  .faqSearchBarWrapper {
+    width: 100%;
+  }
+  .faqSearchBar {
+    width: 80%;
+  }
 }

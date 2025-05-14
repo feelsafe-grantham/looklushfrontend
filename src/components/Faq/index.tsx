@@ -2,6 +2,7 @@
 import { useState } from "react";
 import styles from "./Faqs.module.css"
 import { CiSearch } from "react-icons/ci";
+import AccordionFaq from "../common/AccordiaFaq";
 
 const Faqs = () => {
     const [query, setQuery] = useState<string>("")
@@ -140,7 +141,13 @@ const Faqs = () => {
                 <form onSubmit={handleSubmit}>
                     <div className={`${styles.faqSearchBarWrapper}`}>
                         <CiSearch size={25} className={`${styles.faqSearchIcon}`} />
-                        <input value={query} onChange={(e) => setQuery(e.target.value)} className={`${styles.faqSearchBar}`} type="text" placeholder="Search your queries.." />
+                        <input
+                            type="text"
+                            value={query}
+                            placeholder="Search your queries.."
+                            className={`${styles.faqSearchBar}`}
+                            onChange={(e) => setQuery(e.target.value)}
+                        />
                         <button className={`${styles.faqSearchButton}`} type="submit">Search</button>
                     </div>
                 </form>
@@ -179,6 +186,9 @@ const Faqs = () => {
                         alt="qna image"
                     />
                 </div>
+            </div>
+            <div className={`${styles.qnaMobileContainer}`}>
+                <AccordionFaq qna={qna} />
             </div>
         </div>
     )
