@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./LaserBurn.module.css";
+import Carousel from "@/components/common/Carousel";
 
 const LaserBurnSection = () => {
   const btnLinks = [
@@ -23,13 +24,13 @@ const LaserBurnSection = () => {
   return (
     <div className={styles.container}>
       <div className={styles.imageWrapper}>
-        <button className={styles.navArrow}>❮</button>
-        <img
-          src="/images/homecard1.png"
-          alt="Laser Burn Treatment"
-          className={styles.image}
-        />
-        <button className={styles.navArrow}>❯</button>
+        <Carousel>
+          <img src="/images/carousel1.png" alt="Image 1" />
+          <img src="/images/carousel2.png" alt="Image 1" />
+          <img src="/images/carousel3.png" alt="Image 1" />
+          <img src="/images/carousel4.png" alt="Image 1" />
+          <img src="/images/carousel5.png" alt="Image 1" />
+        </Carousel>
       </div>
       <h2 className={styles.title}>Is Laser Burns?</h2>
       <div className={styles.buttonGroup}>

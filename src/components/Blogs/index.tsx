@@ -1,5 +1,6 @@
 import SectionHeading from "../common/SectionHeading";
 import ReelCard from "../Home/ReelCard";
+import ReelContainer from "../Home/ReelContainer";
 import BlogCard from "./BlogCard";
 import styles from "./BlogsComp.module.css";
 import LaserBurnSection from "./LaserBurn";
@@ -35,9 +36,7 @@ const BlogsComp = () => {
     return (
         <div>
             <LaserBurnSection />
-            <div className={styles.reelContainer}>
-                {Reel.map((Reel) => <ReelCard Reel={Reel} />)}
-            </div>
+            <ReelContainer />
             <SectionHeading line1="Blog Topics" />
             <div className={styles.blogTopicsContainer} >
                 {blogTopics.map((topic) =>

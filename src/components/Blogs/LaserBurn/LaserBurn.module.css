@@ -1,15 +1,14 @@
 .container {
   text-align: center;
-  padding: 40px 20px;
 }
 
 .imageWrapper {
-  position: relative;
-  display: inline-block;
   width: 100%;
-  max-width: var(--max-width-container);
-  border-radius: 20px;
   overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  display: inline-block;
+  max-width: var(--max-width-container);
 }
 
 .image {
