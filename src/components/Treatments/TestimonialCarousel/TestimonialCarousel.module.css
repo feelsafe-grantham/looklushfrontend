@@ -1,6 +1,6 @@
 .carouselWrapper {
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
 .treatmentLeafRight {
   top: -110%;
@@ -8,9 +8,8 @@
   position: absolute;
 }
 .treatmentLeafLeft {
-  /* height: 640px; */
-  bottom: -40%;
   left: -25%;
+  bottom: -40%;
   position: absolute;
 }
 
@@ -59,7 +58,6 @@
 
 .stars {
   color: #ffc107;
-
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
@@ -122,5 +120,11 @@
   .testimonialSection,
   .imageSection {
     max-width: 90%;
+  }
+  .blurredImg {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
   }
 }

@@ -63,7 +63,13 @@ export default function TestimonialCarousel() {
                     </div>
                 </div>
                 <div className={styles.imageSection}>
-                    <Image src={current.displayImage} alt="Testimonial Visual" width={300} height={400} className={styles.blurredImg} />
+                    <Image
+                        width={500}
+                        height={500}
+                        alt="Testimonial Visual"
+                        src={current.displayImage}
+                        className={styles.blurredImg}
+                    />
                     <div className={styles.imageNav}>
                         <button onClick={prev}>&#9664;</button>
                         <button onClick={next}>&#9654;</button>
