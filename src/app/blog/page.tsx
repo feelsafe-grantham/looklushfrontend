@@ -1,5 +1,6 @@
 import BlogsComp from "@/components/Blogs";
 import { apiClient } from "@/lib/api/apiClient";
+import { ENDPOINTS } from "@/lib/api/endpoints";
 import { BlogType } from "@/lib/types";
 import { Metadata } from 'next';
 export const metadata: Metadata = {
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 
 export default async function Blogs() {
-    const blogs: any = await apiClient.get("/get-all-blogs/");
+    const blogs: any = await apiClient.get(ENDPOINTS.BLOGS);
     const data: BlogType[] = blogs?.data;
     return (
         <BlogsComp blogs={data} />
