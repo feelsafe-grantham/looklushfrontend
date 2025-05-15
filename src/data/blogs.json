@@ -98,5 +98,15 @@
     "imagehr": "/images/carousel1.png",
     "author_name": "John Doe",
     "updated_date": "26 June 2023"
+  },
+  {
+    "id": 11,
+    "title": "The Importance of Classical Design in a Modern World",
+    "description": "Discover why classical design principles remain relevant in today's fast-paced, digital-first world.",
+    "content": "<h2>Why Classical Design Still Matters</h2><p>In a world driven by trends and rapid change, classical design principles offer a timeless foundation that ensures both <strong>beauty</strong> and <strong>functionality</strong>.</p><p>From symmetry and proportion to balance and detail, classical design brings a sense of order and elegance that's often missing in purely modern layouts.</p><h2>Key Principles of Classical Design</h2><ul><li><strong>Symmetry:</strong> Balance on both sides creates harmony.</li><li><strong>Proportion:</strong> Proper sizing of elements enhances visual comfort.</li><li><strong>Hierarchy:</strong> Clear structure guides the viewer naturally.</li></ul><p>These principles aren’t just for museums or history books — they actively improve digital design as well.</p><h2>Modern Use Cases</h2><p>Even tech companies and minimal brands are embracing classical touches. Think of serif fonts in digital magazines, symmetrical layouts in portfolios, or bold typography echoing Roman inscriptions.</p><blockquote>“Classical design isn't about the past — it's about clarity, structure, and timeless beauty.”</blockquote><p>Incorporating these elements doesn’t make your design old — it makes it <em>enduring</em>.</p><h2>Conclusion</h2><p>Whether you’re designing a home, website, or logo — grounding your work in classical principles gives it depth and durability that trends can't offer.</p>",
+    "imagesq": "/images/before2.png",
+    "imagehr": "/images/carousel1.png",
+    "author_name": "John Doe",
+    "updated_date": "26 June 2023"
   }
 ]

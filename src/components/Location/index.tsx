@@ -32,8 +32,8 @@ const LocationComp = () => {
       <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
       <VideoComp />
       <ReviewSummary />
-      {/*  <SectionHeading line1="Frequently Asked " line2="Questions" />
-      <Faqs /> */}
+      <SectionHeading line1="Frequently Asked " line2="Questions" />
+      <Faqs />
     </div>
   );
 };

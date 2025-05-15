@@ -4,8 +4,9 @@ import { getIdFromBlogSlug } from "@/lib/helper";
 type PageProps = {
     params: { title: string };
 };
-const BlogDetailPage = ({ params }: PageProps) => {
-    const id = Number(getIdFromBlogSlug(params.title))
+const BlogDetailPage = async ({ params }: PageProps) => {
+    const { title } = await params;
+    const id = Number(getIdFromBlogSlug(title))
     const blog = blogs.find(blog => blog.id == id)
     return <BlogDetail blog={blog} />;
 };

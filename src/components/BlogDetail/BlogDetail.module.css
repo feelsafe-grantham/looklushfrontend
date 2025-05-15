@@ -11,6 +11,7 @@
   flex-direction: column;
   gap: 20px;
 }
+
 .title {
   color: var(--text-dark-color);
   font-weight: 700;
@@ -30,12 +31,152 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .author,
 .date {
   color: var(--text-dark-color);
   display: inline-block;
   width: fit-content;
   font-weight: 500;
+}
+
+.content {
+  color: var(--text-dark-color);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 100%;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  padding: 1rem 0;
+}
+
+/* Paragraphs */
+.content p {
+  margin: 1rem 0;
+}
+
+/* Headings */
+.content h1,
+.content h2,
+.content h3 {
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 1.5rem 0 1rem;
+  color: var(--text-dark-color, #111);
+}
+
+.content h1 {
+  font-size: 2rem;
+}
+.content h2 {
+  font-size: 1.5rem;
+}
+.content h3 {
+  font-size: 1.25rem;
+}
+
+/* Strong and Emphasis */
+.content strong {
+  font-weight: bold;
+  color: var(--text-dark-color, #222);
+}
+
+.content em {
+  font-style: italic;
+}
+
+/* Unordered Lists */
+.content ul {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+  list-style: disc;
+}
+
+.content ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Ordered Lists */
+.content ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+  list-style: decimal;
+}
+
+.content ol li {
+  margin-bottom: 0.5rem;
+}
+
+/* Blockquote */
+.content blockquote {
+  border-left: 4px solid var(--text-theme-dark, #ccc);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: #666;
+  font-style: italic;
+}
+
+/* Images */
+.content img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 8px;
+}
+
+/* Links */
+.content a {
+  color: #0070f3;
+  text-decoration: underline;
+}
+
+.content a:hover {
+  text-decoration: none;
+}
+
+/* Code */
+.content code {
+  background-color: #f4f4f4;
+  padding: 0.2rem 0.4rem;
+  font-family: monospace;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+/* Tables */
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.content table th,
+.content table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.content table th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .content {
+    font-size: 0.95rem;
+  }
+  .content h1 {
+    font-size: 1.6rem;
+  }
+  .content h2 {
+    font-size: 1.3rem;
+  }
+  .content h3 {
+    font-size: 1.15rem;
+  }
 }
 
 @media (max-width: 576px) {

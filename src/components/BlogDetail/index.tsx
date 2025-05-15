@@ -1,6 +1,5 @@
-import { getIdFromBlogSlug } from "@/lib/helper";
+import parse from 'html-react-parser';
 import styles from "./BlogDetail.module.css";
-import blogs from "@/data/blogs.json";
 export default async function BlogDetailPage({ blog }: any) {
 
 
@@ -22,7 +21,7 @@ export default async function BlogDetailPage({ blog }: any) {
                     </div>
                 </div>
                 <div className={`${styles.content}`}>
-
+                    {parse(blog.content)}
                 </div>
             </div>
         </div>
