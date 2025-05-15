@@ -4,21 +4,11 @@ import ReelContainer from "../Home/ReelContainer";
 import BlogCard from "./BlogCard";
 import styles from "./BlogsComp.module.css";
 import LaserBurnSection from "./LaserBurn";
+import blogs from "@/data/blogs.json"
 
 const BlogsComp = () => {
     const blogTopics = ["Laser Burns", "Laser Burns", "Laser Burns", "Laser Burns", "Laser Burns", "Laser Burns"];
-    const blogs = [
-        {
-            id: 1,
-            title: "This is is my blog titleThis is is my blog titleThis is is my blog titleThis is is my blog title",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quia.",
-            content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quia.",
-            imagesq: "/images/before2.png",
-            imagehr: "",
-            author_name: "John Doe",
-            updated_date: "26 june 2023",
-        },
-    ]
+    const blogss = blogs;
     return (
         <div>
             <LaserBurnSection />
@@ -29,7 +19,7 @@ const BlogsComp = () => {
                     <div className={styles.blogTopic}>{topic}</div>
                 )}
             </div>
-            {blogs.map((blog) => <BlogCard key={blog.id} blog={blog} />)}
+            {blogss.map((blog) => <BlogCard key={blog.id} blog={blog} />)}
         </div>
     )
 }

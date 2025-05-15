@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "title": "Understanding Car Detailing – An In-Depth Guide",
+    "description": "A comprehensive overview of professional car detailing and its benefits.",
+    "content": "<p><strong>Car detailing</strong> is more than just a car wash. It involves a thorough cleaning, restoration, and finishing of a vehicle to produce a show-quality cleanliness and polish. In this article, we explore every step involved, from interior vacuuming to paint correction.</p><p>Detailing includes both exterior and interior services. Exterior detailing involves cleaning and restoring the vehicle’s finish, chrome trim, windows, wheels, and tires. Interior detailing includes deep cleaning of upholstery, leather conditioning, and dashboard polishing.</p>",
+    "imagesq": "/images/before2.png",
+    "imagehr": "/images/carousel1.png",
+    "author_name": "John Doe",
+    "updated_date": "26 June 2023"
+  },
+  {
+    "id": 2,
+    "title": "Top 10 Mistakes Car Owners Make When Cleaning Their Vehicles",
+    "description": "Learn what not to do when trying to maintain your car’s look.",
+    "content": "<p>Many car owners think that using household detergents or cheap sponges will get the job done. However, these common practices can damage your paint and interior. <em>Proper materials and techniques</em> are crucial for safe and effective car cleaning.</p><ul><li>Using dish soap instead of car shampoo</li><li>Skipping drying steps</li><li>Cleaning in direct sunlight</li></ul><p>Understanding these mistakes will save you time and money in the long run.</p>",
+    "imagesq": "/images/before2.png",
+    "imagehr": "/images/carousel1.png",
+    "author_name": "John Doe",
+    "updated_date": "26 June 2023"
+  },
+  {
+    "id": 3,
+    "title": "Interior Detailing Tips for a Fresh Cabin Feel",
+    "description": "Make your car's interior feel brand new with these pro tips.",
+    "content": "<p>Keeping your car interior spotless is not just about looks – it's about comfort and hygiene. Vacuuming the seats and carpets is just the start. Use a steam cleaner for fabric seats and a leather conditioner for leather ones.</p><p>Don’t forget to clean the air vents and use a UV protectant on the dashboard. These steps will help prevent cracking and fading over time.</p>",
+    "imagesq": "/images/before2.png",
+    "imagehr": "/images/carousel1.png",
+    "author_name": "John Doe",
+    "updated_date": "26 June 2023"
+  },
+  {
+    "id": 4,
+    "title": "Why Paint Correction Is Worth the Investment",
+    "description": "Discover how paint correction brings your car’s surface back to life.",
+    "content": "<p>Paint correction involves removing swirl marks, scratches, and oxidation from your car’s paint. This process uses compounds and polishers to level the surface and restore gloss.</p><p><strong>The result?</strong> A showroom-worthy shine that enhances the car’s appearance and resale value. Professionals often recommend sealing or ceramic coating after correction for long-term protection.</p>",
+    "imagesq": "/images/before2.png",
+    "imagehr": "/images/carousel1.png",
+    "author_name": "John Doe",
+    "updated_date": "26 June 2023"
+  },
+  {
+    "id": 5,
+    "title": "Step-by-Step Guide to DIY Engine Bay Detailing",
+    "description": "Clean your engine bay safely and effectively at home.",
+    "content": "<p>Start by covering sensitive areas like the battery and air intake. Use a degreaser and a detailing brush to scrub away grime. Rinse gently with low-pressure water, then dry with microfiber towels.</p><p>Apply a plastic or rubber conditioner to hoses and covers for a like-new finish. Regular engine bay detailing not only looks good but also helps with maintenance.</p>",
+    "imagesq": "/images/before2.png",
+    "imagehr": "/images/carousel1.png",
+    "author_name": "John Doe",
+    "updated_date": "26 June 2023"
+  },
+  {
+    "id": 6,
+    "title": "How to Maintain a Ceramic Coated Car",
+    "description": "Keep your ceramic-coated vehicle looking brand new with these maintenance tips.",
+    "content": "<p>Ceramic coatings provide long-lasting protection but require proper care. Use a pH-neutral shampoo and avoid automatic car washes with harsh brushes.</p><p>Dry the vehicle using a microfiber towel or blower, and perform regular inspections for water spots or contaminants. Maintenance sprays every few months can enhance hydrophobic properties.</p>",
+    "imagesq": "/images/before2.png",
+    "imagehr": "/images/carousel1.png",
+    "author_name": "John Doe",
+    "updated_date": "26 June 2023"
+  },
+  {
+    "id": 7,
+    "title": "The Science Behind Car Wax vs. Sealant vs. Ceramic Coating",
+    "description": "Understand the difference between these three protective layers for your car.",
+    "content": "<p>Wax, sealant, and ceramic coatings serve similar purposes but vary greatly in composition and longevity. Carnauba wax offers a warm glow but lasts the shortest. Sealants are synthetic and provide better durability. Ceramic coatings are the most advanced, forming a chemical bond with the paint.</p><p>Choosing the right one depends on your budget, time, and desired finish.</p>",
+    "imagesq": "/images/before2.png",
+    "imagehr": "/images/carousel1.png",
+    "author_name": "John Doe",
+    "updated_date": "26 June 2023"
+  },
+  {
+    "id": 8,
+    "title": "How Often Should You Detail Your Car?",
+    "description": "Find out the optimal frequency for detailing to keep your car in prime condition.",
+    "content": "<p>It’s recommended to detail your car every 4–6 months, depending on usage and climate. Regular washing every two weeks helps maintain cleanliness between full details.</p><p>For high-mileage vehicles or those exposed to harsh elements, consider quarterly detailing sessions with periodic touch-ups in between.</p>",
+    "imagesq": "/images/before2.png",
+    "imagehr": "/images/carousel1.png",
+    "author_name": "John Doe",
+    "updated_date": "26 June 2023"
+  },
+  {
+    "id": 9,
+    "title": "Tools Every Car Detailer Should Own",
+    "description": "Equip yourself with the essentials for professional-grade detailing results.",
+    "content": "<p>A good detailer’s kit includes microfiber towels, foam applicators, detailing brushes, a dual-action polisher, and a quality vacuum. Also stock up on all-purpose cleaner, clay bar, tire dressing, and paint sealant.</p><p>Having the right tools not only improves efficiency but also protects your car’s surfaces from damage.</p>",
+    "imagesq": "/images/before2.png",
+    "imagehr": "/images/carousel1.png",
+    "author_name": "John Doe",
+    "updated_date": "26 June 2023"
+  },
+  {
+    "id": 10,
+    "title": "Mobile Detailing vs. Shop Detailing – Which is Better?",
+    "description": "Weigh the pros and cons of mobile and in-shop car detailing services.",
+    "content": "<p>Mobile detailing offers convenience as professionals come to your location. It’s ideal for busy schedules or quick cleanups. However, in-shop detailing often provides better equipment, lighting, and controlled conditions.</p><p>Choose based on your needs – for full corrections or coatings, an in-shop visit may yield superior results.</p>",
+    "imagesq": "/images/before2.png",
+    "imagehr": "/images/carousel1.png",
+    "author_name": "John Doe",
+    "updated_date": "26 June 2023"
+  }
+]
