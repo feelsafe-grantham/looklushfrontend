@@ -1,7 +1,8 @@
 import Link from "next/link";
 import styles from "./BlogCard.module.css";
 import { generateBlogSlug } from "@/lib/helper";
-const BlogCard = ({ blog }: any) => {
+import { BlogType } from "@/lib/types";
+const BlogCard = ({ blog }: { blog: BlogType }) => {
   const blogSlug = generateBlogSlug(blog?.title, blog?.id);
   return (
     <div className={styles.card}>
@@ -9,7 +10,7 @@ const BlogCard = ({ blog }: any) => {
         <h2 className={styles.heading}>
           {blog.title}
         </h2>
-        <p className={styles.meta}>{blog?.author_name} | {blog?.updated_date}</p>
+        <p className={styles.meta}>{blog?.author_name} | {blog?.date}</p>
         <p className={styles?.description}>
           {blog.description}
         </p>
@@ -21,7 +22,7 @@ const BlogCard = ({ blog }: any) => {
       <div className={styles.imageSection}>
         <img
           alt={blog?.title}
-          src={blog?.imagesq}
+          src={blog?.image_sq}
           className={styles.image}
         />
       </div>

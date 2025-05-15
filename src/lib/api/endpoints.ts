@@ -1,5 +1,5 @@
 export const ENDPOINTS = {
-  BLOGS: "/api/blogs/",
+  BLOGS: "/get-all-blogs/",
   PRODUCTS: "/api/products/",
   SERVICES: "/api/services/",
   CAROUSEL: "/api/carousel/",

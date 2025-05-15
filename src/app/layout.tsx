@@ -1,5 +1,5 @@
 import "./globals.css";
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 import TopBar from "@/components/common/TopBar";
 import { Montserrat, Sour_Gummy } from "next/font/google"
 import Header from "@/components/layout/Header";
@@ -17,10 +17,10 @@ const sourGummy = Sour_Gummy({
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-export const metadata: Metadata = {
-  title: "Looklush Beauty",
-  description: "Looklush Beauty",
-};
+// export const metadata: Metadata = {
+//   title: "Looklush Beauty",
+//   description: "Looklush Beauty",
+// };
 
 export default function RootLayout({
   children,

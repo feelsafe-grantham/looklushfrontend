@@ -1,14 +1,14 @@
-import SectionHeading from "../common/SectionHeading";
-import ReelCard from "../Home/ReelCard";
-import ReelContainer from "../Home/ReelContainer";
 import BlogCard from "./BlogCard";
 import styles from "./BlogsComp.module.css";
 import LaserBurnSection from "./LaserBurn";
-import blogs from "@/data/blogs.json"
+import ReelContainer from "../Home/ReelContainer";
+import SectionHeading from "../common/SectionHeading";
+import { BlogType } from "@/lib/types";
 
-const BlogsComp = () => {
+
+const BlogsComp = ({ blogs }: { blogs: BlogType[] }) => {
     const blogTopics = ["Laser Burns", "Laser Burns", "Laser Burns", "Laser Burns", "Laser Burns", "Laser Burns"];
-    const blogss = blogs;
+
     return (
         <div>
             <LaserBurnSection />
@@ -19,7 +19,7 @@ const BlogsComp = () => {
                     <div className={styles.blogTopic}>{topic}</div>
                 )}
             </div>
-            {blogss.map((blog) => <BlogCard key={blog.id} blog={blog} />)}
+            {blogs.map((blog) => <BlogCard key={blog.id} blog={blog} />)}
         </div>
     )
 }

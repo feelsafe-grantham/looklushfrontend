@@ -10,6 +10,8 @@ import Carousel from "../common/Carousel";
 import VideoComp from "../common/Video";
 import ReelContainer from "./ReelContainer";
 import CompareSliderContainer from "../common/CompareSliderContainer";
+
+
 const Home = () => {
 
     const videoUrl = "/videos/video.mp4";

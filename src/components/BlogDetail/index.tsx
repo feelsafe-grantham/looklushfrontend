@@ -1,6 +1,6 @@
 import parse from 'html-react-parser';
 import styles from "./BlogDetail.module.css";
-export default async function BlogDetailPage({ blog }: any) {
+export default async function BlogDetailPage({ blog }: { blog: any }) {
 
 
     return (
@@ -17,7 +17,7 @@ export default async function BlogDetailPage({ blog }: any) {
                     />
                     <div className={`${styles.infoContainer}`}>
                         <span className={`${styles.author}`}>{blog.author_name}</span>
-                        <span className={`${styles.date}`}>Updated on {blog.updated_date}</span>
+                        <span className={`${styles.date}`}>Updated on {blog.date}</span>
                     </div>
                 </div>
                 <div className={`${styles.content}`}>
