@@ -4,35 +4,21 @@ import ReelContainer from "../Home/ReelContainer";
 import BlogCard from "./BlogCard";
 import styles from "./BlogsComp.module.css";
 import LaserBurnSection from "./LaserBurn";
+
 const BlogsComp = () => {
-    const comments = [
-        { user: "freyjalalila_", message: "OMG 😳😳😳" },
-        { user: "user420", message: "awesome 👍" },
-        { user: "catlover88", message: "this is so wholesome 🐱" },
-        { user: "techjunkie", message: "audio is perfect 🔊" },
-        { user: "nina_artz", message: "what a great smile! 😊" },
-    ];
-    const Reel = [
-        {
-            username: "amanpandey_11",
-            viewers: 120,
-            comments: comments,
-            videoUrl: "/videos/reel.mp4",
-        },
-        {
-            username: "_amanpandey_11",
-            viewers: 120,
-            comments: comments,
-            videoUrl: "/videos/reel.mp4",
-        },
-        {
-            username: "_aman11",
-            viewers: 120,
-            comments: comments,
-            videoUrl: "/videos/reel.mp4",
-        },
-    ];
     const blogTopics = ["Laser Burns", "Laser Burns", "Laser Burns", "Laser Burns", "Laser Burns", "Laser Burns"];
+    const blogs = [
+        {
+            id: 1,
+            title: "This is is my blog titleThis is is my blog titleThis is is my blog titleThis is is my blog title",
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quia.",
+            content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quia.",
+            imagesq: "/images/before2.png",
+            imagehr: "",
+            author_name: "John Doe",
+            updated_date: "26 june 2023",
+        },
+    ]
     return (
         <div>
             <LaserBurnSection />
@@ -43,7 +29,7 @@ const BlogsComp = () => {
                     <div className={styles.blogTopic}>{topic}</div>
                 )}
             </div>
-            <BlogCard />
+            {blogs.map((blog) => <BlogCard key={blog.id} blog={blog} />)}
         </div>
     )
 }

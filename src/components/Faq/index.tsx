@@ -32,12 +32,12 @@ const Faqs = () => {
         {
             question: "I am best coder in the world",
             answer:
-                "   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat itaque cupiditate iure adipisci soluta pariatur, consequuntur placeat quisquam deleniti necessitatibus?",
+                "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat itaque cupiditate iure adipisci soluta pariatur, consequuntur placeat quisquam deleniti necessitatibus?",
         },
         {
             question: "I am best coder in the world",
             answer:
-                "   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat itaque cupiditate iure adipisci soluta pariatur, consequuntur placeat quisquam deleniti necessitatibus?",
+                "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat itaque cupiditate iure adipisci soluta pariatur, consequuntur placeat quisquam deleniti necessitatibus?",
         },
         {
             question: "I am best coder in the world",

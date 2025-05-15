@@ -1,38 +1,27 @@
 import Link from "next/link";
 import styles from "./BlogCard.module.css";
-const BlogCard = () => {
+import { generateBlogSlug } from "@/lib/helper";
+const BlogCard = ({ blog }: any) => {
+  const blogSlug = generateBlogSlug(blog?.title, blog?.id);
   return (
     <div className={styles.card}>
       <div className={styles.textSection}>
         <h2 className={styles.heading}>
-          Welcome to our Aesthetic Clinic We
-          <br />
-          use most recent and up to date
-          <br />
-          Aesthetic and Laser Technology
+          {blog.title}
         </h2>
-        <p className={styles.meta}>Author Name | 26 June</p>
-        <p className={styles.description}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged.
+        <p className={styles.meta}>{blog?.author_name} | {blog?.updated_date}</p>
+        <p className={styles?.description}>
+          {blog.description}
         </p>
-        <p className={styles.description}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer.
-        </p>
-        <Link href="#" className={styles.button}>
+
+        <Link href={`/blog/${blogSlug}`} className={styles.button}>
           Show More!
         </Link>
       </div>
       <div className={styles.imageSection}>
         <img
-          src="/images/after1.png"
-          alt="Aesthetic Treatment"
+          alt={blog?.title}
+          src={blog?.imagesq}
           className={styles.image}
         />
       </div>
