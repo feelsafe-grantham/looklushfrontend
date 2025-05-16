@@ -1,7 +1,8 @@
 "use client"
-import React, { useEffect, useState, useRef } from 'react';
 import styles from './ReelCard.module.css';
-const ReelCard = ({ Reel }: any) => {
+import { VideoTestimonial } from '@/lib/types';
+import React, { useEffect, useState, useRef } from 'react';
+const ReelCard = ({ Reel }: { Reel: VideoTestimonial }) => {
     const { username, viewers, comments, videoUrl } = Reel;
     const [hearts, setHearts] = useState<{ id: number; left: number; color: string }[]>([]);
 
@@ -31,10 +32,11 @@ const ReelCard = ({ Reel }: any) => {
     }, []);
     return (
         <div className={styles.oneCard}>
+
             <div className={styles.header}>
                 <div className={styles.profile}><span className={styles.dot}></span>{username}</div>
                 <div className={styles.liveTag}>LIVE</div>
-                <div className={styles.viewCount}><span className={styles.eye}>👁</span> {viewers}</div>
+                <div className={styles.viewCount}><span className={styles.eye}>👁</span>{viewers}</div>
                 <div>
                     ❌
                 </div>

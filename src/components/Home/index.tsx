@@ -7,13 +7,13 @@ import ExpertCard from "../common/ExpertCard";
 import SectionHeading from "../common/SectionHeading";
 import SectionHeadPara from "../common/SectionHeadPara";
 import PriceTabel from "../common/PriceTable";
-import Carousel from "../common/Carousel";
 import VideoComp from "../common/Video";
 import ReelContainer from "./ReelContainer";
 import CompareSliderContainer from "../common/CompareSliderContainer";
+import { CarouselWrapper } from "../common/Carousel";
 
 
-const Home = () => {
+const Home = async () => {
     const videoUrl = "/videos/video.mp4";
     const links = [
         { label: "Home", value: "/" },
@@ -46,14 +46,8 @@ const Home = () => {
 
     return (
         <div className={`${styles.homeContainer}`}>
+            <CarouselWrapper />
 
-            <Carousel>
-                <img src="/images/cars1.jpeg" alt="Image 1" />
-                <img src="/images/cars2.jpeg" alt="Image 1" />
-                <img src="/images/cars3.jpeg" alt="Image 1" />
-                <img src="/images/cars4.jpeg" alt="Image 1" />
-                <img src="/images/cars5.jpeg" alt="Image 1" />
-            </Carousel>{/* Carousel client */}
 
             <ExpertCard />
 

@@ -1,4 +1,4 @@
-const Loading = () => {
+const CarouselShimmer = () => {
     return (
         <div className="w-full max-w-screen-xl mx-auto ">
 
@@ -27,4 +27,4 @@ const Loading = () => {
     );
 };
 
-export default Loading;
+export default CarouselShimmer;

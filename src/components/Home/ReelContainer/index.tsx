@@ -1,49 +1,48 @@
+import { apiClient } from "@/lib/api/apiClient";
 import ReelCard from "../ReelCard";
 import styles from "./ReelContainer.module.css"
-export interface ReelType {
-    username: string;
-    viewers: number;
-    comments: { user: string; message: string }[];
-    videoUrl: string;
-    fallbackImage: string;
-}
-async function fetchReels(): Promise<ReelType[]> {
-    // Replace with your actual backend or API call
-    return [
-        {
-            username: "amanpandey_11",
-            viewers: 120,
-            comments: [
-                { user: "freyjalalila_", message: "OMG 😳😳😳" },
-                { user: "user420", message: "awesome 👍" },
-                { user: "catlover88", message: "this is so wholesome 🐱" },
-            ],
-            videoUrl: "/videos/reel.mp4",
-            fallbackImage: "",
-        },
-        {
-            username: "_aman11",
-            viewers: 120,
-            comments: [
-                { user: "freyjalalila_", message: "OMG 😳😳😳" },
-                { user: "user420", message: "awesome 👍" },
-                { user: "catlover88", message: "this is so wholesome 🐱" },
-            ],
-            videoUrl: "/videos/reel.mp4",
-            fallbackImage: "",
-        },
-        {
-            username: "_aman11",
-            viewers: 120,
-            comments: [
-                { user: "freyjalalila_", message: "OMG 😳😳😳" },
-                { user: "user420", message: "awesome 👍" },
-                { user: "catlover88", message: "this is so wholesome 🐱" },
-            ],
-            videoUrl: "/videos/reel.mp4",
-            fallbackImage: "",
-        },
-    ];
+import { ENDPOINTS } from "@/lib/api/endpoints";
+import { ApiResponse, VideoTestimonial } from "@/lib/types";
+
+async function fetchReels(): Promise<VideoTestimonial[]> {
+    const response: ApiResponse<VideoTestimonial[]> = await apiClient.get(ENDPOINTS.REELS);
+    return response?.data;
+
+    // return [
+    //     {
+    //         username: "amanpandey_11",
+    //         viewers: 120,
+    //         comments: [
+    //             { user: "freyjalalila_", message: "OMG 😳😳😳" },
+    //             { user: "user420", message: "awesome 👍" },
+    //             { user: "catlover88", message: "this is so wholesome 🐱" },
+    //         ],
+    //         videoUrl: "/videos/reel.mp4",
+    //         fallbackImage: "",
+    //     },
+    //     {
+    //         username: "_aman11",
+    //         viewers: 120,
+    //         comments: [
+    //             { user: "freyjalalila_", message: "OMG 😳😳😳" },
+    //             { user: "user420", message: "awesome 👍" },
+    //             { user: "catlover88", message: "this is so wholesome 🐱" },
+    //         ],
+    //         videoUrl: "/videos/reel.mp4",
+    //         fallbackImage: "",
+    //     },
+    //     {
+    //         username: "_aman11",
+    //         viewers: 120,
+    //         comments: [
+    //             { user: "freyjalalila_", message: "OMG 😳😳😳" },
+    //             { user: "user420", message: "awesome 👍" },
+    //             { user: "catlover88", message: "this is so wholesome 🐱" },
+    //         ],
+    //         videoUrl: "/videos/reel.mp4",
+    //         fallbackImage: "",
+    //     },
+    // ];
 }
 const ReelContainer = async () => {
     const Reel = await fetchReels();
