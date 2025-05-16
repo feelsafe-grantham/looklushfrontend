@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Home() {
-  const carousel = await apiClient.get(ENDPOINTS.CAROUSEL)
+  // const carousel = await apiClient.get(ENDPOINTS.CAROUSEL)
 
   return (
     <HomeComp />
