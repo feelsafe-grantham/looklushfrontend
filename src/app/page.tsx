@@ -1,4 +1,6 @@
 import HomeComp from "@/components/Home";
+import { apiClient } from "@/lib/api/apiClient";
+import { ENDPOINTS } from "@/lib/api/endpoints";
 import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'LookLush | Advanced Skin & Hair Treatments in Gurugram & Mumbai',
@@ -6,7 +8,9 @@ export const metadata: Metadata = {
   keywords: ['LookLush', 'skin clinic', 'hair treatment', 'Gurugram', 'Mumbai', 'dermatology', 'PRP', 'anti-aging'],
 };
 
-export default function Home() {
+export default async function Home() {
+  const carousel = await apiClient.get(ENDPOINTS.CAROUSEL)
+
   return (
     <HomeComp />
   );

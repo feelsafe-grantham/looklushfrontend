@@ -83,7 +83,7 @@ const Home = () => {
                 line2="with Dr. Poonam Patel"
             />
 
-            <SectionHeadPara para="  Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
+            <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
 
             <VideoComp videoUrl={videoUrl} />
 
