@@ -1,3 +1,4 @@
+
 import Form from "../common/Form";
 import Faqs from "../common/Faqs";
 import styles from "./Home.module.css";
@@ -52,7 +53,7 @@ const Home = () => {
                 <img src="/images/cars3.jpeg" alt="Image 1" />
                 <img src="/images/cars4.jpeg" alt="Image 1" />
                 <img src="/images/cars5.jpeg" alt="Image 1" />
-            </Carousel>
+            </Carousel>{/* Carousel client */}
 
             <ExpertCard />
 
@@ -87,7 +88,7 @@ const Home = () => {
 
             <VideoComp videoUrl={videoUrl} />
 
-            <CompareSliderContainer />
+            <CompareSliderContainer /> {/* clint slider */}
 
             <SectionHeading line1="Nothing Complex Here" />
 
@@ -116,7 +117,7 @@ const Home = () => {
 
             <SectionHeading line1="Frequently Asked Questions" line2="& Answers" />
 
-            <Faqs />
+            <Faqs />{/*client */}
         </div>
     );
 };

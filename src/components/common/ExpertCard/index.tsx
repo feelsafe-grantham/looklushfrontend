@@ -1,7 +1,7 @@
 import styles from "./ExpertCard.module.css";
 const ExpertCard = () => {
     const homeCards = [
-        { image: "/images/homeCard1.png", title: "USFDA Approved Equipment" },
+        { image: "/images/homeCard1.jpg", title: "USFDA Approved Equipment" },
         { image: "/images/homeCard2.png", title: "Leading in Corporates" },
         { image: "/images/homeCard3.png", title: "Well Trained Experts" },
     ]
