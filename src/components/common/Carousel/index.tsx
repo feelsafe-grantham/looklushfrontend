@@ -3,15 +3,13 @@
 import React, { useEffect, useRef, useState, ReactElement } from "react";
 import styles from "./Carousel.module.css";
 
-
 interface CarouselProps {
     children: React.ReactElement[]; // Accept any type of valid React element
     showButtons?: boolean;
 }
 
 
-
-async function Carousel({ children, showButtons = false }: CarouselProps) {
+function Carousel({ children, showButtons = false }: CarouselProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const carouselBoxRef = useRef<HTMLDivElement>(null);
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -123,19 +121,5 @@ async function Carousel({ children, showButtons = false }: CarouselProps) {
     );
 }
 
-async function CarouselWrapper(
-
-) {
-    return <Carousel>
-        <img src="/images/cars1.jpeg" alt="Image 1" />
-        <img src="/images/cars2.jpeg" alt="Image 1" />
-        <img src="/images/cars3.jpeg" alt="Image 1" />
-        <img src="/images/cars4.jpeg" alt="Image 1" />
-        <img src="/images/cars5.jpeg" alt="Image 1" />
-    </Carousel>
-}
-
-
 export default Carousel;
-export { CarouselWrapper }
 

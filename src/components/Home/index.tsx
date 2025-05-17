@@ -10,7 +10,8 @@ import PriceTabel from "../common/PriceTable";
 import VideoComp from "../common/Video";
 import ReelContainer from "./ReelContainer";
 import CompareSliderContainer from "../common/CompareSliderContainer";
-import { CarouselWrapper } from "../common/Carousel";
+import Carousel from "../common/Carousel";
+import CarouselContainer from "../common/CarouselContainer";
 
 
 const Home = async () => {
@@ -46,8 +47,8 @@ const Home = async () => {
 
     return (
         <div className={`${styles.homeContainer}`}>
-            <CarouselWrapper />
 
+            <CarouselContainer />
 
             <ExpertCard />
 

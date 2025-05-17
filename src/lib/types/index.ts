@@ -15,6 +15,12 @@ export interface VideoTestimonial {
   videoUrl: string;
   fallbackImage?: string;
 }
+export interface HeroImagesType {
+  id: string;
+  image: string;
+  index: number;
+  url?: string;
+}
 export interface BlogType {
   id: string;
   title: string;
