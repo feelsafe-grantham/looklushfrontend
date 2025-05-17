@@ -6,7 +6,7 @@ import { ENDPOINTS } from "@/lib/api/endpoints";
 
 async function fetchCompareCards() {
     try {
-        const res: ApiResponse<CompareCardType[]> = await apiClient.get(ENDPOINTS.REELS);
+        const res: ApiResponse<CompareCardType[]> = await apiClient.get(ENDPOINTS.COMPARESLIDERHOME);
         const data = res?.data;
         return data;
     } catch (err) {

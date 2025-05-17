@@ -97,16 +97,16 @@ const Home = async () => {
                 <VideoContainer endpoint={ENDPOINTS.HOMEVIDEO} />
             </Suspense>
 
-            {/* <Suspense fallback={<CarouselShimmer />}>
+            <Suspense fallback={<CarouselShimmer />}>
                 <CompareSliderContainer />
-            </Suspense> */}
+            </Suspense>
 
-            {/* <SectionHeading line1="Nothing Complex Here" />
+            <SectionHeading line1="Nothing Complex Here" />
 
             <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
 
             <PriceTabel />
-
+            {/*
             <SectionHeading
                 line1="Welcome to Looklush Asthetic"
                 line2="& Laser Center"
