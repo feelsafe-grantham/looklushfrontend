@@ -5,8 +5,13 @@ import { ENDPOINTS } from "@/lib/api/endpoints";
 import { ApiResponse, VideoTestimonial } from "@/lib/types";
 
 async function fetchReels(): Promise<VideoTestimonial[]> {
-    const response: ApiResponse<VideoTestimonial[]> = await apiClient.get(ENDPOINTS.REELS);
-    return response?.data;
+    try {
+        const response: ApiResponse<VideoTestimonial[]> = await apiClient.get(ENDPOINTS.REELS);
+        return response?.data;
+    } catch (error) {
+        console.error("Failed to fetch hero images:", error);
+        return [];
+    }
 
     // return [
     //     {
@@ -46,6 +51,7 @@ async function fetchReels(): Promise<VideoTestimonial[]> {
 }
 const ReelContainer = async () => {
     const Reel = await fetchReels();
+    if (Reel.length === 0) return null
 
     return (
         <div className={`${styles.reelWrapper}`}>

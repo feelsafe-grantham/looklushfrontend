@@ -8,7 +8,7 @@ const CarouselShimmer = () => {
                     {[1].map((i) => (
                         <div
                             key={i}
-                            className="w-full h-48 bg-gray-200 animate-pulse rounded-lg"
+                            className="w-full h-64 bg-gray-200 animate-pulse rounded-lg"
                         />
                     ))}
                 </div>

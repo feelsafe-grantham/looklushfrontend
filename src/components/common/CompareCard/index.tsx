@@ -1,28 +1,30 @@
-
-import { Span } from "next/dist/trace";
+import { apiClient } from "@/lib/api/apiClient";
 import CompareSlider from "../CompareSlider";
 import styles from "./CompareCard.module.css"
-interface CompareCardProps {
-    clientName: string;
-    starRating: number;
-    clientText: string;
-    imageBefore: string;
-    imageAfter: string;
-    imageAlt?: string;
-}
-const CompareCard = ({ CompareCard }: { CompareCard: CompareCardProps }) => {
-    const { clientName = "Client Name Here", starRating = 5, clientText = "Lorem, ipsum dolor sit amet consectetur adipisicing elit.t consectetur adipisict consectetur adipisicing elit.", imageBefore = "/images/before2.png", imageAfter = "/images/after2.png", imageAlt } = CompareCard || {};
+import { ApiResponse, CompareCardType } from "@/lib/types";
+import { ENDPOINTS } from "@/lib/api/endpoints";
+
+
+const CompareCard = ({ CompareCard }: { CompareCard: CompareCardType }) => {
+    const {
+        client_name = "Client Name Here",
+        star_rating = 5,
+        client_text = "Lorem, ipsum dolor sit amet consectetur adipisicing elit.t consectetur adipisict consectetur adipisicing elit.",
+        image_before = "/images/before2.png",
+        image_after = "/images/after2.png",
+        image_alt = "",
+    } = CompareCard || {};
     return (
         <div className={styles.compareCardContainer}>
-            <h5 className={styles.clientName}>{clientName}</h5>
+            <h5 className={styles.clientName}>{client_name}</h5>
             <div className={`${styles.clientStarContainer}`}>
-                {[...Array(starRating)].map((_, i) => <span key={i}>⭐</span>)}
+                {[...Array(star_rating)].map((_, i) => <span key={i}>⭐</span>)}
             </div>
             <p className={`${styles.clientText}`}>
-                {clientText}
+                {client_text}
             </p>
             <div className={styles.compareImageContainer}>
-                <CompareSlider before={imageBefore} after={imageAfter} />
+                <CompareSlider before={image_before} after={image_after} alt={image_alt} />
             </div>
         </div>
     );

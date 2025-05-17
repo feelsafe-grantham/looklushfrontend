@@ -1,7 +1,8 @@
 "use client"
 import React, { useState } from 'react';
 import styles from './CompareSlider.module.css'
-const CompareSlider = ({ before = "/images/before1.png", after = "/images/after1.png" }) => {
+import { ImageSliderProps } from '@/lib/types';
+const CompareSlider = ({ before = "/images/before1.png", after = "/images/after1.png", alt = "" }: ImageSliderProps) => {
     const [sliderValue, setSliderValue] = useState(50);
 
     const handleSlide = (e: any) => {
@@ -13,10 +14,10 @@ const CompareSlider = ({ before = "/images/before1.png", after = "/images/after1
     };
     return (
         <div className={styles.container}>
-            <img src={after} alt="after" />
+            <img src={after} alt={alt} />
             <img
                 src={before}
-                alt="before"
+                alt={alt}
                 className={styles.overlayImg}
                 style={clipStyle}
             />

@@ -63,7 +63,7 @@ const PriceTabel = () => {
                         <th className={`${styles.tableHeader}`}>Diff </th>
                         <th className={`${styles.tableHeader}`}>Value </th>
                         <th className={`${styles.topRightRadius} ${styles.tableHeader}`}>
-                            Achivement{" "}
+                            Achivement
                         </th>
                     </tr>
                 </thead>

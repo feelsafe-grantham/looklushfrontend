@@ -8,13 +8,23 @@ import Carousel from "../Carousel";
 
 
 async function fetchHeroImages(): Promise<HeroImagesType[]> {
-    const response: ApiResponse<HeroImagesType[]> = await apiClient.get(ENDPOINTS.CAROUSEL);
-    return response?.data;
+    try {
+        const response: ApiResponse<HeroImagesType[]> = await apiClient.get(ENDPOINTS.CAROUSEL);
+        return response?.data || [];
+    } catch (error) {
+        console.error("Failed to fetch hero images:", error);
+        return [];
+    }
 }
 
 const CarouselContainer = async () => {
     const data = await fetchHeroImages();
     const imgUrls = data.map((item) => item.image);
+
+    if (imgUrls.length === 0) {
+        return null
+    }
+
     return (
         <Carousel>
             {imgUrls.map((image, index) => (

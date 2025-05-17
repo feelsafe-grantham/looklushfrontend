@@ -31,3 +31,17 @@ export interface BlogType {
   author_name: string;
   date: string;
 }
+
+export interface CompareCardType {
+  client_name: string;
+  star_rating: number;
+  client_text: string;
+  image_before: string;
+  image_after: string;
+  image_alt?: string;
+}
+export interface ImageSliderProps {
+  before: string;
+  after: string;
+  alt: string;
+}

@@ -1,20 +1,20 @@
-
+import { Suspense } from "react";
 import Form from "../common/Form";
 import Faqs from "../common/Faqs";
 import styles from "./Home.module.css";
+import VideoComp from "../common/Video";
+import ReelContainer from "./ReelContainer";
+import PriceTabel from "../common/PriceTable";
 import SwiperCard from "../common/SwiperCard";
 import ExpertCard from "../common/ExpertCard";
 import SectionHeading from "../common/SectionHeading";
 import SectionHeadPara from "../common/SectionHeadPara";
-import PriceTabel from "../common/PriceTable";
-import VideoComp from "../common/Video";
-import ReelContainer from "./ReelContainer";
-import CompareSliderContainer from "../common/CompareSliderContainer";
-import Carousel from "../common/Carousel";
 import CarouselContainer from "../common/CarouselContainer";
-
+import CarouselShimmer from "../common/Loading/CarouselShimmer";
+import CompareSliderContainer from "../common/CompareSliderContainer";
 
 const Home = async () => {
+
     const videoUrl = "/videos/video.mp4";
     const links = [
         { label: "Home", value: "/" },
@@ -48,7 +48,9 @@ const Home = async () => {
     return (
         <div className={`${styles.homeContainer}`}>
 
-            <CarouselContainer />
+            <Suspense fallback={<CarouselShimmer />}>
+                <CarouselContainer />
+            </Suspense>
 
             <ExpertCard />
 
@@ -72,7 +74,9 @@ const Home = async () => {
                 className={`${styles.celebrityImage}`}
             />
 
-            <ReelContainer />
+            <Suspense fallback={<CarouselShimmer />}>
+                <ReelContainer />
+            </Suspense>
 
             <SectionHeading
                 line1="Experience the art of Caring"
@@ -83,7 +87,9 @@ const Home = async () => {
 
             <VideoComp videoUrl={videoUrl} />
 
-            <CompareSliderContainer /> {/* clint slider */}
+            <Suspense fallback={<CarouselShimmer />}>
+                <CompareSliderContainer />
+            </Suspense>
 
             <SectionHeading line1="Nothing Complex Here" />
 
@@ -112,7 +118,7 @@ const Home = async () => {
 
             <SectionHeading line1="Frequently Asked Questions" line2="& Answers" />
 
-            <Faqs />{/*client */}
+            <Faqs />
         </div>
     );
 };
