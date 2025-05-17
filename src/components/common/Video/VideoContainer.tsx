@@ -6,7 +6,6 @@ import { ApiResponse, VidoeFallbackType } from "@/lib/types";
 async function fetchFallback(endpoint: string) {
     try {
         const res: ApiResponse<VidoeFallbackType> = await apiClient.get(endpoint);
-        console.log("this si afet fethc fallback", res)
         return res.data;
     } catch (error) {
         console.error("Error while fetching fallback: ", error);
