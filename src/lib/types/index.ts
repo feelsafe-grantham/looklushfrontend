@@ -52,3 +52,8 @@ export interface FallbackType {
 export interface VideoType {
   video_url?: string;
 }
+
+export interface VidoeFallbackType {
+  fallback: string;
+  video_url: string;
+}

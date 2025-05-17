@@ -1,23 +1,31 @@
 import VideoComp from "."
 import { apiClient } from "@/lib/api/apiClient";
-import { ApiResponse, FallbackType } from "@/lib/types";
+import { ApiResponse, VidoeFallbackType } from "@/lib/types";
 
 
 async function fetchFallback(endpoint: string) {
     try {
-        // const res: ApiResponse<FallbackType> = await apiClient.get(endpoint);
-        return { fallback: "/images/homeFallback.png" };
-        // return res?.data;
-    } catch (e) {
-        console.log(e)
-        return {}
+        const res: ApiResponse<VidoeFallbackType> = await apiClient.get(endpoint);
+        console.log("this si afet fethc fallback", res)
+        return res.data;
+    } catch (error) {
+        console.error("Error while fetching fallback: ", error);
+        return {
+            fallback: "/images/fallback.png",
+            video_url: ""
+        }
     }
 }
-const VidoeContainer = async ({ endpointFallback = "", endpointVideo = "" }: { endpointFallback: string, endpointVideo: string }) => {
-    const fallback = await fetchFallback(endpointFallback);
-    if (!fallback?.fallback) return null;
+const VidoeContainer = async ({ endpoint }: { endpoint: string }) => {
+    const videoData: VidoeFallbackType = await fetchFallback(endpoint);
+
+    if (!videoData?.video_url) {
+        return null;
+    }
+    const fallbackUrl = videoData?.fallback ?? "/images/fallback.png";
+    const videoUrl = videoData?.video_url ?? "";
     return (
-        <VideoComp fallback={fallback?.fallback} endpointVideo={endpointVideo} />
+        <VideoComp videoUrl={videoUrl} fallback={fallbackUrl} />
     )
 }
 export default VidoeContainer

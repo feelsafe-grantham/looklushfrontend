@@ -13,6 +13,11 @@ import CarouselContainer from "../common/CarouselContainer";
 import CarouselShimmer from "../common/Loading/CarouselShimmer";
 import CompareSliderContainer from "../common/CompareSliderContainer";
 import VidoeContainer from "../common/Video/VideoContainer";
+import dynamic from "next/dynamic";
+const VideoContainer = dynamic(() => import("../common/Video/VideoContainer"), {
+    ssr: true,
+    loading: () => <CarouselShimmer />,
+});
 import { ENDPOINTS } from "@/lib/api/endpoints";
 
 const Home = async () => {
@@ -89,10 +94,7 @@ const Home = async () => {
             <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
 
             <Suspense fallback={<CarouselShimmer />}>
-                <VidoeContainer
-                    endpointVideo={ENDPOINTS.HOMEVIDEO}
-                    endpointFallback={ENDPOINTS.HOMEVIDEOFALLBACK}
-                />
+                <VideoContainer endpoint={ENDPOINTS.HOMEVIDEO} />
             </Suspense>
 
             {/* <Suspense fallback={<CarouselShimmer />}>

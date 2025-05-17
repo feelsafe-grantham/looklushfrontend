@@ -2,8 +2,8 @@ export const ENDPOINTS = {
   //home page here
   CAROUSEL: "/home-carousel/",
   REELS: "/get-all-video-testimonials/",
-  HOMEVIDEOFALLBACK: "",
-  HOMEVIDEO: "",
+  HOMEVIDEOFALLBACK: "//",
+  HOMEVIDEO: "/page-video/home/",
   //blogs here
   BLOGS: "/get-all-blogs/",
   BLOG: "/get-blog/",
