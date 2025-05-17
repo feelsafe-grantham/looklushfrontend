@@ -1,19 +1,39 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "./VideoComp.module.css"
-const VideoComp = ({ videoUrl = "/videos/video.mp4", fallback = "/images/homeFallback.png" }: { videoUrl?: string, fallback?: string }) => {
+import { apiClient } from "@/lib/api/apiClient";
+import { ApiResponse, VideoType } from "@/lib/types";
+const VideoComp = ({ fallback = "/images/homeFallback.png", endpointVideo }: { endpointVideo: string, fallback?: string }) => {
+    const video = "/videos/video.mp4"
     const videoRef = useRef<HTMLVideoElement | null>(null);
+    const [videoUrl, setVideoUrl] = useState<string>("");
+    const fetchVideoUrl = async () => {
+        try {
+            setVideoUrl(video)
+            // const res: ApiResponse<VideoType> = await apiClient.get(endpointVideo);
+            // if (res?.data?.video_url) {
+            //     setVideoUrl(res.data.video_url);
+            // }
+        } catch (e) {
+            console.error("Video fetch error:", e);
+        }
+    };
+    useEffect(() => {
+
+        fetchVideoUrl();
+    }, []);
+
     useEffect(() => {
         const timeout = setTimeout(() => {
             if (videoRef.current) {
                 videoRef.current.src = videoUrl;
             }
-        }, 300);
+        }, 0);
 
         return () => {
             clearTimeout(timeout);
         };
-    }, []);
+    }, [videoUrl]);
     return (
         <div className={styles.videoContainer}>
             <video

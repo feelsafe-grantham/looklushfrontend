@@ -12,6 +12,8 @@ import SectionHeadPara from "../common/SectionHeadPara";
 import CarouselContainer from "../common/CarouselContainer";
 import CarouselShimmer from "../common/Loading/CarouselShimmer";
 import CompareSliderContainer from "../common/CompareSliderContainer";
+import VidoeContainer from "../common/Video/VideoContainer";
+import { ENDPOINTS } from "@/lib/api/endpoints";
 
 const Home = async () => {
 
@@ -52,6 +54,7 @@ const Home = async () => {
                 <CarouselContainer />
             </Suspense>
 
+
             <ExpertCard />
 
             <SectionHeading line1="Our Celebrity Clients" />
@@ -85,13 +88,18 @@ const Home = async () => {
 
             <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
 
-            <VideoComp videoUrl={videoUrl} />
-
             <Suspense fallback={<CarouselShimmer />}>
-                <CompareSliderContainer />
+                <VidoeContainer
+                    endpointVideo={ENDPOINTS.HOMEVIDEO}
+                    endpointFallback={ENDPOINTS.HOMEVIDEOFALLBACK}
+                />
             </Suspense>
 
-            <SectionHeading line1="Nothing Complex Here" />
+            {/* <Suspense fallback={<CarouselShimmer />}>
+                <CompareSliderContainer />
+            </Suspense> */}
+
+            {/* <SectionHeading line1="Nothing Complex Here" />
 
             <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
 
@@ -118,7 +126,7 @@ const Home = async () => {
 
             <SectionHeading line1="Frequently Asked Questions" line2="& Answers" />
 
-            <Faqs />
+            <Faqs /> */}
         </div>
     );
 };

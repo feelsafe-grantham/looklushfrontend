@@ -45,3 +45,10 @@ export interface ImageSliderProps {
   after: string;
   alt: string;
 }
+
+export interface FallbackType {
+  fallback?: string;
+}
+export interface VideoType {
+  video_url?: string;
+}
