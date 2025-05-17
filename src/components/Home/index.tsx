@@ -19,6 +19,8 @@ const VideoContainer = dynamic(() => import("../common/Video/VideoContainer"), {
     loading: () => <CarouselShimmer />,
 });
 import { ENDPOINTS } from "@/lib/api/endpoints";
+import PriceTableContainer from "../common/PriceTable/PriceContainer";
+import ServicesContainer from "../ServicesContainer";
 
 const Home = async () => {
 
@@ -105,27 +107,18 @@ const Home = async () => {
 
             <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
 
-            <PriceTabel />
-            {/*
+            <Suspense fallback={<CarouselShimmer />}>
+                <PriceTableContainer />
+            </Suspense>
+
+
             <SectionHeading
                 line1="Welcome to Looklush Asthetic"
                 line2="& Laser Center"
             />
+            <ServicesContainer />
 
-            <div className={`${styles.servicesContainer}`}>
-                <div className={`scrollbar-hide ${styles.serviesLinksContainer}`}>
-                    {links.map((link, index) => (
-                        <span key={index} className={`${styles.serviceLink}`}>
-                            {link.label}
-                        </span>
-                    ))}
-                </div>
-                <SwiperCard />
-                <div className={`${styles.formContainer}`}>
-                    <Form />
-                </div>
-            </div>
-
+            {/*
             <SectionHeading line1="Frequently Asked Questions" line2="& Answers" />
 
             <Faqs /> */}

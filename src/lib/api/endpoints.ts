@@ -4,9 +4,10 @@ export const ENDPOINTS = {
   REELS: "/get-all-video-testimonials/",
   HOMEVIDEO: "/page-video/home/",
   COMPARESLIDERHOME: "/get-comment-testimonials/",
+  GETPRICETABLE: "/get-pricing-tables/",
+  SERVICES: "/get-asthetics/",
   //blogs here
   BLOGS: "/get-all-blogs/",
   BLOG: "/get-blog/",
   PRODUCTS: "/api/products/",
-  SERVICES: "/api/services/",
 };

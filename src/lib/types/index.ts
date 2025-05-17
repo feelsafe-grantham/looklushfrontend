@@ -57,3 +57,24 @@ export interface VidoeFallbackType {
   fallback: string;
   video_url: string;
 }
+
+export interface PriceItem {
+  service: string;
+  market_price: string;
+  our_price: string;
+  diff: string;
+  value: string;
+  achievement: string;
+}
+
+export interface ServiceCard {
+  image: string;
+  likes: number;
+  impressions: number;
+}
+
+export interface ServiceItem {
+  id: number;
+  name: string;
+  images: ServiceCard[];
+}

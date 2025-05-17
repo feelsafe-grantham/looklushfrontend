@@ -1,20 +1,11 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import styles from "./SwiperCard.module.css";
-type Card = {
-    name: string;
-    image: string;
-};
-const cardsData: Card[] = [
-    { name: "Girl1", image: "/images/swipe1.png" },
-    { name: "Girl2", image: "/images/swipe2.png" },
-    { name: "Girl3", image: "/images/swipe3.png" },
-];
-const SwiperCard = () => {
+import { ServiceCard } from "@/lib/types";
+const SwiperCard = ({ cardsData }: { cardsData: ServiceCard[] }) => {
     const [cards, setCards] = useState(cardsData);
     const [isDragging, setIsDragging] = useState(false);
     const [translate, setTranslate] = useState({ x: 0, y: 0 });
-
     const startPos = useRef({ x: 0, y: 0 });
 
     useEffect(() => {
@@ -65,7 +56,13 @@ const SwiperCard = () => {
         setIsDragging(true);
     };
 
+
+
     const topCard = cards[cards.length - 1];
+    useEffect(() => {
+        setCards(cardsData);
+    }, [cardsData]);
+
 
     return (
         <div className={styles.swipeContainer}>
@@ -73,7 +70,7 @@ const SwiperCard = () => {
                 const isTop = card === topCard;
                 return (
                     <div
-                        key={card.name}
+                        key={card.image}
                         className={styles.card}
                         onMouseDown={isTop ? handleStart : undefined}
                         onTouchStart={isTop ? handleStart : undefined}
@@ -88,8 +85,8 @@ const SwiperCard = () => {
                     >
                         <div className={styles.overlay}>
                             <div className={styles.actions}>
-                                <div className={styles.icon}>❤️ Likes</div>
-                                <div className={styles.icon}>👍 Impression</div>
+                                <div className={styles.icon}>❤️ {card.likes}</div>
+                                <div className={styles.icon}>👍 {card.impressions}</div>
                             </div>
                         </div>
                     </div>
