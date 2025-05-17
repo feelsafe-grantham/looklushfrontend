@@ -21,7 +21,7 @@ const AccordionFaq: React.FC<Props> = ({ qna }) => {
     return (
         <div className={styles.qnaContainerMobile}>
             <ul className={styles.questionsContainer}>
-                {qna.map((item, index) => (
+                {qna?.map((item, index) => (
                     <li key={index} className={styles.card}>
                         <div
                             className={styles.questionWrapper}

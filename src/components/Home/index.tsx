@@ -118,10 +118,10 @@ const Home = async () => {
             />
             <ServicesContainer />
 
-            {/*
+
             <SectionHeading line1="Frequently Asked Questions" line2="& Answers" />
 
-            <Faqs /> */}
+            <Faqs />
         </div>
     );
 };
