@@ -1,17 +1,9 @@
 "use client"
 import React, { useState } from 'react';
 import styles from './AccordionFaq.module.css';
+import { FaqItem } from '@/lib/types';
 
-type QnA = {
-    question: string;
-    answer: string;
-};
-
-interface Props {
-    qna: QnA[];
-}
-
-const AccordionFaq: React.FC<Props> = ({ qna }) => {
+const AccordionFaq = ({ qna }: { qna: FaqItem[] | undefined }) => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     const toggleIndex = (index: number) => {

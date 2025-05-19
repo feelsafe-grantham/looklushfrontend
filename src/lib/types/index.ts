@@ -78,3 +78,16 @@ export interface ServiceItem {
   name: string;
   images: ServiceCard[];
 }
+
+export interface FaqItem {
+  id: number;
+  question: string;
+  answer: string;
+}
+
+export interface FaqCategory {
+  id: number;
+  text: string;
+  image: string;
+  faqs: FaqItem[];
+}

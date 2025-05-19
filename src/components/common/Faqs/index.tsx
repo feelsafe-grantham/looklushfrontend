@@ -4,48 +4,12 @@ import AccordionFaq from "../AccordiaFaq";
 import styles from "./Faqs.module.css";
 import useFaqs from "./useFaqs";
 const Faqs = () => {
-    // faq
-    const faq = [
-        { text: "Acne Star", image: "/images/problem1.png" },
-        { text: "Hydrafacial", image: "/images/problem2.png" },
-        { text: "Laser Hair Removal", image: "/images/problem3.png" },
-        { text: "Hifu Facial", image: "/images/problem4.png" },
-        { text: "Lip Lightening", image: "/images/problem5.png" },
-    ];
-    //faqs
 
-    const qna = [
-        {
-            question: "I am best coder in the world",
-            answer:
-                "   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat itaque cupiditate iure adipisci soluta pariatur, consequuntur placeat quisquam deleniti necessitatibus?",
-        },
-        {
-            question: "I am best coder in the world",
-            answer:
-                "   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat itaque cupiditate iure adipisci soluta pariatur, consequuntur placeat quisquam deleniti necessitatibus?",
-        },
-        {
-            question: "I am best coder in the world",
-            answer:
-                "   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat itaque cupiditate iure adipisci soluta pariatur, consequuntur placeat quisquam deleniti necessitatibus?",
-        },
-        {
-            question: "I am best coder in the world",
-            answer:
-                "   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat itaque cupiditate iure adipisci soluta pariatur, consequuntur placeat quisquam deleniti necessitatibus?",
-        },
-        {
-            question: "I am best coder in the world",
-            answer:
-                "   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat itaque cupiditate iure adipisci soluta pariatur, consequuntur placeat quisquam deleniti necessitatibus?",
-        },
-    ];
     const { faqCategories, setActiveCategory, activeCategory, activeQuestion, setActiveQuestion } = useFaqs();
     return (
         <>
             <div className={`${styles.faqContainer}`}>
-                {faqCategories.map((faqCat, index) => (
+                {faqCategories.map((faqCat,) => (
                     <div key={faqCat.id} onClick={() => { setActiveCategory(faqCat.id) }} className={styles.iconWrapper}>
                         <div className={styles.imageContainer}>
                             <img src={faqCat.image} className={styles.faqImage} />
@@ -82,7 +46,6 @@ const Faqs = () => {
                 </div>
             </div>
             <div className={`${styles.qnaContainerMobile}`}>
-
                 <AccordionFaq qna={activeCategory?.faqs} />
             </div>
 

@@ -6,6 +6,7 @@ export const ENDPOINTS = {
   COMPARESLIDERHOME: "/get-comment-testimonials/",
   GETPRICETABLE: "/get-pricing-tables/",
   SERVICES: "/get-asthetics/",
+  GETFAQCATEGORIES: "/get-faqs/",
   //blogs here
   BLOGS: "/get-all-blogs/",
   BLOG: "/get-blog/",
