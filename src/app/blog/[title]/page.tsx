@@ -1,4 +1,4 @@
-import BlogDetail from "@/components/BlogDetail";
+import BlogDetail from "@/components/Blogs/BlogDetail";
 import { getIdFromBlogSlug } from "@/lib/helper";
 import { apiClient } from "@/lib/api/apiClient";
 import { BlogType } from "@/lib/types";
@@ -12,7 +12,7 @@ const BlogDetailPage = async ({ params }: any) => {
     const blog: any = await apiClient.get(`${ENDPOINTS.BLOG}${id}`);
     const data: BlogType = blog?.data;
 
-    // return <div> blog</div>
+    console.log(data)
     return <BlogDetail blog={data} />;
 };
 

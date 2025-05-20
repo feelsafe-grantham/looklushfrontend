@@ -4,6 +4,7 @@ import LaserBurnSection from "./LaserBurn";
 import ReelContainer from "../Home/ReelContainer";
 import SectionHeading from "../common/SectionHeading";
 import { BlogType } from "@/lib/types";
+import BlogContainer from "./BlogContainer";
 
 
 const BlogsComp = ({ blogs }: { blogs: BlogType[] }) => {
@@ -19,7 +20,7 @@ const BlogsComp = ({ blogs }: { blogs: BlogType[] }) => {
                     <div className={styles.blogTopic}>{topic}</div>
                 )}
             </div>
-            {blogs.map((blog) => <BlogCard key={blog.id} blog={blog} />)}
+            <BlogContainer />
         </div>
     )
 }
