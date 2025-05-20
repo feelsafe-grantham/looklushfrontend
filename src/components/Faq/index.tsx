@@ -3,6 +3,7 @@ import { useState } from "react";
 import styles from "./Faqs.module.css"
 import { CiSearch } from "react-icons/ci";
 import AccordionFaq from "../common/AccordiaFaq";
+import useFaqs from "../common/Faqs/useFaqs";
 
 const Faqs = () => {
     const [query, setQuery] = useState<string>("")
@@ -135,6 +136,7 @@ const Faqs = () => {
         },
 
     ];
+    const { faqCategories, setActiveCategory, activeCategory, activeQuestion, setActiveQuestion } = useFaqs();
     return (
         <div className={styles.faqContainer}>
             <div className={`${styles.faqSearchBarContainer}`}>
@@ -153,24 +155,24 @@ const Faqs = () => {
                 </form>
             </div>
             <div className={`${styles.faqProblemContainer}`}>
-                {faq.map((faq, index) => (
-                    <div key={index} className={styles.iconWrapper}>
+                {faqCategories.map((faqCat) => (
+                    <div key={faqCat.id} onClick={() => { setActiveCategory(faqCat.id) }} className={styles.iconWrapper}>
                         <div className={styles.imageContainer}>
-                            <img src={faq.image} className={styles.faqImage} />
+                            <img src={faqCat.image} className={styles.faqImage} />
                             <img
                                 src="/images/faqborder.png"
-                                alt={faq.text}
+                                alt={faqCat.text}
                                 className={styles.border}
                             />
                         </div>
-                        <p className={styles.label}>{faq.text}</p>
+                        <p className={styles.label}>{faqCat.text}</p>
                     </div>
                 ))}
             </div>
             <div className={`${styles.qnaContainer}`}>
                 <ul className={`${styles.questionsContainer} scrollbar-hide`}>
-                    {qna.map((item, index) => (
-                        <li key={index} className={styles.card}>
+                    {activeCategory?.faqs.map((item, index) => (
+                        <li key={index} className={styles.card} onClick={() => { setActiveQuestion(item.id) }}>
                             <span className={styles.number}>
                                 {(index + 1).toString().padStart(2, "0")}
                             </span>
@@ -179,7 +181,7 @@ const Faqs = () => {
                     ))}
                 </ul>
                 <div className={`${styles.answerContainer}`}>
-                    <p className={`${styles.answer} scrollbar-hide`}>{qna[0].answer}</p>
+                    <p className={`${styles.answer} scrollbar-hide`}>{activeQuestion?.answer}</p>
                     <img
                         className={`${styles.qnaImage}`}
                         src="/images/qnaImage.gif"
@@ -188,7 +190,7 @@ const Faqs = () => {
                 </div>
             </div>
             <div className={`${styles.qnaMobileContainer}`}>
-                <AccordionFaq qna={qna} />
+                <AccordionFaq qna={activeCategory?.faqs} />
             </div>
         </div>
     )
