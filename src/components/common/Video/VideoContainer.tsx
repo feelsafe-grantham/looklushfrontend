@@ -15,7 +15,7 @@ async function fetchFallback(endpoint: string) {
         }
     }
 }
-const VidoeContainer = async ({ endpoint }: { endpoint: string }) => {
+const VidoeContainer = async ({ endpoint, isFullWidth }: { endpoint: string, isFullWidth?: boolean }) => {
     const videoData: VidoeFallbackType = await fetchFallback(endpoint);
 
     if (!videoData?.video_url) {
@@ -24,7 +24,7 @@ const VidoeContainer = async ({ endpoint }: { endpoint: string }) => {
     const fallbackUrl = videoData?.fallback ?? "/images/fallback.png";
     const videoUrl = videoData?.video_url ?? "";
     return (
-        <VideoComp videoUrl={videoUrl} fallback={fallbackUrl} />
+        <VideoComp videoUrl={videoUrl} fallback={fallbackUrl} isFullWidth={isFullWidth} />
     )
 }
 export default VidoeContainer

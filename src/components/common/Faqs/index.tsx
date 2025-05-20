@@ -45,6 +45,7 @@ const Faqs = () => {
                     />
                 </div>
             </div>
+
             <div className={`${styles.qnaContainerMobile}`}>
                 <AccordionFaq qna={activeCategory?.faqs} />
             </div>

@@ -2,8 +2,17 @@ import ExpertCard from "../common/ExpertCard";
 import Faqs from "../common/Faqs";
 import LocationCard from "../common/LocationCard";
 import SectionHeading from "../common/SectionHeading";
-import VideoComp from "../common/Video";
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
+const VideoContainer = dynamic(() => import("../common/Video/VideoContainer"), {
+    ssr: true,
+    loading: () => <CarouselShimmer />,
+});
 import styles from "./About.module.css";
+import CarouselShimmer from "../common/Loading/CarouselShimmer";
+import { ENDPOINTS } from "@/lib/api/endpoints";
+import { GURUGRAM_ADDRESS, MUMBAI_ADDRESS } from "@/data";
+import ServiceCardContainer from "../common/ServiceCardContainer";
 const About = () => {
     const features = [
         {
@@ -87,57 +96,17 @@ const About = () => {
             name: "Youtube",
         },
     ];
-    const services = [
-        {
-            id: 1,
-            image: "/images/carousel1.png",
-            title: "Cosmetic Dermatology",
-            description:
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-            phone: "+91-12345 67890",
-            timing: "Mon-Sat 11:00AM - 08:00PM",
-            fee: "1000 Consultation Fees",
-            address:
-                "101, AHIMSA HEIGHT, AHIMSA MARG, NEAR SUNDAR NAGAR, OFF, Chincholi Bunder Rd, Malad West, Mumbai, Maharashtra 400064",
-        },
-        {
-            id: 2,
-            image: "/images/carousel1.png",
-            title: "Cosmetic Dermatology",
-            description:
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-            phone: "+91-12345 67890",
-            timing: "Mon-Sat 11:00AM - 08:00PM",
-            fee: "1000 Consultation Fees",
-            address:
-                "101, AHIMSA HEIGHT, AHIMSA MARG, NEAR SUNDAR NAGAR, OFF, Chincholi Bunder Rd, Malad West, Mumbai, Maharashtra 400064",
-        },
-        {
-            id: 3,
-            image: "/images/carousel1.png",
-            title: "Cosmetic Dermatology",
-            description:
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-            phone: "+91-12345 67890",
-            timing: "Mon-Sat 11:00AM - 08:00PM",
-            fee: "1000 Consultation Fees",
-            address:
-                "101, AHIMSA HEIGHT, AHIMSA MARG, NEAR SUNDAR NAGAR, OFF, Chincholi Bunder Rd, Malad West, Mumbai, Maharashtra 400064",
-        },
-    ];
+
     return (
         <div className={`${styles.aboutContainer}`}>
-            <div>
-                <img
-                    alt="Home"
-                    src="/images/carousel1.png"
-                    className={`${styles.aboutImage}`}
-                />
-            </div>
+            <Suspense fallback={<CarouselShimmer />}>
+                <VideoContainer endpoint={ENDPOINTS.ABOUTHOMEVIDEO} isFullWidth={true} />
+            </Suspense>
+
             <ExpertCard />
             <div className={`${styles.locationContainer}`}>
-                <LocationCard />
-                <LocationCard />
+                <LocationCard location={MUMBAI_ADDRESS} />
+                <LocationCard location={GURUGRAM_ADDRESS} />
             </div>
             <div className={`${styles.experienceContainer}`}>
                 <img
@@ -173,7 +142,9 @@ const About = () => {
                     ))}
                 </ul>
             </div>
-            <VideoComp />
+            <Suspense fallback={<CarouselShimmer />}>
+                <VideoContainer endpoint={ENDPOINTS.ABOUTHOMEVIDEOSEC} />
+            </Suspense>
             <SectionHeading line1="Our Vision" />
             <div className={`${styles.visionContainer}`}>
                 <p className={`${styles.visionHeading}`}>
@@ -209,58 +180,9 @@ const About = () => {
                     />
                 ))}
             </div>
-            <div className={styles.servicesContainer}>
-                {services.map((service) => (
-                    <div key={service.id} className={styles.card}>
-                        <div className={`${styles.serviceHeadContainer}`}>
-                            <img
-                                src={service.image}
-                                alt={service.title}
-                                className={styles.serviceCardImage}
-                            />
-                            <h3 className={styles.title}>{service.title}</h3>
-                        </div>
-                        <p className={styles.description}>{service.description}</p>
-                        <ul className={styles.details}>
-                            <li className={`${styles.listItem}`}>
-                                <img
-                                    className={`${styles.icon}`}
-                                    src="/images/call.png"
-                                    alt="phone"
-                                />
-                                {service.phone}
-                            </li>
-                            <li className={`${styles.listItem}`}>
-                                <img
-                                    className={`${styles.icon}`}
-                                    src="/images/clock.png"
-                                    alt="phone"
-                                />
-                                {service.timing}
-                            </li>
-                            <li className={`${styles.listItem}`}>
-                                <img
-                                    className={`${styles.icon}`}
-                                    src="/images/rupee.png"
-                                    alt="phone"
-                                />
-                                {service.fee}
-                            </li>
-                            <li className={`${styles.listItem}`}>
-                                <img
-                                    className={`${styles.icon}`}
-                                    src="/images/pin.png"
-                                    alt="phone"
-                                />
-                                {service.address}
-                            </li>
-                        </ul>
-                        <a href="#" className={styles.viewMore}>
-                            View More
-                        </a>
-                    </div>
-                ))}
-            </div>
+            <Suspense fallback={<CarouselShimmer />}>
+                <ServiceCardContainer />
+            </Suspense>
             <SectionHeading line1="Questions About Us!" />
             <Faqs />
         </div>

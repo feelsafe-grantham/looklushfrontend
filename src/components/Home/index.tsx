@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import Form from "../common/Form";
 import Faqs from "../common/Faqs";
 import styles from "./Home.module.css";
@@ -14,6 +13,7 @@ import CarouselShimmer from "../common/Loading/CarouselShimmer";
 import CompareSliderContainer from "../common/CompareSliderContainer";
 import VidoeContainer from "../common/Video/VideoContainer";
 import dynamic from "next/dynamic";
+import { Suspense } from "react";
 const VideoContainer = dynamic(() => import("../common/Video/VideoContainer"), {
     ssr: true,
     loading: () => <CarouselShimmer />,
@@ -23,36 +23,6 @@ import PriceTableContainer from "../common/PriceTable/PriceContainer";
 import ServicesContainer from "../ServicesContainer";
 
 const Home = async () => {
-
-    const videoUrl = "/videos/video.mp4";
-    const links = [
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-        { label: "Home", value: "/" },
-    ];
 
     return (
         <div className={`${styles.homeContainer}`}>

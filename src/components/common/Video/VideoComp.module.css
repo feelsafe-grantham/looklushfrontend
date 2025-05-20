@@ -1,5 +1,4 @@
 .videoContainer {
-  max-width: 900px;
   position: relative;
   margin: 0;
   padding: 0;
@@ -7,9 +6,18 @@
   margin: auto;
   border-radius: var(--standard-border-radius);
 }
+.maxWidth {
+  max-width: 1200px;
+  margin: auto;
+}
 
 .video {
-  border-radius: var(--standard-border-radius);
   margin: auto;
+  border-radius: var(--standard-border-radius);
   aspect-ratio: 2/1;
+}
+.fullWidth {
+  width: 100%;
+  aspect-ratio: 3/1;
+  border-radius: 0px;
 }

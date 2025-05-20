@@ -91,3 +91,14 @@ export interface FaqCategory {
   image: string;
   faqs: FaqItem[];
 }
+
+export interface ConsultServices {
+  id: number;
+  image: string;
+  title: string;
+  description: string;
+  phone: string;
+  timing: string;
+  fee: string;
+  address: string;
+}

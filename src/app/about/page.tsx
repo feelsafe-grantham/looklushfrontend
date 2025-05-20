@@ -11,4 +11,3 @@ export default function About() {
         <AboutComp />
     );
 }
-// export default function About() {
