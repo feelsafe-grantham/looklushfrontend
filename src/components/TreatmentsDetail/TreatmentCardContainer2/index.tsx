@@ -107,7 +107,6 @@ const TreatmentCardContainer2 = async ({ id }: { id?: number }) => {
 
     ]
     const treatmensts: ProblemCatType | undefined = await fetchRelatedProblemCards(id!);
-    console.log("this is treatmensts: ", treatmensts)
     if (treatmensts?.cards?.length === 0) notFound();
     return (
         <div className={`${styles.treatmentCardContainer}`}>

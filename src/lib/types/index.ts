@@ -147,3 +147,12 @@ export interface TreatmentDetailType {
   keypoints: KeyValueType[];
   benifits: BenifitsType[];
 }
+
+export interface Testimonial {
+  client_name: string;
+  star_rating: number;
+  client_text: string;
+  profile_image: string;
+  image: string;
+  image_alt?: string;
+}

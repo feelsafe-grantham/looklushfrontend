@@ -16,6 +16,7 @@ export const ENDPOINTS = {
   TREATMENTDETAILVIEW: "/get-problem/",
   //TREATMENTS DETAILED
   PROBLEMCARDSRELATED: "/get-treatment/",
+  TESTIMONIALONDETAILPAGE: "/get-problem-testimonial/",
   //blogs here
   BLOGS: "/get-all-blogs/",
   BLOG: "/get-blog/",
