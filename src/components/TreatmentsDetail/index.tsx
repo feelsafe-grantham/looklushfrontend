@@ -9,6 +9,7 @@ import TreatmentHeroSection from "./HeroSection";
 import AppointmentForm from "../common/AppointmentForm";
 import { TreatmentDetailType } from "@/lib/types";
 import PriceTableContainer from "../common/PriceTable/PriceContainer";
+import TreatmentCardContainer2 from "./TreatmentCardContainer2";
 const TreatmentsDetail = ({ data, id }: { data: TreatmentDetailType, id?: number }) => {
     const images = [
         "/images/after1.png",
@@ -154,39 +155,8 @@ const TreatmentsDetail = ({ data, id }: { data: TreatmentDetailType, id?: number
                     </div>
                 ))}
             </div>
-            <div className={`${styles.treatmentCardContainer}`}>
-                {treatmentCards.map((treatmentCard, index) =>
-                    <div key={index} className={styles.treatmentCard}>
-                        <div className={styles.imageContainer}>
-                            <img
-                                src={treatmentCard.image1}
-                                alt={treatmentCard.title}
-                                className={styles.cardImage}
-                            />
-                            <img
-                                src={treatmentCard.image2}
-                                alt={treatmentCard.title}
-                                className={styles.cardImage}
-                            />
-                        </div>
-                        <h3 className={styles.title}>{treatmentCard.title}</h3>
-                        <p className={styles.description}>{treatmentCard.description}</p>
+            <TreatmentCardContainer2 id={data.id} />
 
-                        <div className={styles.stats}>
-                            <div className={styles.stat}>
-                                <span className={styles.rating}>{treatmentCard.rating}</span>
-                                <span className={styles.stars}>⭐⭐⭐⭐⭐</span>
-                            </div>
-                            <div className={styles.stat}>
-                                <span className={styles.customers}>{treatmentCard.customers}</span>
-                                <span className={styles.label}>Satisfied Customers</span>
-                            </div>
-                        </div>
-
-                        <button className={styles.button}>Book Now!</button>
-                    </div>)
-                }
-            </div>
             {/* <TestimonialCarousel />
             <ResultsSection />
             <SectionHeading line1="Pricing List" />

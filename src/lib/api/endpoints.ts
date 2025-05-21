@@ -14,6 +14,8 @@ export const ENDPOINTS = {
   //treatments page
   TREATMENTCATEGORY: "/get-all-treatments/",
   TREATMENTDETAILVIEW: "/get-problem/",
+  //TREATMENTS DETAILED
+  PROBLEMCARDSRELATED: "/get-treatment/",
   //blogs here
   BLOGS: "/get-all-blogs/",
   BLOG: "/get-blog/",

@@ -1,0 +1,20 @@
+.treatmentCardContainer {
+  max-width: var(--max-width-container);
+  margin: 0px auto;
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 1000px) {
+  .treatmentCardContainer {
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    gap: 24px;
+  }
+}
+@media (max-width: 600px) {
+  .treatmentCardContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

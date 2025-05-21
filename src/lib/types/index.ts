@@ -108,6 +108,7 @@ export interface ProblemCardsType {
   title: string;
   image: string;
   review: string;
+  description?: string;
   no_of_reviews: string;
   button_text: string;
 }
