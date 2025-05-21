@@ -1,6 +1,8 @@
 
 "use client";
 import AccordionFaq from "../AccordiaFaq";
+import FaqAnsShimmer from "../Loading/FaqAnsShimmer";
+import FaqCatShimmer from "../Loading/FaqCatShimmer";
 import styles from "./Faqs.module.css";
 import useFaqs from "./useFaqs";
 const Faqs = () => {
@@ -9,7 +11,7 @@ const Faqs = () => {
     return (
         <>
 
-            <div className={`${styles.faqContainer}`}>
+            {loading ? <FaqCatShimmer /> : <div className={`${styles.faqContainer}`}>
                 {faqCategories.map((faqCat,) => (
                     <div key={faqCat.id} onClick={() => { setActiveCategory(faqCat.id) }} className={styles.iconWrapper}>
                         <div className={styles.imageContainer}>
@@ -23,9 +25,9 @@ const Faqs = () => {
                         <p className={styles.label}>{faqCat.text}</p>
                     </div>
                 ))}
-            </div>
+            </div>}
 
-            <div className={`${styles.qnaContainer}`}>
+            {loading ? <FaqAnsShimmer /> : <div className={`${styles.qnaContainer}`}>
                 <ul className={`${styles.questionsContainer}`}>
                     {activeCategory?.faqs.map((item, index) => (
                         <li key={index} className={styles.card} onClick={() => { setActiveQuestion(item.id) }}>
@@ -45,7 +47,7 @@ const Faqs = () => {
                         alt="qna image"
                     />
                 </div>
-            </div>
+            </div>}
 
             <div className={`${styles.qnaContainerMobile}`}>
                 <AccordionFaq qna={activeCategory?.faqs} />

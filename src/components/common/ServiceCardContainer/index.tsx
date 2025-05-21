@@ -6,7 +6,7 @@ import { ApiResponse, ConsultServices } from "@/lib/types";
 async function fetchServices() {
     try {
         const res: ApiResponse<ConsultServices[]> = await apiClient.get(ENDPOINTS.ABOUTPAGESERVICES);
-        console.log("res: ", res)
+
         const data = res?.data;
         return data;
     } catch (err) {
@@ -54,7 +54,7 @@ const ServiceCardContainer = async () => {
         },
     ];
     const servicess = await fetchServices();
-    console.log(servicess)
+
     return (
         <div className={styles.servicesContainer}>
             {servicess.map((service) => (

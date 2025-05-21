@@ -12,7 +12,7 @@ const BlogDetailPage = async ({ params }: any) => {
     const blog: any = await apiClient.get(`${ENDPOINTS.BLOG}${id}`);
     const data: BlogType = blog?.data;
 
-    console.log(data)
+
     return <BlogDetail blog={data} />;
 };
 

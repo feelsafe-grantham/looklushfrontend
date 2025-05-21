@@ -25,7 +25,7 @@ const Home = async () => {
 
     return (
         <div className={`${styles.homeContainer}`}>
-            {/* 
+
             <Suspense fallback={<CarouselShimmer />}>
                 <CarouselContainer />
             </Suspense>
@@ -51,46 +51,46 @@ const Home = async () => {
                 alt="Celebrity"
                 src="/images/20-years.png"
                 className={`${styles.celebrityImage}`}
-            /> */}
+            />
 
-            {/* <Suspense fallback={<ReelContainerShimmer />}>
+            <Suspense fallback={<ReelContainerShimmer />}>
                 <ReelContainer />
-            </Suspense> */}
+            </Suspense>
 
-            {/* <SectionHeading
+            <SectionHeading
                 line1="Experience the art of Caring"
                 line2="with Dr. Poonam Patel"
-            /> */}
+            />
 
-            {/* <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." /> */}
+            <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
 
-            {/* 
+
             <Suspense fallback={<VideoShimmer />}>
                 <VideoContainer endpoint={ENDPOINTS.HOMEVIDEO} />
-            </Suspense> 
-            */}
+            </Suspense>
 
-            {/* <Suspense fallback={<CompareSliderShimmer />}>
+
+            <Suspense fallback={<CompareSliderShimmer />}>
                 <CompareSliderContainer />
-            </Suspense> */}
+            </Suspense>
 
-            {/* <SectionHeading line1="Nothing Complex Here" />
+            <SectionHeading line1="Nothing Complex Here" />
 
-            <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." /> */}
+            <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
 
-            {/* <Suspense fallback={<PriceTableShimmer />}>
+            <Suspense fallback={<PriceTableShimmer />}>
                 <PriceTableContainer />
-            </Suspense> */}
+            </Suspense>
 
 
-            {/* <SectionHeading
+            <SectionHeading
                 line1="Welcome to Looklush Asthetic"
                 line2="& Laser Center"
             />
 
             <ServicesContainer />
 
-            <SectionHeading line1="Frequently Asked Questions" line2="& Answers" /> */}
+            <SectionHeading line1="Frequently Asked Questions" line2="& Answers" />
 
             <Faqs />
         </div>
