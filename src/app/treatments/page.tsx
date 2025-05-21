@@ -1,4 +1,4 @@
-import TreatmentsComp from "@/components/Treatments";
+import TreatmentsComp from '@/components/Treatments';
 import { Metadata } from 'next';
 export const metadata: Metadata = {
     title: 'Skin & Hair Treatments | LookLush Clinics Gurugram & Mumbai',
