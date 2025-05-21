@@ -155,7 +155,7 @@ const TreatmentsDetail = ({ data, id }: { data: TreatmentDetailType, id?: number
                     </div>
                 ))}
             </div>
-            <TreatmentCardContainer2 id={data.id} />
+            <TreatmentCardContainer2 id={data.treatment_id} />
 
             {/* <TestimonialCarousel />
             <ResultsSection />

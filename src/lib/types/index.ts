@@ -137,6 +137,7 @@ export interface TreatmentDetailType {
   image: string;
   description: string;
   stars: 5;
+  treatment_id?: number;
   satisfied_customers: number;
   button_text: string;
   banner_image: string;

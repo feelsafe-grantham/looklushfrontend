@@ -8,7 +8,6 @@ import { notFound } from "next/navigation";
 async function fetchTreatmentDetail(id: number) {
     try {
         const res: ApiResponse<TreatmentDetailType> = await apiClient.get(`${ENDPOINTS.TREATMENTDETAILVIEW}${id}`);
-
         return res?.data;
     } catch (error) {
         console.log("Error while fetching blog: ", error);

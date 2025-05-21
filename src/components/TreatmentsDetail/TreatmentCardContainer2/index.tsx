@@ -1,4 +1,4 @@
-import { ApiResponse, ProblemCardsType } from "@/lib/types";
+import { ApiResponse, ProblemCardsType, ProblemCatType } from "@/lib/types";
 import TreatmentCard2 from "../TreatmentCard2";
 import styles from "./TreatmentCardContainer2.module.css"
 import { apiClient } from "@/lib/api/apiClient";
@@ -6,8 +6,7 @@ import { ENDPOINTS } from "@/lib/api/endpoints";
 import { notFound } from "next/navigation";
 async function fetchRelatedProblemCards(id: number) {
     try {
-        const res: ApiResponse<ProblemCardsType[]> = await apiClient.get(`${ENDPOINTS.PROBLEMCARDSRELATED}${id}`);
-        console.log("this is res here: ", res?.data)
+        const res: ApiResponse<ProblemCatType> = await apiClient.get(`${ENDPOINTS.PROBLEMCARDSRELATED}${id}`);
         return res?.data;
     } catch (error) {
         console.log("this is error: ", error)
@@ -107,12 +106,13 @@ const TreatmentCardContainer2 = async ({ id }: { id?: number }) => {
         },
 
     ]
-    const treatmensts: ProblemCardsType[] | undefined = await fetchRelatedProblemCards(id!);
-    if (treatmensts?.length === 0) notFound();
+    const treatmensts: ProblemCatType | undefined = await fetchRelatedProblemCards(id!);
+    console.log("this is treatmensts: ", treatmensts)
+    if (treatmensts?.cards?.length === 0) notFound();
     return (
         <div className={`${styles.treatmentCardContainer}`}>
 
-            {/* {treatmensts?.map((card, index) => <TreatmentCard2 key={index} card={card} />)} */}
+            {treatmensts?.cards?.map((card, index) => <TreatmentCard2 key={index} card={card} />)}
         </div>
     )
 }
