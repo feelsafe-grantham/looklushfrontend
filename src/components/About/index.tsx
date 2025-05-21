@@ -6,13 +6,14 @@ import dynamic from "next/dynamic";
 import { Suspense } from "react";
 const VideoContainer = dynamic(() => import("../common/Video/VideoContainer"), {
     ssr: true,
-    loading: () => <CarouselShimmer />,
+    loading: () => <VideoShimmer />,
 });
 import styles from "./About.module.css";
 import CarouselShimmer from "../common/Loading/CarouselShimmer";
 import { ENDPOINTS } from "@/lib/api/endpoints";
 import { GURUGRAM_ADDRESS, MUMBAI_ADDRESS } from "@/data";
 import ServiceCardContainer from "../common/ServiceCardContainer";
+import VideoShimmer from "../common/Loading/VideoShimmer";
 const About = () => {
     const features = [
         {
@@ -99,10 +100,9 @@ const About = () => {
 
     return (
         <div className={`${styles.aboutContainer}`}>
-            <Suspense fallback={<CarouselShimmer />}>
+            <Suspense fallback={<VideoShimmer />}>
                 <VideoContainer endpoint={ENDPOINTS.ABOUTHOMEVIDEO} isFullWidth={true} />
             </Suspense>
-
             <ExpertCard />
             <div className={`${styles.locationContainer}`}>
                 <LocationCard location={MUMBAI_ADDRESS} />
@@ -142,7 +142,7 @@ const About = () => {
                     ))}
                 </ul>
             </div>
-            <Suspense fallback={<CarouselShimmer />}>
+            <Suspense fallback={<VideoShimmer />}>
                 <VideoContainer endpoint={ENDPOINTS.ABOUTHOMEVIDEOSEC} />
             </Suspense>
             <SectionHeading line1="Our Vision" />
