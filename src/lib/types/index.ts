@@ -111,3 +111,8 @@ export interface ProblemCardsType {
   no_of_reviews: string;
   button_text: string;
 }
+
+export interface ProblemCatType {
+  heading: string;
+  cards: ProblemCardsType[];
+}

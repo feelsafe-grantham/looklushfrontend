@@ -11,6 +11,8 @@ export const ENDPOINTS = {
   ABOUTHOMEVIDEO: "/page-video/about/1",
   ABOUTHOMEVIDEOSEC: "/page-video/about/2",
   ABOUTPAGESERVICES: "/get-services/",
+  //treatments page
+  TREATMENTCATEGORY: "/get-all-treatments/",
   //blogs here
   BLOGS: "/get-all-blogs/",
   BLOG: "/get-blog/",
