@@ -4,12 +4,11 @@ import { ENDPOINTS } from "@/lib/api/endpoints";
 import { useEffect, useState } from "react";
 import { FaqItem, FaqCategory, ApiResponse } from "@/lib/types";
 
-// Interfaces
-
 export interface UseFaqsReturn {
   faqCategories: FaqCategory[];
   activeCategory: FaqCategory | null;
   activeQuestion: FaqItem | null;
+  loading: boolean;
   setActiveCategory: (id: number) => void;
   setActiveQuestion: (id: number) => void;
 }
@@ -21,16 +20,23 @@ const useFaqs = (): UseFaqsReturn => {
     null
   );
 
+  const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
-    // Assign questions to each category (for demo, same qna for all)
     const fetchedCategories = async () => {
-      const res: ApiResponse<FaqCategory[]> = await apiClient.get(
-        ENDPOINTS.GETFAQCATEGORIES
-      );
-      if (!res.code || res.code !== 200) return [];
-      setFaqCategories(res.data);
-      setActiveCategoryInternal(res.data[0]);
-      setActiveQuestionInternal(res.data[0].faqs[0]);
+      try {
+        setLoading(true);
+        const res: ApiResponse<FaqCategory[]> = await apiClient.get(
+          ENDPOINTS.GETFAQCATEGORIES
+        );
+        if (!res.code || res.code !== 200) return [];
+        setFaqCategories(res.data);
+        setActiveCategoryInternal(res.data[0]);
+        setActiveQuestionInternal(res.data[0].faqs[0]);
+      } catch (error) {
+        console.log("this is error", error);
+      } finally {
+        setLoading(false);
+      }
     };
     fetchedCategories();
   }, []);
@@ -51,6 +57,7 @@ const useFaqs = (): UseFaqsReturn => {
     faqCategories,
     activeCategory,
     activeQuestion,
+    loading,
     setActiveCategory,
     setActiveQuestion,
   };

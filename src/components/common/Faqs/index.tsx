@@ -5,9 +5,10 @@ import styles from "./Faqs.module.css";
 import useFaqs from "./useFaqs";
 const Faqs = () => {
 
-    const { faqCategories, setActiveCategory, activeCategory, activeQuestion, setActiveQuestion } = useFaqs();
+    const { loading, faqCategories, setActiveCategory, activeCategory, activeQuestion, setActiveQuestion } = useFaqs();
     return (
         <>
+
             <div className={`${styles.faqContainer}`}>
                 {faqCategories.map((faqCat,) => (
                     <div key={faqCat.id} onClick={() => { setActiveCategory(faqCat.id) }} className={styles.iconWrapper}>
