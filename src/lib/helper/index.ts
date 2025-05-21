@@ -1,4 +1,4 @@
-export const generateBlogSlug = (title: string, id: string) => {
+export const generateBlogSlug = (title: string, id: string | number) => {
   return title
     .toLowerCase()
     .replace(/ /g, "-")

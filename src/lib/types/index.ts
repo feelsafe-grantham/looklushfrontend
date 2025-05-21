@@ -102,3 +102,12 @@ export interface ConsultServices {
   fee: string;
   address: string;
 }
+
+export interface ProblemCardsType {
+  id: number;
+  title: string;
+  image: string;
+  review: string;
+  no_of_reviews: string;
+  button_text: string;
+}

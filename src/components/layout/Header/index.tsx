@@ -9,7 +9,6 @@ const Header = () => {
         { label: "Home", url: "/", },
         { label: "About", url: "/about", },
         { label: "Treatments", url: "/treatments", },
-        { label: "Problems", url: "/problems", },
         { label: "Blog", url: "/blog", },
         { label: "Location", url: "/location", },
         { label: "FAQs", url: "/faqs", },
