@@ -1,5 +1,6 @@
 import Form from "@/components/common/Form";
 import styles from "./Footer.module.css";
+import { MUMBAI_ADDRESS, GURUGRAM_ADDRESS } from "@/data";
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import Link from "next/link";
 const Footer = () => {
@@ -24,10 +25,10 @@ const Footer = () => {
                             <h3 className={styles.heading}>MENU</h3>
                             <ul className={styles.menuList}>
                                 <li className={`${styles.menuItem}`}><Link href="/">Home</Link></li>
-                                <li className={`${styles.menuItem}`}><Link href="/">Treatments</Link></li>
-                                <li className={`${styles.menuItem}`}><Link href="/">Problems</Link></li>
-                                <li className={`${styles.menuItem}`}><Link href="/">Blogs</Link></li>
-                                <li className={`${styles.menuItem}`}><Link href="/">Contact</Link></li>
+                                <li className={`${styles.menuItem}`}><Link href="/about">About</Link></li>
+                                <li className={`${styles.menuItem}`}><Link href="/treatments">Treatments</Link></li>
+                                <li className={`${styles.menuItem}`}><Link href="/blog">Blog</Link></li>
+                                <li className={`${styles.menuItem}`}><Link href="/faqs">Faqs</Link></li>
                             </ul>
                         </div>
 
@@ -47,11 +48,11 @@ const Footer = () => {
                             </div>
                             <h4 className={styles.heading}>Address</h4>
                             <p className={styles.address}>
-                                <strong>MUMBAI:</strong> 101, Ahimsa Height, Ahimsa Marg, Near Sundar Nagar, Off, Chincholi Bunder Rd, Malad West, Mumbai,
+                                <strong>MUMBAI:</strong> {MUMBAI_ADDRESS.address}
                             </p>
 
                             <p className={styles.address}>
-                                <strong>GURGAON:</strong> R3, M3M Urbana mall, 108, Golf course extension Road, Sector 67, Gurugram, Haryana 122001
+                                <strong>GURGAON:</strong> {GURUGRAM_ADDRESS.address}
                             </p>
                         </div>
 

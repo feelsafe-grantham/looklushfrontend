@@ -38,6 +38,14 @@ const Treatments = () => {
             button_text: "Explore",
             no_of_reviews: "120+ reviews"
         },
+        {
+            id: 5,
+            image: "/images/skinProblem4.png",
+            title: "Anti-Aging",
+            review: "4.7",
+            button_text: "Explore",
+            no_of_reviews: "120+ reviews"
+        },
     ];
     const problems = [
         {
