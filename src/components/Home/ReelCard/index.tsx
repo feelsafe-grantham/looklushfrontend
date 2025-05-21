@@ -3,7 +3,7 @@ import styles from './ReelCard.module.css';
 import { VideoTestimonial } from '@/lib/types';
 import React, { useEffect, useState, useRef } from 'react';
 const ReelCard = ({ Reel }: { Reel: VideoTestimonial }) => {
-    const { username, viewers, comments, videoUrl } = Reel;
+    const { username, viewers, comments, videoUrl, fallback } = Reel;
     const [hearts, setHearts] = useState<{ id: number; left: number; color: string }[]>([]);
 
     useEffect(() => {
@@ -48,7 +48,7 @@ const ReelCard = ({ Reel }: { Reel: VideoTestimonial }) => {
                 muted
                 autoPlay
                 playsInline
-                poster="/images/homeFallback.jpg"
+                poster={fallback}
                 preload="auto"
             >
                 {/* <source src={"/home/video/videoBag.mp4"} type="video/mp4" /> */}

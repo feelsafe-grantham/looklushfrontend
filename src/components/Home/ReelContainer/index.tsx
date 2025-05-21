@@ -12,42 +12,6 @@ async function fetchReels(): Promise<VideoTestimonial[]> {
         console.error("Failed to fetch hero images:", error);
         return [];
     }
-
-    // return [
-    //     {
-    //         username: "amanpandey_11",
-    //         viewers: 120,
-    //         comments: [
-    //             { user: "freyjalalila_", message: "OMG 😳😳😳" },
-    //             { user: "user420", message: "awesome 👍" },
-    //             { user: "catlover88", message: "this is so wholesome 🐱" },
-    //         ],
-    //         videoUrl: "/videos/reel.mp4",
-    //         fallbackImage: "",
-    //     },
-    //     {
-    //         username: "_aman11",
-    //         viewers: 120,
-    //         comments: [
-    //             { user: "freyjalalila_", message: "OMG 😳😳😳" },
-    //             { user: "user420", message: "awesome 👍" },
-    //             { user: "catlover88", message: "this is so wholesome 🐱" },
-    //         ],
-    //         videoUrl: "/videos/reel.mp4",
-    //         fallbackImage: "",
-    //     },
-    //     {
-    //         username: "_aman11",
-    //         viewers: 120,
-    //         comments: [
-    //             { user: "freyjalalila_", message: "OMG 😳😳😳" },
-    //             { user: "user420", message: "awesome 👍" },
-    //             { user: "catlover88", message: "this is so wholesome 🐱" },
-    //         ],
-    //         videoUrl: "/videos/reel.mp4",
-    //         fallbackImage: "",
-    //     },
-    // ];
 }
 const ReelContainer = async () => {
     const Reel = await fetchReels();

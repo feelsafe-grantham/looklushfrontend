@@ -13,7 +13,7 @@ export interface VideoTestimonial {
   viewers: number;
   comments: VideoTestimonialComments[];
   videoUrl: string;
-  fallbackImage?: string;
+  fallback?: string;
 }
 export interface HeroImagesType {
   id: string;

@@ -1,17 +1,12 @@
-import Form from "../common/Form";
 import Faqs from "../common/Faqs";
 import styles from "./Home.module.css";
-import VideoComp from "../common/Video";
 import ReelContainer from "./ReelContainer";
-import PriceTabel from "../common/PriceTable";
-import SwiperCard from "../common/SwiperCard";
 import ExpertCard from "../common/ExpertCard";
 import SectionHeading from "../common/SectionHeading";
 import SectionHeadPara from "../common/SectionHeadPara";
 import CarouselContainer from "../common/CarouselContainer";
 import CarouselShimmer from "../common/Loading/CarouselShimmer";
 import CompareSliderContainer from "../common/CompareSliderContainer";
-import VidoeContainer from "../common/Video/VideoContainer";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 const VideoContainer = dynamic(() => import("../common/Video/VideoContainer"), {
@@ -21,12 +16,13 @@ const VideoContainer = dynamic(() => import("../common/Video/VideoContainer"), {
 import { ENDPOINTS } from "@/lib/api/endpoints";
 import PriceTableContainer from "../common/PriceTable/PriceContainer";
 import ServicesContainer from "../ServicesContainer";
+import { ReelContainerShimmer } from "../common/Loading/ReelContainerShimmer";
 
 const Home = async () => {
 
     return (
         <div className={`${styles.homeContainer}`}>
-
+            {/* 
             <Suspense fallback={<CarouselShimmer />}>
                 <CarouselContainer />
             </Suspense>
@@ -52,13 +48,13 @@ const Home = async () => {
                 alt="Celebrity"
                 src="/images/20-years.png"
                 className={`${styles.celebrityImage}`}
-            />
+            /> */}
 
-            <Suspense fallback={<CarouselShimmer />}>
+            <Suspense fallback={<ReelContainerShimmer />}>
                 <ReelContainer />
             </Suspense>
 
-            <SectionHeading
+            {/* <SectionHeading
                 line1="Experience the art of Caring"
                 line2="with Dr. Poonam Patel"
             />
@@ -91,7 +87,7 @@ const Home = async () => {
 
             <SectionHeading line1="Frequently Asked Questions" line2="& Answers" />
 
-            <Faqs />
+            <Faqs /> */}
         </div>
     );
 };
