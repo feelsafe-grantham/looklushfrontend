@@ -1,8 +1,7 @@
 
 import styles from "./TreatmentDetail.module.css"
-import TreatmentCategory from "./TreatmentCategory";
-import { ProblemCardsType } from "@/lib/types";
 import { Suspense } from "react";
+import { ProblemCardsType } from "@/lib/types";
 import TreatmentsContainer from "./TreatmentsContainer";
 
 

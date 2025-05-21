@@ -116,3 +116,32 @@ export interface ProblemCatType {
   heading: string;
   cards: ProblemCardsType[];
 }
+
+export interface KeyValueType {
+  key: string;
+  value: string;
+}
+export interface ImageType {
+  image: string;
+}
+export interface BenifitsType {
+  heading1: string;
+  heading2?: string;
+  description: string;
+  images: ImageType[];
+}
+export interface TreatmentDetailType {
+  id: number;
+  title: string;
+  image: string;
+  description: string;
+  stars: 5;
+  satisfied_customers: number;
+  button_text: string;
+  banner_image: string;
+  banner_text1: string;
+  banner_text2: string;
+  book_now_link: string;
+  keypoints: KeyValueType[];
+  benifits: BenifitsType[];
+}

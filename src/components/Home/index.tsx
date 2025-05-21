@@ -11,7 +11,7 @@ import dynamic from "next/dynamic";
 import { Suspense } from "react";
 const VideoContainer = dynamic(() => import("../common/Video/VideoContainer"), {
     ssr: true,
-    loading: () => <CarouselShimmer />,
+    loading: () => <VideoShimmer />,
 });
 import { ENDPOINTS } from "@/lib/api/endpoints";
 import PriceTableContainer from "../common/PriceTable/PriceContainer";

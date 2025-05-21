@@ -1,3 +1,7 @@
+.treatmentContainer {
+  display: grid;
+  gap: 20px;
+}
 .patientImageContainer {
   display: grid;
   place-content: center;

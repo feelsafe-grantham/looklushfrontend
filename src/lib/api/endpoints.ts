@@ -13,6 +13,7 @@ export const ENDPOINTS = {
   ABOUTPAGESERVICES: "/get-services/",
   //treatments page
   TREATMENTCATEGORY: "/get-all-treatments/",
+  TREATMENTDETAILVIEW: "/get-problem/",
   //blogs here
   BLOGS: "/get-all-blogs/",
   BLOG: "/get-blog/",

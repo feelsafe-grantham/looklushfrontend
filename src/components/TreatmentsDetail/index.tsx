@@ -7,7 +7,9 @@ import TestimonialCarousel from "./TestimonialCarousel";
 import styles from "./Treatments.module.css"
 import TreatmentHeroSection from "./HeroSection";
 import AppointmentForm from "../common/AppointmentForm";
-const TreatmentsDetail = () => {
+import { TreatmentDetailType } from "@/lib/types";
+import PriceTableContainer from "../common/PriceTable/PriceContainer";
+const TreatmentsDetail = ({ data, id }: { data: TreatmentDetailType, id?: number }) => {
     const images = [
         "/images/after1.png",
         "/images/after2.png",
@@ -133,18 +135,22 @@ const TreatmentsDetail = () => {
     ]
     return (
         <div className={`${styles.treatmentContainer}`}>
-            <TreatmentHeroSection />
+            <TreatmentHeroSection data={data} />
             <AppointmentForm />
-            <SectionHeading line1="Benifits of Premelase hair" line2="removal procedure" />
-            <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
-            <div className={styles.patientImageContainer}>
-                {images.map((img, idx) => <img key={idx} className={styles.patientImage} src={img} alt="patientImage" />)}
-            </div>
-            <SectionHeading line1="Here are the key points about Primelase" line2="laser hair removal " />
+            {data.benifits.length > 0 && data.benifits.map((benifit, index) =>
+                <>
+                    <SectionHeading key={index} line1={benifit.heading1} line2={benifit.heading2} />
+                    <SectionHeadPara key={index} para={benifit.description} />
+                    <div key={index} className={styles.patientImageContainer}>
+                        {benifit.images.map((img, idx) => <img key={idx} className={styles.patientImage} src={img.image} alt="patientImage" />)}
+                    </div>
+                </>
+            )}
+            <SectionHeading line1={`Key points about ${data.banner_text1}`} line2={`${data.banner_text2}`} />
             <div className={styles.gridContainer}>
-                {benefits.map((item, index) => (
+                {data.keypoints.map((item, index) => (
                     <div key={index} className={styles.card}>
-                        <strong>{item.title}</strong> – {item.description}
+                        <strong>{item.key}</strong> – {item.value}
                     </div>
                 ))}
             </div>
@@ -178,16 +184,16 @@ const TreatmentsDetail = () => {
                         </div>
 
                         <button className={styles.button}>Book Now!</button>
-                    </div>)}
-
+                    </div>)
+                }
             </div>
-            <TestimonialCarousel />
+            {/* <TestimonialCarousel />
             <ResultsSection />
             <SectionHeading line1="Pricing List" />
             <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
-            {/* <PriceTabel /> */}
+            <PriceTableContainer />
             <SectionHeading line1="Frequently Asked " line2="Questions" />
-            <Faqs />
+            <Faqs /> */}
         </div>
 
     )
