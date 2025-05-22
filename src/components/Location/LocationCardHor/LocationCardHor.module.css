@@ -1,7 +1,3 @@
-.locaionContainer {
-  display: grid;
-  gap: 20px;
-}
 .addressContainer {
   max-width: var(--max-width-container);
   margin: 0px auto;
@@ -59,10 +55,14 @@
   cursor: pointer;
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+.mapContainer {
+  max-width: 100%;
+}
 .map {
-  width: 90%;
+  width: 90vw;
   margin: auto;
   height: 100%;
+  max-width: 100%;
   border-radius: var(--standard-border-radius);
 }
 

@@ -166,3 +166,12 @@ export interface ResultSection {
   fallback: string;
   image_alt?: string;
 }
+
+export interface AddressType {
+  mapSrc: string;
+  city: string;
+  address: string;
+  phone: string;
+  email: string;
+  visit_link?: string;
+}
