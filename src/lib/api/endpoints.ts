@@ -17,6 +17,7 @@ export const ENDPOINTS = {
   //TREATMENTS DETAILED
   PROBLEMCARDSRELATED: "/get-treatment/",
   TESTIMONIALONDETAILPAGE: "/get-problem-testimonial/",
+  GETRESULTDELIVERED: "/get-results-delivered/",
   //blogs here
   BLOGS: "/get-all-blogs/",
   BLOG: "/get-blog/",

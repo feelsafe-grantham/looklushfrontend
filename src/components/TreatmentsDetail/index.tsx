@@ -158,12 +158,12 @@ const TreatmentsDetail = ({ data, id }: { data: TreatmentDetailType, id?: number
             <TreatmentCardContainer2 id={data.treatment_id} />
 
             <TestimonialCarousel id={data.treatment_id} />
-            <ResultsSection />
-            {/* <SectionHeading line1="Pricing List" />
+            <ResultsSection id={data.treatment_id} />
+            <SectionHeading line1="Pricing List" />
             <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
             <PriceTableContainer />
             <SectionHeading line1="Frequently Asked " line2="Questions" />
-            <Faqs /> */}
+            <Faqs />
         </div>
 
     )

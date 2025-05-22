@@ -156,3 +156,13 @@ export interface Testimonial {
   image: string;
   image_alt?: string;
 }
+
+export interface ResultSection {
+  title1: string;
+  title2?: string;
+  description: string;
+  image: ImageType[];
+  video_url: string;
+  fallback: string;
+  image_alt?: string;
+}
