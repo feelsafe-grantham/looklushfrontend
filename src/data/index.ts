@@ -16,3 +16,11 @@ export const GURUGRAM_ADDRESS = {
   phone: "+91 93228 17696",
   email: "drpatelpoonam@gmail.com",
 };
+
+export const SOCIAL_MEDIA = {
+  facebook: "https://www.facebook.com/Looklushdrpoonam",
+  instagram: "https://www.instagram.com/looklush_gurgaon/",
+  youtube: "https://www.youtube.com/@looklush4760",
+  linkedin: "https://www.linkedin.com/company/looklush-india/",
+  twitter: "https://www.instagram.com/looklush_gurgaon/",
+};
