@@ -1,4 +1,6 @@
-.locationContainer {
+.locaionContainer {
+  display: grid;
+  gap: 40px;
 }
 .addressContainer {
   max-width: var(--max-width-container);

@@ -22,4 +22,6 @@ export const ENDPOINTS = {
   BLOGS: "/get-all-blogs/",
   BLOG: "/get-blog/",
   PRODUCTS: "/api/products/",
+  //location
+  LOCATIONVIDEO: "/page-video/location/1",
 };
