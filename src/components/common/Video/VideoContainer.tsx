@@ -28,6 +28,12 @@ const VidoeContainer = async ({
   }
   const fallbackUrl = videoData?.fallback ?? "/images/fallback.png";
   const videoUrl = videoData?.video_url ?? "";
-  return <VideoComp videoUrl={videoUrl} fallback={fallbackUrl} />;
+  return (
+    <VideoComp
+      videoUrl={videoUrl}
+      fallback={fallbackUrl}
+      isFullWidth={isFullWidth}
+    />
+  );
 };
 export default VidoeContainer;
