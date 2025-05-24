@@ -1,9 +1,12 @@
+"use client"
 import "./globals.css";
-// import type { Metadata } from "next";
 import TopBar from "@/components/common/TopBar";
 import { Montserrat, Sour_Gummy } from "next/font/google"
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+
+import Modal from "@/components/ui/Modal/Modal";
+import { ModalProvider } from "@/components/ui/Modal/ModalProvider";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -17,10 +20,6 @@ const sourGummy = Sour_Gummy({
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-// export const metadata: Metadata = {
-//   title: "Looklush Beauty",
-//   description: "Looklush Beauty",
-// };
 
 export default function RootLayout({
   children,
@@ -32,11 +31,13 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${sourGummy.variable} antialiased`}
       >
-        <TopBar />
-        <Header />
-        {children}
-        <Footer />
-
+        <ModalProvider>
+          <TopBar />
+          <Header />
+          {children}
+          <Footer />
+          <Modal />
+        </ModalProvider>
       </body>
     </html>
   );

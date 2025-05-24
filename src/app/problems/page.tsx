@@ -1,18 +1,21 @@
-import { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "Skin & Hair Problems We Treat | LookLush",
-  description:
-    "From acne to hair loss, LookLush addresses a variety of skin and hair concerns with effective clinical treatments.",
-  keywords: [
-    "acne",
-    "hair fall",
-    "hyperpigmentation",
-    "skin concerns",
-    "hair loss treatment Gurugram",
-    "Mumbai clinic",
-  ],
-};
+"use client"
+import Form from "@/components/common/Form";
+import { useModal } from "@/components/ui/Modal/useModal";
+
 
 export default function Problems() {
-  return <div></div>;
+  const { closeModal, isOpen, openModal, options } = useModal();
+  return <div className="my-4">
+    <button
+      onClick={() =>
+        openModal({
+          content: <Form />,
+          footer: null,
+          animation: 'slide',
+        })
+      }
+    >
+      Open Modal
+    </button>
+  </div>;
 }
