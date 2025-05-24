@@ -4,10 +4,10 @@
 
 .sectionHeading {
   text-align: center;
-  color: var(--text-light-color);
-  font-size: 30px;
+  font-size: 40px;
   line-height: 40px;
   font-weight: 700;
+  color: var(--text-light-color);
   font-family: var(--font-sour-gummy);
 }
 
@@ -17,5 +17,14 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
-  bottom: -10px;
+  bottom: -15px;
+}
+
+@media (max-width: 768px) {
+  .sectionHeading {
+    font-size: 30px;
+  }
+  .sectionHeadingImage {
+    bottom: -10px;
+  }
 }
