@@ -62,7 +62,7 @@
   padding: 20px 40px;
   background-color: var(--bg-primary-color);
   border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
