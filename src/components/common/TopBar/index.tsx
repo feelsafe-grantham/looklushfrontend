@@ -1,6 +1,18 @@
+"use client"
 import styles from "./TopBar.module.css";
 import { staticImages } from "@/utils/staticNames";
+import { useModal } from "@/components/ui/Modal/useModal";
+import Form from "../Form";
 const TopBar = () => {
+    const { openModal } = useModal();
+    const handleBtnClick = () => {
+        openModal(
+            {
+                content: <Form />,
+                animation: "scale",
+            }
+        )
+    }
     return (
         <div className={`${styles.topBar}`}>
             <img
@@ -14,7 +26,7 @@ const TopBar = () => {
                     src={staticImages.upperOfferImage}
                     alt="UpperOffer"
                 />
-                <span className={`${styles.upperOfferText}`}>
+                <span onClick={handleBtnClick} className={`${styles.upperOfferText}`}>
                     <span className={`${styles.upperOfferTextBold}`}>Click Here</span>
                 </span>
             </div>
