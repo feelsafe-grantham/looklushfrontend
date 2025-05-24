@@ -2,7 +2,7 @@
   display: grid;
   margin: 0px auto;
   max-width: var(--max-width-container);
-  grid-template-columns: 300px 350px 1fr;
+  grid-template-columns: 300px 350px 350px;
   gap: 0px 20px;
   padding: 5px 0px;
 }
@@ -36,6 +36,8 @@
   border: 1px solid var(--bg-theme-color);
 }
 
+.formContainer {
+}
 @media (max-width: 1000px) {
   .serviesLinksContainer {
     display: none;
