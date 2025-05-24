@@ -4,6 +4,8 @@ import { createContext, useContext, useState, ReactNode } from 'react';
 interface ModalOptions {
     content: ReactNode;
     footer?: ReactNode;
+    header?: ReactNode;
+    headerAlign?: 'left' | 'center' | 'right';
     animation?: 'fade' | 'slide' | 'scale';
 }
 

@@ -8,6 +8,7 @@ const TopBar = () => {
     const handleBtnClick = () => {
         openModal(
             {
+                // header: "Contact Us",
                 content: <Form />,
                 animation: "scale",
             }

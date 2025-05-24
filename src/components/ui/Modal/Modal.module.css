@@ -30,6 +30,13 @@
   overflow: hidden;
 }
 
+.modalHeader {
+  display: flex;
+  align-items: space-between;
+}
+.headerTitle {
+  color: var(--text-dark-color);
+}
 /* Content Area Scrollable */
 .content {
   overflow-y: auto;
