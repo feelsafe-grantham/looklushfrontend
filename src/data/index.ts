@@ -24,3 +24,9 @@ export const SOCIAL_MEDIA = {
   linkedin: "https://www.linkedin.com/company/looklush-india/",
   twitter: "https://www.instagram.com/looklush_gurgaon/",
 };
+
+export const contactData = {
+  number1: "9322817696",
+  number2: "9322817696",
+  email: "drpatelpoonam@gmail.com",
+};

@@ -7,6 +7,8 @@ import Footer from "@/components/layout/Footer";
 
 import Modal from "@/components/ui/Modal/Modal";
 import { ModalProvider } from "@/components/ui/Modal/ModalProvider";
+import WhatsappIcon from "@/components/ui/CTA/Icons/Whatsapp";
+import MessageBot from "@/components/ui/CTA/MessageBot";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -36,6 +38,8 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer />
+          <WhatsappIcon />
+          <MessageBot />
           <Modal />
         </ModalProvider>
       </body>
