@@ -1,4 +1,3 @@
-
 "use client";
 import AccordionFaq from "../AccordiaFaq";
 import FaqAnsShimmer from "../Loading/FaqAnsShimmer";
