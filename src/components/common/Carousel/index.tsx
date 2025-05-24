@@ -26,6 +26,12 @@ function Carousel({ children, showButtons = false }: CarouselProps) {
         };
     }, []);
 
+    useEffect(() => {
+        const { slides } = getSlidesInfo();
+        [...slides].forEach((slide, index) => {
+            slide.setAttribute("data-active", String(index === currentIndex));
+        });
+    }, [currentIndex]);
     const getSlidesInfo = () => {
         const carouselBox = carouselBoxRef.current;
         const slides = carouselBox?.children ?? [];
@@ -45,10 +51,10 @@ function Carousel({ children, showButtons = false }: CarouselProps) {
             setCurrentIndex((prev) => {
                 const { count } = getSlidesInfo();
                 const newIndex = (prev + 1) % count;
-                setActiveSlide(newIndex);
+                // setActiveSlide(newIndex);
                 return newIndex;
             });
-        }, 2000);
+        }, 3000);
     };
 
     const stopSlider = () => {
@@ -61,7 +67,8 @@ function Carousel({ children, showButtons = false }: CarouselProps) {
         stopSlider();
         const { count } = getSlidesInfo();
         const newIndex = (currentIndex - 1 + count) % count;
-        setActiveSlide(newIndex);
+        // setActiveSlide(newIndex);
+        setCurrentIndex(newIndex);
         startSlider();
     };
 
@@ -69,7 +76,8 @@ function Carousel({ children, showButtons = false }: CarouselProps) {
         stopSlider();
         const { count } = getSlidesInfo();
         const newIndex = (currentIndex + 1) % count;
-        setActiveSlide(newIndex);
+        // setActiveSlide(newIndex);
+        setCurrentIndex(newIndex);
         startSlider();
     };
 
@@ -78,6 +86,7 @@ function Carousel({ children, showButtons = false }: CarouselProps) {
         setActiveSlide(index);
         startSlider();
     };
+
 
     return (
         <div className={styles.carousel}>
