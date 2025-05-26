@@ -2,6 +2,7 @@
   margin: 0px auto;
   width: var(--max-width-container);
   border-radius: var(--standard-border-radius);
+  margin-bottom: 20px;
 }
 
 .tableHeaderRow {

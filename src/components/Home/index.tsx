@@ -52,6 +52,7 @@ const Home = async () => {
                 src="/images/celebrity.png"
                 className={`${styles.celebrityImage}`}
             />
+
             <Suspense fallback={<ReelContainerShimmer />}>
                 <ReelContainer />
             </Suspense>
