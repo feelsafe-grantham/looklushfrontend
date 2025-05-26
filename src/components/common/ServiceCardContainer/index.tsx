@@ -15,52 +15,18 @@ async function fetchServices() {
     }
 }
 const ServiceCardContainer = async () => {
-    const services = [
-        {
-            id: 1,
-            image: "/images/carousel1.png",
-            title: "Cosmetic asd fas fasd asdf asdf  asfdasdf asdfjla;ksjdf;laksjdf;alskdjf asdf",
-            description:
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-            phone: "+91-12345 67890",
-            timing: "Mon-Sat 11:00AM - 08:00PM",
-            fee: "1000 Consultation Fees",
-            address:
-                "101, AHIMSA HEIGHT, AHIMSA MARG, NEAR SUNDAR NAGAR, OFF, Chincholi Bunder Rd, Malad West, Mumbai, Maharashtra 400064",
-        },
-        {
-            id: 2,
-            image: "/images/carousel1.png",
-            title: "Cosmetic Dermatology",
-            description:
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-            phone: "+91-12345 67890",
-            timing: "Mon-Sat 11:00AM - 08:00PM",
-            fee: "1000 Consultation Fees",
-            address:
-                "101, AHIMSA HEIGHT, AHIMSA MARG, NEAR SUNDAR NAGAR, OFF, Chincholi Bunder Rd, Malad West, Mumbai, Maharashtra 400064",
-        },
-        {
-            id: 3,
-            image: "/images/carousel1.png",
-            title: "Cosmetic Dermatology",
-            description:
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-            phone: "+91-12345 67890",
-            timing: "Mon-Sat 11:00AM - 08:00PM",
-            fee: "1000 Consultation Fees",
-            address:
-                "101, AHIMSA HEIGHT, AHIMSA MARG, NEAR SUNDAR NAGAR, OFF, Chincholi Bunder Rd, Malad West, Mumbai, Maharashtra 400064",
-        },
-    ];
+
     const servicess = await fetchServices();
 
     return (
-        <div className={styles.servicesContainer}>
-            {servicess.map((service) => (
-                <ServiceCard key={service.id} service={service} />
-            ))
-            }
+        <div className={`${styles.servicesWrapper}`}>
+
+            <div className={styles.servicesContainer}>
+                {servicess.map((service) => (
+                    <ServiceCard key={service.id} service={service} />
+                ))
+                }
+            </div>
         </div>
     )
 }

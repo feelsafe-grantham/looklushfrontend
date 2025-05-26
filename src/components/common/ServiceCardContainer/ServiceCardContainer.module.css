@@ -1,8 +1,14 @@
-.servicesContainer {
+.servicesWrapper {
   background-color: var(--bg-section-color);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   padding: 2rem;
-  gap: 2rem;
+  overflow-x: hidden;
+}
+.servicesContainer {
+  max-width: var(--max-width-container);
+  margin: 0px auto;
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  gap: 50px;
 }

@@ -47,7 +47,7 @@ const ServiceCard = ({ service }: { service: ConsultServices }) => {
                     {service.address}
                 </li>
             </ul>
-            <a href="#" className={styles.viewMore}>
+            <a href="/treatments" className={styles.viewMore}>
                 View More
             </a>
         </div>

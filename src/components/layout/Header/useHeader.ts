@@ -74,7 +74,16 @@ export default function useHeader() {
     {
       label: "Location",
       url: "/location",
-      subLink: [],
+      subLink: [
+        {
+          label: "Mumbai",
+          url: "/location/mumbai",
+        },
+        {
+          label: "Gurgaon",
+          url: "/location/gurugram",
+        },
+      ],
     },
     {
       label: "About",

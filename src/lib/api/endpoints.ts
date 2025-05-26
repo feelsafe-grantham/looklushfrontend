@@ -24,4 +24,5 @@ export const ENDPOINTS = {
   PRODUCTS: "/api/products/",
   //location
   LOCATIONVIDEO: "/page-video/location/1",
+  LOCATIONVIDEOSEC: "/page-video/location/2",
 };
