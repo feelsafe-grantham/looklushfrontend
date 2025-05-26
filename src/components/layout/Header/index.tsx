@@ -1,23 +1,10 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
 import { staticImages } from "@/utils/staticNames/index"
-import { usePathname } from "next/navigation";
 import styles from "./Header.module.css";
+import useHeader from "./useHeader";
 const Header = () => {
-    const links = [
-        { label: "Home", url: "/", },
-        { label: "About", url: "/about", },
-        { label: "Treatments", url: "/treatments", },
-        { label: "Blog", url: "/blog", },
-        { label: "Location", url: "/location", },
-        { label: "FAQs", url: "/faqs", },
-    ]
-    const pathname = usePathname()
-    const isActive = (url: string) => pathname === url
-    const [isOpen, setIsOpen] = useState(false)
-    const toggleMenu = () => setIsOpen(!isOpen)
-    const closeMenu = () => setIsOpen(false)
+    const { links, toggleMenu, isActive, isOpen, closeMenu, closeSubLink, handleMouseEnter, handleMouseLeave, hoverLink, } = useHeader();
     return (
         <header className={`${styles.headerContainer}`}>
             <div className={`${styles.hamburgerContainer}`} onClick={toggleMenu}>
@@ -50,16 +37,43 @@ const Header = () => {
             <ul className={`${styles.headerLinksContainer} ${isOpen ? styles.open : ""}`}>
                 {links.map((link) => (
                     <li key={link.label} className={`${styles.headerLink}`}>
+
                         <Link
                             href={link.url}
                             onClick={closeMenu}
                             aria-label={`Navigate to ${link.label}`}
                             className={`${isActive(link.url) ? styles.linkActive : "not"}`}
                             title={`Navigate to ${link.label}`}
+                            onMouseEnter={() => handleMouseEnter(link.label)}
+                            onMouseLeave={handleMouseLeave}
 
                         >
                             {link.label}
                         </Link>
+                        {hoverLink === link.label &&
+                            <ul
+                                onMouseLeave={handleMouseLeave}
+                                className={`${styles.headerSubLinksContainer}`}
+                                onMouseEnter={() => handleMouseEnter(link.label)}
+                            >
+
+                                {link.subLink.map((subLink, index) => (
+                                    <li className={`${styles.headerSubLink}`} key={index}>
+                                        <Link
+                                            href={subLink.url}
+                                            onClick={closeSubLink}
+                                            aria-label={`Navigate to ${subLink.label}`}
+                                            className={`${isActive(subLink.url) ? styles.linkActive : "not"}`}
+                                            title={`Navigate to ${subLink.label}`}
+
+
+                                        >
+                                            {subLink.label}
+                                        </Link>
+                                    </li>
+                                ))
+                                }
+                            </ul>}
                     </li>
                 ))}
             </ul>

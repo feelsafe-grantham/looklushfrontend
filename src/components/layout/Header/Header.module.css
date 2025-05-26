@@ -25,7 +25,23 @@
   font-size: 24px;
   transition: color 0.3s ease;
 }
-
+.headerSubLinksContainer {
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid var(--text-light-color);
+  border-radius: var(--standard-border-radius);
+  font-size: 14px;
+  max-width: 1100px;
+  z-index: 999;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 15px;
+  display: flex;
+  gap: 10px;
+}
+.headerSubLink {
+  width: max-content;
+}
 .linkActive {
   font-weight: 600;
   color: var(--text-theme-color);
@@ -34,9 +50,9 @@
 .offerStripContainer {
   border-radius: 5px;
   display: grid;
-  background-color: var(--bg-theme-color);
   padding: 5px 5px;
   margin-right: 50px;
+  background-color: var(--bg-theme-color);
 }
 .fitContent {
   width: 100%;
@@ -117,6 +133,11 @@
     gap: 0px;
     background-color: rgba(255, 255, 255, 1);
     z-index: 11;
+  }
+  .headerSubLinksContainer {
+    position: relative;
+
+    grid-template-columns: repeat(1, 1fr);
   }
   .open {
     display: flex;
