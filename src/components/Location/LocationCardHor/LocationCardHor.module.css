@@ -22,7 +22,7 @@
 }
 .addressText {
   color: var(--text-light-color);
-  font-size: 16px;
+  font-size: 20px;
   text-align: center;
   font-family: var(--font-sour-gummy);
 }
@@ -53,7 +53,7 @@
   border-radius: 25px;
   padding: 5px 30px;
   cursor: pointer;
-  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .mapContainer {
   max-width: 100%;
