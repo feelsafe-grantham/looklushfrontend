@@ -10,11 +10,6 @@ export default function useHeader() {
       subLink: [],
     },
     {
-      label: "About",
-      url: "/about",
-      subLink: [],
-    },
-    {
       label: "Treatments",
       url: "/treatments",
       subLink: [
@@ -77,13 +72,18 @@ export default function useHeader() {
       ],
     },
     {
-      label: "Blog",
-      url: "/blog",
+      label: "Location",
+      url: "/location",
       subLink: [],
     },
     {
-      label: "Location",
-      url: "/location",
+      label: "About",
+      url: "/about",
+      subLink: [],
+    },
+    {
+      label: "Blog",
+      url: "/blog",
       subLink: [],
     },
     {

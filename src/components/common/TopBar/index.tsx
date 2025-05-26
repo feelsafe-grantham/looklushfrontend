@@ -8,7 +8,7 @@ const TopBar = () => {
     const handleBtnClick = () => {
         openModal(
             {
-                // header: "Contact Us",
+                header: "Contact Us",
                 content: <Form />,
                 animation: "scale",
             }
@@ -28,7 +28,7 @@ const TopBar = () => {
                     alt="UpperOffer"
                 />
                 <span onClick={handleBtnClick} className={`${styles.upperOfferText}`}>
-                    <span className={`${styles.upperOfferTextBold}`}>Click Here</span>
+                    <span className={`${styles.upperOfferTextBold}`}>Book Now</span>
                 </span>
             </div>
         </div>

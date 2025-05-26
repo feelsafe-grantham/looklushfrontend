@@ -10,9 +10,9 @@ export default function Modal() {
     return (
         <div className={`${styles.backdrop} ${styles[animation]}`}>
             <div className={`${styles.modal} ${styles[animation + 'In']}`}>
+                <button className={styles.closeButton} onClick={closeModal}>×</button>
                 <div className={styles.modalHeader}>
                     {header && <div className={styles.headerTitle}>{header}</div>}
-                    <button className={styles.closeButton} onClick={closeModal}>×</button>
                 </div>
                 <div className={styles.content}>{content}</div>
                 {footer && <div className={styles.footer}>{footer}</div>}

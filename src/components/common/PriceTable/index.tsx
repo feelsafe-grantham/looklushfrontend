@@ -1,55 +1,6 @@
 import { PriceItem } from "@/lib/types";
 import styles from "./PriceTable.module.css";
-// const priceData2: PriceItem[] = [
-//     {
-//         service: "Acne Star",
-//         market_price: "₹999",
-//         our_price: "₹699",
-//         diff: "₹300",
-//         value: "300+ Customers",
-//         achievement: "Book Appointment",
-//     },
-//     {
-//         service: "Glow Facial",
-//         market_price: "₹1200",
-//         our_price: "₹850",
-//         diff: "₹350",
-//         value: "500+ Customers",
-//         achievement: "Book Appointment",
-//     },
-//     {
-//         service: "Hair Spa",
-//         market_price: "₹1500",
-//         our_price: "₹999",
-//         diff: "₹501",
-//         value: "250+ Customers",
-//         achievement: "Book Appointment",
-//     },
-//     {
-//         service: "Acne Star",
-//         market_price: "₹999",
-//         our_price: "₹699",
-//         diff: "₹300",
-//         value: "300+ Customers",
-//         achievement: "Book Appointment",
-//     },
-//     {
-//         service: "Glow Facial",
-//         market_price: "₹1200",
-//         our_price: "₹850",
-//         diff: "₹350",
-//         value: "500+ Customers",
-//         achievement: "Book Appointment",
-//     },
-//     {
-//         service: "Hair Spa",
-//         market_price: "₹1500",
-//         our_price: "₹999",
-//         diff: "₹501",
-//         value: "250+ Customers",
-//         achievement: "Book Appointment",
-//     },
-// ];
+import Link from "next/link";
 const PriceTabel = ({ priceData }: { priceData: PriceItem[] }) => {
   return (
     <div className={`${styles.priceTableContainer}`}>
@@ -81,9 +32,9 @@ const PriceTabel = ({ priceData }: { priceData: PriceItem[] }) => {
                 {item.value.split(" ").slice(1).join(" ")}
               </td>
               <td className={styles.tableData}>
-                <button className={styles.bookButton}>
+                <Link href={"/location"} className={styles.bookButton}>
                   {item.achievement}
-                </button>
+                </Link>
               </td>
             </tr>
           ))}

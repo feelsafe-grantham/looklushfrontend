@@ -30,12 +30,11 @@
   overflow: hidden;
 }
 
-.modalHeader {
-  display: flex;
-  align-items: space-between;
-}
 .headerTitle {
+  text-align: center;
   color: var(--text-dark-color);
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 /* Content Area Scrollable */
 .content {
@@ -51,7 +50,6 @@
   gap: 1rem;
 }
 
-/* Close Button */
 .closeButton {
   position: absolute;
   top: 10px;
