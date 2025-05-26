@@ -3,6 +3,17 @@ export interface ApiResponse<T> {
   data: T;
   code: number;
 }
+export interface HeaderLinkType {
+  label: string;
+  url: string;
+  subLink?:
+    | {
+        label: string;
+        url: string;
+      }[]
+    | null;
+}
+
 interface VideoTestimonialComments {
   user: string;
   message: string;

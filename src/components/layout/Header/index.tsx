@@ -1,10 +1,19 @@
 "use client";
 import Link from "next/link";
+import { FaChevronDown, FaChevronUp, } from "react-icons/fa";
+
 import { staticImages } from "@/utils/staticNames/index"
 import styles from "./Header.module.css";
 import useHeader from "./useHeader";
+import { HeaderLinkType } from "@/lib/types";
 const Header = () => {
-    const { links, toggleMenu, isActive, isOpen, closeMenu, closeSubLink, handleMouseEnter, handleMouseLeave, hoverLink, } = useHeader();
+    const { links, toggleMenu, isActive, isOpen, closeMenu, closeSubLink, handleMouseEnter, handleMouseLeave, hoverLink, isMobile,
+        activeSubMenu,
+        toggleSubMenu, } = useHeader();
+    const shouldShowSubmenu = (link: HeaderLinkType) => {
+        if (link?.subLink?.length === 0) return false
+        return isMobile ? activeSubMenu === link.label : hoverLink === link.label;
+    };
     return (
         <header className={`${styles.headerContainer}`}>
             <div className={`${styles.hamburgerContainer}`} onClick={toggleMenu}>
@@ -36,28 +45,40 @@ const Header = () => {
             </div>
             <ul className={`${styles.headerLinksContainer} ${isOpen ? styles.open : ""}`}>
                 {links.map((link) => (
+
                     <li key={link.label} className={`${styles.headerLink}`}>
+                        <div className={styles.mainLinkWrapper}>
+                            <Link
+                                href={link.url}
+                                onClick={closeMenu}
+                                aria-label={`Navigate to ${link.label}`}
+                                className={`${isActive(link.url) ? styles.linkActive : "not"}`}
+                                title={`Navigate to ${link.label}`}
+                                onMouseEnter={() => handleMouseEnter(link.label)}
+                                onMouseLeave={handleMouseLeave}
 
-                        <Link
-                            href={link.url}
-                            onClick={closeMenu}
-                            aria-label={`Navigate to ${link.label}`}
-                            className={`${isActive(link.url) ? styles.linkActive : "not"}`}
-                            title={`Navigate to ${link.label}`}
-                            onMouseEnter={() => handleMouseEnter(link.label)}
-                            onMouseLeave={handleMouseLeave}
+                            >
+                                {link.label}
+                            </Link>
 
-                        >
-                            {link.label}
-                        </Link>
-                        {hoverLink === link.label &&
+                            {isMobile && link?.subLink
+                                && link?.subLink?.length > 0 && (
+                                    <button
+                                        className={styles.subMenuToggle}
+                                        onClick={() => toggleSubMenu(link.label)}
+                                    >
+                                        {activeSubMenu === link.label ? <FaChevronUp /> : <FaChevronDown />}
+                                    </button>
+                                )}
+                        </div>
+                        {shouldShowSubmenu(link) && link.label &&
                             <ul
                                 onMouseLeave={handleMouseLeave}
                                 className={`${styles.headerSubLinksContainer}`}
                                 onMouseEnter={() => handleMouseEnter(link.label)}
                             >
 
-                                {link.subLink.map((subLink, index) => (
+                                {link?.subLink && link.subLink.map((subLink, index) => (
                                     <li className={`${styles.headerSubLink}`} key={index}>
                                         <Link
                                             href={subLink.url}
@@ -75,6 +96,8 @@ const Header = () => {
                                 }
                             </ul>}
                     </li>
+
+
                 ))}
             </ul>
             <div className={`${styles.offerStripContainer} ${styles.logoheight}`}>

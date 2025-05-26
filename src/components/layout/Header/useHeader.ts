@@ -1,17 +1,18 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { HeaderLinkType } from "@/lib/types";
 export default function useHeader() {
-  const links = [
+  const links: HeaderLinkType[] = [
     {
       label: "Home",
       url: "/",
-      subLink: [{ label: "Home", url: " /" }],
+      subLink: [],
     },
     {
       label: "About",
       url: "/about",
-      subLink: [{ label: "Home", url: " /" }],
+      subLink: [],
     },
     {
       label: "Treatments",
@@ -78,17 +79,17 @@ export default function useHeader() {
     {
       label: "Blog",
       url: "/blog",
-      subLink: [{ label: "Home", url: " /" }],
+      subLink: [],
     },
     {
       label: "Location",
       url: "/location",
-      subLink: [{ label: "Home", url: " /" }],
+      subLink: [],
     },
     {
       label: "FAQs",
       url: "/faqs",
-      subLink: [{ label: "Home", url: " /" }],
+      subLink: [],
     },
   ];
   const pathname = usePathname();
@@ -116,6 +117,24 @@ export default function useHeader() {
     }, 200);
     setIsOpen(false);
   };
+
+  const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
+
+  const toggleSubMenu = (label: string) => {
+    setActiveSubMenu((prev) => (prev === label ? null : label));
+  };
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1100);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return {
     closeSubLink,
     links,
@@ -126,5 +145,8 @@ export default function useHeader() {
     hoverLink,
     handleMouseEnter,
     handleMouseLeave,
+    isMobile,
+    activeSubMenu,
+    toggleSubMenu,
   };
 }
