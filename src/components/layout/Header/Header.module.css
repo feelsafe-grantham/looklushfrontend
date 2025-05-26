@@ -38,8 +38,7 @@
   padding: 10px 15px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  /* this should appear and disappear wiht a bit fade animaiton */
+  gap: 20px 20px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease-in;
