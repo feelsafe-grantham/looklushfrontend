@@ -66,7 +66,11 @@ const Home = async () => {
 
 
             <Suspense fallback={<VideoShimmer />}>
-                <VideoContainer endpoint={ENDPOINTS.HOMEVIDEO} />
+                <VideoContainer
+                    endpoint={ENDPOINTS.HOMEVIDEO}
+                    isOverlay={true}
+                />
+
             </Suspense>
 
 

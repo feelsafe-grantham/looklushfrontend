@@ -17,9 +17,11 @@ async function fetchFallback(endpoint: string) {
 const VidoeContainer = async ({
   endpoint,
   isFullWidth,
+  isOverlay = false,
 }: {
   endpoint: string;
   isFullWidth?: boolean;
+  isOverlay?: boolean;
 }) => {
   const videoData: VidoeFallbackType = await fetchFallback(endpoint);
 
@@ -33,6 +35,7 @@ const VidoeContainer = async ({
       videoUrl={videoUrl}
       fallback={fallbackUrl}
       isFullWidth={isFullWidth}
+      isOverlay={isOverlay}
     />
   );
 };

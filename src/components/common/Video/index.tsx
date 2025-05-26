@@ -2,7 +2,8 @@
 import { useEffect, useRef } from "react";
 import styles from "./VideoComp.module.css"
 
-const VideoComp = ({ videoUrl = "", fallback = "", isFullWidth = false }: { videoUrl: string, fallback: string, isFullWidth?: boolean }) => {
+const VideoComp = (
+    { videoUrl = "", fallback = "", isFullWidth = false, isOverlay = false }: { videoUrl: string, fallback: string, isFullWidth?: boolean, isOverlay?: boolean }) => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
     useEffect(() => {
         const timeout = setTimeout(() => {
@@ -15,7 +16,8 @@ const VideoComp = ({ videoUrl = "", fallback = "", isFullWidth = false }: { vide
         };
     }, [videoUrl]);
     return (
-        <div className={`${styles.videoContainer} ${isFullWidth ? styles.fullWidth : styles.maxWidth}`}>
+        <div
+            className={`${styles.videoContainer} ${isFullWidth ? styles.fullWidth : styles.maxWidth}`}>
             <video
                 className={`${styles.video} ${isFullWidth ? styles.fullWidth : styles.maxWidth}`}
                 ref={videoRef}
@@ -29,6 +31,7 @@ const VideoComp = ({ videoUrl = "", fallback = "", isFullWidth = false }: { vide
                 {/* <source src={"/home/video/videoBag.mp4"} type="video/mp4" /> */}
                 Your browser does not support the video tag.
             </video>
+            {isOverlay && <div className={styles.overlay}></div>}
         </div>
     );
 }
