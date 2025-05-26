@@ -14,60 +14,60 @@ export default function useHeader() {
       url: "/treatments",
       subLink: [
         {
-          label: "Acne Treatment",
-          url: "treatments/acne-solution-1",
+          label: "Acne Cleanup",
+          url: "/treatments/acne-cleanup-3",
         },
         {
           label: "Anti-Aging Treatment",
-          url: "treatments/anti-aging-solution-1",
+          url: "/treatments/anti-aging-solution-1",
         },
         {
           label: "Laser Hair Removal",
-          url: "treatments/laser-hair-removal-1",
+          url: "/treatments/laser-hair-removal-1",
         },
         {
           label: "PRP Treatment",
-          url: "treatments/prp-solution-1",
+          url: "/treatments/prp-solution-1",
         },
         {
           label: "Acne Treatment",
-          url: "treatments/acne-solution-1",
+          url: "/treatments/acne-solution-1",
         },
         {
           label: "Anti-Aging Treatment",
-          url: "treatments/anti-aging-solution-1",
+          url: "/treatments/anti-aging-solution-1",
         },
         {
           label: "Laser Hair Removal",
-          url: "treatments/laser-hair-removal-1",
+          url: "/treatments/laser-hair-removal-1",
         },
         {
           label: "PRP Treatment",
-          url: "treatments/prp-solution-1",
+          url: "/treatments/prp-solution-1",
         },
         {
           label: "Laser Hair Removal",
-          url: "treatments/laser-hair-removal-1",
+          url: "/treatments/laser-hair-removal-1",
         },
         {
           label: "PRP Treatment",
-          url: "treatments/prp-solution-1",
+          url: "/treatments/prp-solution-1",
         },
         {
           label: "Acne Treatment",
-          url: "treatments/acne-solution-1",
+          url: "/treatments/acne-solution-1",
         },
         {
           label: "Anti-Aging Treatment",
-          url: "treatments/anti-aging-solution-1",
+          url: "/treatments/anti-aging-solution-1",
         },
         {
           label: "Laser Hair Removal",
-          url: "treatments/laser-hair-removal-1",
+          url: "/treatments/laser-hair-removal-1",
         },
         {
           label: "PRP Treatment",
-          url: "treatments/prp-solution-1",
+          url: "/treatments/prp-solution-1",
         },
       ],
     },

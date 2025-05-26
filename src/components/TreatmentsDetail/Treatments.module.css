@@ -14,7 +14,12 @@
   object-fit: cover;
   border-radius: var(--standard-border-radius);
 }
-
+.benifitContainer {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  gap: 20px;
+}
 .gridContainer {
   display: grid;
   max-width: var(--max-width-container);

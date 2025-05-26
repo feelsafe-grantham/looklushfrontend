@@ -22,7 +22,7 @@ const TreatmentsDetail = ({
       <AppointmentForm />
       {data.benifits.length > 0 &&
         data.benifits.map((benifit, index) => (
-          <div key={index}>
+          <div className={`${styles.benifitContainer}`} key={index}>
             <SectionHeading line1={benifit.heading1} line2={benifit.heading2} />
             <SectionHeadPara para={benifit.description} />
             <div className={styles.patientImageContainer}>

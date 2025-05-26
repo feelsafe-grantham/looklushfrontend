@@ -59,12 +59,11 @@
   height: 100%;
   margin: auto;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
 .video {
-  max-width: 65%;
+  max-height: 550px;
 }
 
 @media (max-width: 1100px) {
