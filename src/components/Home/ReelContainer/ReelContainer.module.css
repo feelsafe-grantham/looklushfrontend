@@ -1,22 +1,53 @@
 .reelWrapper {
   background-color: var(--bg-section-color);
   padding: 50px 0;
+  overflow-x: hidden; /* Prevents full screen shifting */
 }
+
 .reelContainer {
   max-width: var(--max-width-container);
-  margin: 0px auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  place-items: center;
-  gap: 50px 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  justify-content: flex-start;
+  -keyboard-scrolling: true;
 }
-@media (max-width: 940px) {
-  .reelContainer {
-    grid-template-columns: 1fr 1fr;
-  }
+/* Optional: Customize scrollbar appearance */
+.reelContainer::-webkit-scrollbar {
+  height: 6px;
 }
-@media (max-width: 640px) {
+
+.reelContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.reelContainer::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.reelContainer::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.reelContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.reelContainer > * {
+  flex: 0 0 auto; /* Prevent child items from stretching */
+  scroll-snap-align: start;
+}
+
+@media (max-width: 1200px) {
   .reelContainer {
-    grid-template-columns: 1fr;
+    justify-content: flex-start;
   }
 }
