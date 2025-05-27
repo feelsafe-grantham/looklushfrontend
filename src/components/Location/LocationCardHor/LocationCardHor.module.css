@@ -1,9 +1,9 @@
 .addressContainer {
   max-width: var(--max-width-container);
   margin: 0px auto;
-  gap: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 50px;
   padding: 20px 0;
 }
 .address {
@@ -70,7 +70,7 @@
   .addressContainer {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 0px;
+    gap: 20px;
   }
   .address {
     margin: 0px auto;

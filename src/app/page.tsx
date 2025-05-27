@@ -1,5 +1,5 @@
-import HomeComp from "@/components/Home";
 import { Metadata } from 'next';
+import HomeComp from "@/components/Home";
 export const metadata: Metadata = {
   title: 'LookLush | Advanced Skin & Hair Treatments in Gurugram & Mumbai',
   description: 'Experience the best in skin and hair care at LookLush Clinics in Gurugram and Mumbai. Customized treatments, expert dermatologists, visible results.',

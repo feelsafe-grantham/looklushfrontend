@@ -16,7 +16,7 @@ import { MUMBAI_ADDRESS, GURUGRAM_ADDRESS } from "@/data";
 import LocationCardHor from "./LocationCardHor";
 const LocationComp = () => {
   return (
-    <div className={`${styles.locaionContainer}`}>
+    <div className={`${styles.locationContainer}`}>
       <LocationCardHor location={MUMBAI_ADDRESS} />
       <LocationCardHor location={GURUGRAM_ADDRESS} />
       <AppointmentForm />
