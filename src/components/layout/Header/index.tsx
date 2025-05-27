@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { FaChevronDown, FaChevronUp, } from "react-icons/fa";
-
 import { staticImages } from "@/utils/staticNames/index"
 import styles from "./Header.module.css";
 import useHeader from "./useHeader";

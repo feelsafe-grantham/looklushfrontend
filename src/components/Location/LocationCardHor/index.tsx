@@ -11,7 +11,11 @@ const LocationCardHor = ({ location }: { location: AddressType }) => {
           <button className={`${styles.locationButton}`}>Location</button>
           <input type="text" className={`${styles.locationInput}`} />
         </div> */}
-        <Link href="/location" className={`${styles.visitButton}`}>
+        <Link
+          target="_blank"
+          className={`${styles.visitButton}`}
+          href={location?.visit_link ? location?.visit_link : "#"}
+        >
           Visit Now!
         </Link>
       </div>
