@@ -1,0 +1,11 @@
+.ctaButton {
+  background-color: var(--bg-white-color);
+  color: var(--text-theme-color);
+  font-family: var(--font-sour-gummy);
+  align-self: flex-end;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 5px 30px;
+  cursor: pointer;
+  box-shadow: inset 0px 0px 10px rgba(244, 119, 149, 0.5);
+}

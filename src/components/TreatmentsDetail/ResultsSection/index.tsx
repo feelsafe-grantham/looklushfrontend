@@ -27,7 +27,7 @@ const ResultsSection = ({ id }: { id: number | undefined }) => {
     <div className={styles.container}>
       <div className={styles.textSection}>
         {result?.title1 && (
-          <SectionHeading line1={result?.title1} line2={result?.title2} />
+          <SectionHeading line1={result?.title1} />
         )}
         <p className={styles.description}>{result?.description}</p>
         <div className={styles.imageCarousel}>

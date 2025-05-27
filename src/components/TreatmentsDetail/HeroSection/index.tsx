@@ -1,5 +1,6 @@
 import { TreatmentDetailType } from "@/lib/types";
 import styles from "./TreatmentHeroSection.module.css"
+import CtaButton from "@/components/ui/CtaButton";
 const TreatmentHeroSection = ({ data }: { data: TreatmentDetailType }) => {
     return (
         <div className={`${styles.treatmentHeroSection}`}>
@@ -28,7 +29,8 @@ const TreatmentHeroSection = ({ data }: { data: TreatmentDetailType }) => {
                     </div>
                 </div>
                 <div className={`${styles.buttonContainer}`}>
-                    <button className={`${styles.heroButton}`}>Book Now</button>
+
+                    <CtaButton text="Book Now" />
                 </div>
             </div>
             <div className={`${styles.heroImageContainer}`}>
