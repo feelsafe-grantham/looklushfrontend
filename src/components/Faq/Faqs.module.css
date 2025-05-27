@@ -5,7 +5,7 @@
 .faqSearchBarContainer {
   max-width: var(--max-width-container);
   margin: 0px auto;
-  padding: 100px 0;
+  padding: 50px 0;
   display: flex;
   justify-content: center;
   align-items: center;
