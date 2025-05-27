@@ -25,7 +25,7 @@ const LaserBurnSection = () => {
   return (
     <div className={styles.container}>
       <div className={styles.imageWrapper}>
-        <Carousel>
+        <Carousel showButtons={true}>
           <img src="/images/carousel1.png" alt="Image 1" />
           <img src="/images/carousel2.png" alt="Image 1" />
           <img src="/images/carousel3.png" alt="Image 1" />

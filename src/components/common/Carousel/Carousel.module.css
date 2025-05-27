@@ -31,12 +31,27 @@
 
 .button {
   position: absolute;
-  height: 80px;
-  width: 80px;
   border-radius: 50%;
   z-index: 10;
+  font-size: 14px;
+  padding: 10px;
+  font-weight: 200;
+  background-color: var(--bg-theme-color);
+  color: var(--text-white-color);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.button:hover {
+  background-color: var(--bg-theme-dark);
+}
+.button:active {
+  transform: scale(0.99);
+}
+
+.gtIcon {
+  color: var(--text-white-color);
+  font-size: 24px;
+}
 .next,
 .prev {
   top: 50%;
@@ -46,11 +61,11 @@
 }
 
 .next {
-  right: 0;
+  right: 10px;
 }
 
 .prev {
-  left: 0;
+  left: 10px;
 }
 
 .stepper {

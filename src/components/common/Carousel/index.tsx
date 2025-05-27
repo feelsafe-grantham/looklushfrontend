@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useEffect, useRef, useState, ReactElement } from "react";
+import React, { useEffect, useRef, useState, } from "react";
 import styles from "./Carousel.module.css";
+import { FaLessThan, FaGreaterThan } from "react-icons/fa";
 
 interface CarouselProps {
     children: React.ReactElement[]; // Accept any type of valid React element
@@ -107,10 +108,10 @@ function Carousel({ children, showButtons = false }: CarouselProps) {
                 )}
             </section>
             {showButtons && <button className={`${styles.button} ${styles.prev}`} onClick={handlePrev}>
-                &lt;
+                <FaLessThan className={`${styles.gtIcon}`} />
             </button>}
             {showButtons && <button className={`${styles.button} ${styles.next}`} onClick={handleNext}>
-                &gt;
+                <FaGreaterThan className={`${styles.gtIcon}`} />
             </button>}
 
             <div className={styles.stepper}>
