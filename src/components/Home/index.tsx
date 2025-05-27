@@ -42,7 +42,6 @@ const Home = async () => {
                 className={`${styles.celebrityImage}`}
             />
 
-
             <SectionHeading line1="20 years of Experience" />
 
             <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
@@ -56,7 +55,7 @@ const Home = async () => {
             <Suspense fallback={<ReelContainerShimmer />}>
                 <ReelContainer />
             </Suspense>
-
+            {/*
             <SectionHeading
                 line1="Experience the art of Caring"
                 line2="with Dr. Poonam Patel"
@@ -70,7 +69,6 @@ const Home = async () => {
                     endpoint={ENDPOINTS.HOMEVIDEO}
                     isOverlay={true}
                 />
-
             </Suspense>
 
 
@@ -96,7 +94,7 @@ const Home = async () => {
 
             <SectionHeading line1="Frequently Asked Questions" line2="& Answers" />
 
-            <Faqs />
+            <Faqs /> */}
         </div>
     );
 };
