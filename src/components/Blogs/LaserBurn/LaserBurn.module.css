@@ -1,20 +1,23 @@
 .container {
   text-align: center;
+  place-items: center;
+  display: grid;
+  gap: 10px;
 }
 
 .imageWrapper {
   width: 100%;
   overflow: hidden;
   position: relative;
-  border-radius: 20px;
   display: inline-block;
   max-width: var(--max-width-container);
+  border-radius: var(--standard-border-radius);
 }
 
 .image {
   width: 100%;
   display: block;
-  border-radius: 20px;
+  border-radius: var(--standard-border-radius);
 }
 
 .navArrow {
@@ -81,4 +84,11 @@
   padding: 5px 30px;
   cursor: pointer;
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 576px) {
+  .image,
+  .imageWrapper {
+    border-radius: 0px;
+  }
 }

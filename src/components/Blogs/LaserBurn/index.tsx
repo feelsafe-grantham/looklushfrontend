@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./LaserBurn.module.css";
 import Carousel from "@/components/common/Carousel";
+import Link from "next/link";
 
 const LaserBurnSection = () => {
   const btnLinks = [
@@ -38,7 +39,7 @@ const LaserBurnSection = () => {
           <button className={styles.infoButton}>{btn.label}</button>
         ))}
       </div>
-      <button className={styles.checkoutButton}>Book Now</button>
+      <Link href="/location" className={styles.checkoutButton}>Book Now</Link>
     </div>
   );
 };

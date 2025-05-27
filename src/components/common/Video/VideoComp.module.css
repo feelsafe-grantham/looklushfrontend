@@ -33,3 +33,9 @@
   pointer-events: none;
   border-radius: var(--standard-border-radius);
 }
+
+@media (max-width: 576px) {
+  .maxWidth {
+    padding: 0px 5px;
+  }
+}
