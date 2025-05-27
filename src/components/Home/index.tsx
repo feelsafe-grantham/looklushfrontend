@@ -55,7 +55,7 @@ const Home = async () => {
             <Suspense fallback={<ReelContainerShimmer />}>
                 <ReelContainer />
             </Suspense>
-            {/*
+
             <SectionHeading
                 line1="Experience the art of Caring"
                 line2="with Dr. Poonam Patel"
@@ -94,7 +94,7 @@ const Home = async () => {
 
             <SectionHeading line1="Frequently Asked Questions" line2="& Answers" />
 
-            <Faqs /> */}
+            <Faqs />
         </div>
     );
 };
