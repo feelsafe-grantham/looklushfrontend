@@ -5,6 +5,9 @@ import { staticImages } from "@/utils/staticNames/index"
 import styles from "./Header.module.css";
 import useHeader from "./useHeader";
 import { HeaderLinkType } from "@/lib/types";
+import { contactData } from "@/data";
+import { useModal } from "@/components/ui/Modal/useModal";
+import Form from "@/components/common/Form";
 const Header = () => {
     const { links, toggleMenu, isActive, isOpen, closeMenu, closeSubLink, handleMouseEnter, handleMouseLeave, hoverLink, isMobile,
         activeSubMenu,
@@ -13,6 +16,16 @@ const Header = () => {
         if (link?.subLink?.length === 0) return false
         return isMobile ? activeSubMenu === link.label : hoverLink === link.label;
     };
+    const { openModal } = useModal();
+    const handleBookNow = () => {
+        openModal(
+            {
+                header: "Contact Us",
+                content: <Form />,
+                animation: "scale",
+            }
+        )
+    }
     return (
         <header className={`${styles.headerContainer}`}>
             <div className={`${styles.hamburgerContainer}`} onClick={toggleMenu}>
@@ -44,9 +57,8 @@ const Header = () => {
             </div>
             <ul className={`${styles.headerLinksContainer} ${isOpen ? styles.open : ""}`}>
                 {links.map((link) => (
-
                     <li key={link.label} className={`${styles.headerLink}`}>
-                        <div className={styles.mainLinkWrapper}>
+                        {/* <div className={styles.mainLinkWrapper}>
                             <Link
                                 href={link.url}
                                 onClick={closeMenu}
@@ -60,16 +72,41 @@ const Header = () => {
                                 {link.label}
                             </Link>
 
-                            {isMobile && link?.subLink
-                                && link?.subLink?.length > 0 && (
-                                    <button
-                                        className={styles.subMenuToggle}
-                                        onClick={() => toggleSubMenu(link.label)}
-                                    >
-                                        {activeSubMenu === link.label ? <FaChevronUp /> : <FaChevronDown />}
-                                    </button>
-                                )}
+                            {isMobile && link?.subLink && link?.subLink?.length > 0 && (
+                                <button
+                                    className={styles.subMenuToggle}
+                                    onClick={() => toggleSubMenu(link.label)}
+                                >
+                                    {activeSubMenu === link.label ? <FaChevronUp /> : <FaChevronDown />}
+                                </button>
+                            )}
+                        </div> */}
+                        <div className={styles.mainLinkWrapper}>
+                            <div className={styles.linkTextWrapper}> {/* Wrapper for link text */}
+                                <Link
+                                    href={link.url}
+                                    onClick={closeMenu}
+                                    aria-label={`Navigate to ${link.label}`}
+                                    className={`${isActive(link.url) ? styles.linkActive : "not"}`}
+                                    title={`Navigate to ${link.label}`}
+                                    onMouseEnter={() => handleMouseEnter(link.label)}
+                                    onMouseLeave={handleMouseLeave}
+                                >
+                                    {link.label}
+                                </Link>
+                            </div>
+
+                            {isMobile && link?.subLink && link?.subLink?.length > 0 && (
+                                <button
+                                    className={styles.subMenuToggle}
+                                    onClick={() => toggleSubMenu(link.label)}
+                                >
+                                    {activeSubMenu === link.label ? <FaChevronUp /> : <FaChevronDown />}
+                                </button>
+                            )}
                         </div>
+
+
                         {shouldShowSubmenu(link) && link.label &&
                             <ul
                                 onMouseLeave={handleMouseLeave}
@@ -85,8 +122,6 @@ const Header = () => {
                                             aria-label={`Navigate to ${subLink.label}`}
                                             className={`${isActive(subLink.url) ? styles.linkActive : "not"}`}
                                             title={`Navigate to ${subLink.label}`}
-
-
                                         >
                                             {subLink.label}
                                         </Link>
@@ -95,14 +130,12 @@ const Header = () => {
                                 }
                             </ul>}
                     </li>
-
-
                 ))}
             </ul>
             <div className={`${styles.offerStripContainer} ${styles.logoheight}`}>
-                <span className={`${styles.offerStripContact} ${styles.fitContent} ${styles.borderBottom}`}>+91 987654321</span>
-                <span className={`${styles.offerStripContact} ${styles.fitContent}`}>drpoonam@looklush.in</span>
-                <span className={`${styles.offerStripCta} ${styles.fitContent}`}>Let's fix your skin - Book Now</span>
+                <Link href={`tel:+91${contactData.number1}`} className={`${styles.offerStripContact} ${styles.fitContent} ${styles.borderBottom}`}>+91 {contactData.number1}</Link>
+                <Link href={`mailto:${contactData.email}`} className={`${styles.offerStripContact} ${styles.fitContent}`}>{contactData.email}</Link>
+                <span onClick={handleBookNow} className={`${styles.offerStripCta} ${styles.fitContent}`}>Let's fix your skin - Book Now</span>
             </div>
         </header>
     );

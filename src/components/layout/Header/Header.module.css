@@ -37,20 +37,14 @@
   transform: translateX(-50%);
   padding: 10px 15px;
   display: grid;
-  /* grid-template-columns: repeat(4, 1fr); */
   grid-template-columns: repeat(auto-fit, minmax(calc(100% / 4), 1fr));
   gap: 20px 20px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease-in;
-}
-
-.headerLink:hover .headerSubLinksContainer {
   opacity: 1;
   pointer-events: all;
 }
 
 .headerSubLink {
+  font-size: 18px;
   font-weight: 500;
   width: max-content;
 }
@@ -88,6 +82,7 @@
   text-transform: uppercase;
   font-family: var(--font-sour-gummy);
   background-color: var(--bg-primary-color);
+  cursor: pointer;
 }
 
 .offerStrip {
@@ -155,10 +150,9 @@
     z-index: 11;
   }
   .headerSubLinksContainer {
-    position: relative;
-    flex-direction: column;
     max-height: 300px;
     overflow-y: scroll;
+    position: relative;
   }
   .open {
     display: flex;
@@ -191,14 +185,37 @@
     place-items: center;
   }
 
-  .mainLinkWrapper {
+  /* .mainLinkWrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     gap: 20px;
+    border: 3px solid red;
+  } */
+  /* starts */
+  .mainLinkWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 
+  .linkTextWrapper {
+    display: flex;
+    align-items: center; /* Align text vertically */
+    justify-content: center; /* Ensure the text is centered horizontally */
+    text-align: center; /* Keep text alignment centered */
+  }
+
+  .subMenuToggle {
+    margin-left: 10px; /* Adds a small gap between text and button */
+    background: none;
+    border: none;
+    cursor: pointer; /* Ensures it looks like a clickable button */
+  }
+
+  /* ends */
   .headerSubLink {
     width: 100%;
   }
