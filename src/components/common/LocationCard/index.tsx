@@ -1,3 +1,4 @@
+import CtaButton from '@/components/ui/CtaButton';
 import styles from './LocationCard.module.css';
 const LocationCard = ({ location }: { location?: any }) => {
     const {
@@ -15,7 +16,7 @@ const LocationCard = ({ location }: { location?: any }) => {
             <p className={styles.text}><strong>Hours:</strong> Mon-Sat 11:00AM - 08:00PM</p>
             <p className={styles.text}><strong>Phone:</strong> {phone}</p>
             <p className={styles.text}><strong>Email:</strong> {email}</p>
-            <button className={styles.button}>Visit Now!</button>
+            <CtaButton href={location?.visit_link} text='Visit Now!' />
         </div>
 
     );

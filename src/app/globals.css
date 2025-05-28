@@ -17,6 +17,12 @@
   --max-width-container: 1200px;
   --standard-border-radius: 10px;
   --standard-border-radius2: 5px;
+  --standard-padding: 5px;
+}
+@media (max-width: 600px) {
+  :root {
+    --standard-padding: 10px;
+  }
 }
 
 /* .scrollbar-hide {

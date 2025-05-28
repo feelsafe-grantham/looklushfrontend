@@ -56,4 +56,9 @@
     overflow-x: scroll;
     border-radius: var(--standard-border-radius);
   }
+  .tableData,
+  .tableHeader {
+    width: 100px;
+    padding: 5px 5px;
+  }
 }

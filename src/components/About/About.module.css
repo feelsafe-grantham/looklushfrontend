@@ -249,11 +249,16 @@
 }
 @media (max-width: 576px) {
   .headingcontainer {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 440px) {
+  .headingcontainer {
     font-size: 2rem;
   }
 }
 @media (max-width: 376px) {
   .headingcontainer {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }

@@ -5,7 +5,6 @@ import { ENDPOINTS } from "@/lib/api/endpoints";
 import BlogCard from "../BlogCard";
 async function fetchBlogs() {
     try {
-
         const res: ApiResponse<BlogType[]> = await apiClient.get(ENDPOINTS.BLOGS);
         return res?.data;
     } catch (error) {

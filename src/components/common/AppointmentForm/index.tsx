@@ -2,7 +2,7 @@ import styles from "./AppointmentForm.module.css";
 const AppointmentForm = () => {
   return (
     <div className={`${styles.appointmentFormContainer}`}>
-      <form>
+      <form className={styles.form}>
         <div className={styles.formInputContainer}>
           <select className={`${styles.formInput} ${styles.formSelect}`}>
             <option className={styles.option}>Date & time</option>

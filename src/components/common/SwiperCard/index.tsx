@@ -69,7 +69,7 @@ const SwiperCard = ({ cardsData }: { cardsData: ServiceCard[] }) => {
                 return (
                     <div
                         key={card.image}
-                        className={`${styles.card} ${isTop ? styles.topCard : ""}`}
+                        className={`${styles.card} ${isTop ? styles.topCard : styles.bottomCard}`}
                         onMouseDown={isTop ? handleStart : undefined}
                         onTouchStart={isTop ? handleStart : undefined}
                         style={{

@@ -2,23 +2,24 @@ import React from "react";
 import styles from "./LaserBurn.module.css";
 import Carousel from "@/components/common/Carousel";
 import Link from "next/link";
+import CtaButton from "@/components/ui/CtaButton";
 
 const LaserBurnSection = () => {
   const btnLinks = [
     {
-      label: "What is a Laser Burn?",
+      label: "What is your skin type?",
       url: "",
     },
     {
-      label: "How it works?",
+      label: "How to properly clean your skin?",
       url: "",
     },
     {
-      label: "Total Sitting?",
+      label: "Is your skin sensitive?",
       url: "",
     },
     {
-      label: "Is it painful?",
+      label: " Is your skin dry or oily?",
       url: "",
     },
   ];
@@ -33,13 +34,13 @@ const LaserBurnSection = () => {
           <img src="/images/carousel5.png" alt="Image 1" />
         </Carousel>
       </div>
-      <h2 className={styles.title}>Is Laser Burns?</h2>
+      <h2 className={styles.title}>Know about Your Skin</h2>
       <div className={styles.buttonGroup}>
         {btnLinks.map((btn) => (
           <button className={styles.infoButton}>{btn.label}</button>
         ))}
       </div>
-      <Link href="/location" className={styles.checkoutButton}>Book Now</Link>
+      <CtaButton newTab={false} href="/location" text="Book Now!" />
     </div>
   );
 };

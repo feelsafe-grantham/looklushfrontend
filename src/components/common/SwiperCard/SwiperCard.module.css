@@ -21,10 +21,15 @@
   justify-content: flex-end;
   overflow: hidden;
   max-height: 500px;
+}
+.topCard {
   box-shadow: 0 0px 5px rgba(244, 119, 149, 1);
   border: 3px solid rgb(244, 119, 149);
 }
-
+.bottomCard {
+  box-shadow: 0 0px 5px rgba(244, 119, 149, 1);
+  border: 3px solid rgb(244, 119, 149);
+}
 .overlay {
   width: 100%;
   padding: 20px;

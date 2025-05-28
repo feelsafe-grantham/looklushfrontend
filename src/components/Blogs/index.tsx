@@ -1,14 +1,22 @@
-import BlogCard from "./BlogCard";
 import styles from "./BlogsComp.module.css";
 import LaserBurnSection from "./LaserBurn";
 import ReelContainer from "../Home/ReelContainer";
 import SectionHeading from "../common/SectionHeading";
-import { BlogType } from "@/lib/types";
 import BlogContainer from "./BlogContainer";
 
 
-const BlogsComp = ({ blogs }: { blogs: BlogType[] }) => {
-    const blogTopics = ["Laser Burns", "Laser Burns", "Laser Burns", "Laser Burns", "Laser Burns", "Laser Burns"];
+const BlogsComp = () => {
+    const blogTopics = [
+        "Laser Burns",
+        "Acne Treatment",
+        "Anti-Aging Treatment",
+        "PRP Treatment",
+        "Laser Hair Removal",
+        "Skin Care",
+        "Hair Care",
+        "Lifestyle",
+        "Aesthetic Treatments",
+    ];
 
     return (
         <div>

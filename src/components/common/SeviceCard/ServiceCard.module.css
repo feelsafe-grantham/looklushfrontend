@@ -9,6 +9,8 @@
   justify-content: center;
   gap: 0.5rem;
   text-align: left;
+  border: 1px solid var(--text-light-color);
+  padding: 5px 1px;
 }
 .serviceHeadContainer {
   display: flex;

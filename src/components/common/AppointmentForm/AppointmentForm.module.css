@@ -36,3 +36,18 @@
   font-weight: 600;
   cursor: pointer;
 }
+
+@media (max-width: 576px) {
+  .appointmentFormContainer {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+  }
+  .form {
+    width: fit-content;
+  }
+  .formInputContainer {
+    padding: 20px var(--standard-padding);
+    justify-content: flex-start;
+  }
+}
