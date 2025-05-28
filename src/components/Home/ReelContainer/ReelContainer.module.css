@@ -1,15 +1,10 @@
 .reelWrapper {
   background-color: var(--bg-section-color);
-  padding: 50px 0;
+  padding: 20px 0px;
   overflow: hidden;
-}
-
-.reelWrapper {
   max-width: var(--max-width-container);
   width: 100%;
   margin: auto;
-
-  padding: 0px 0;
   overflow: hidden;
   position: relative;
 }
@@ -22,7 +17,6 @@
   gap: 100px;
   overflow-x: scroll;
   overflow-y: hidden;
-  padding-bottom: 10px;
   justify-content: flex-start;
 }
 .button {
@@ -65,7 +59,7 @@
 }
 
 .reelContainer > * {
-  flex: 0 0 auto; /* Prevent child items from stretching */
+  flex: 0 0 auto;
   scroll-snap-align: start;
 }
 

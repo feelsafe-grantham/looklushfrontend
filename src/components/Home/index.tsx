@@ -40,11 +40,6 @@ const Home = async () => {
             <SectionHeading line1="20 years of Experience" />
             <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
             <ExperienceContainer />
-            <img
-                alt="Celebrity"
-                src="/images/celebrity.png"
-                className={`${styles.celebrityImage}`}
-            />
             <Suspense fallback={<ReelContainerShimmer />}>
                 <ReelContainer />
             </Suspense>

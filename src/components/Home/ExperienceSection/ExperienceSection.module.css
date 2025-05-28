@@ -1,6 +1,6 @@
 .experienceWrapper {
   width: 100%;
-  padding: 1rem;
+  padding: 3rem 0px;
 }
 
 .experienceContainer {
@@ -100,8 +100,13 @@
   height: 75%;
   object-fit: cover;
 }
-@media (max-width: 768px) {
-  .experienceContainer {
-    position: relative;
+@media (max-width: 576px) {
+  .phoneContainer {
+    left: 0%;
+    width: 25%;
+  }
+  .tabContainer {
+    right: 2%;
+    width: 50%;
   }
 }
