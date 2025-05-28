@@ -3,6 +3,8 @@ export const ENDPOINTS = {
   CAROUSEL: "/home-carousel/",
   REELS: "/get-all-video-testimonials/",
   HOMEVIDEO: "/page-video/home/1",
+  HOMEVIDEOREEL: "/page-video/home/2",
+  HOMEVIDEOSEC: "/page-video/home/3",
   COMPARESLIDERHOME: "/get-comment-testimonials/",
   GETPRICETABLE: "/get-pricing-tables/",
   SERVICES: "/get-asthetics/",

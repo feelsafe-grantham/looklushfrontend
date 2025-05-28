@@ -20,7 +20,7 @@ import { ReelContainerShimmer } from "../common/Loading/ReelContainerShimmer";
 import VideoShimmer from "../common/Loading/VideoShimmer";
 import CompareSliderShimmer from "../common/Loading/CompareSliderShimmer";
 import PriceTableShimmer from "../common/Loading/PriceTableShimmer";
-import ExperienceSection from "./ExperienceSection";
+import ExperienceContainer from "./ExperienceSection/Container";
 
 const Home = async () => {
 
@@ -39,7 +39,7 @@ const Home = async () => {
             />
             <SectionHeading line1="20 years of Experience" />
             <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
-            <ExperienceSection />
+            <ExperienceContainer />
             <img
                 alt="Celebrity"
                 src="/images/celebrity.png"

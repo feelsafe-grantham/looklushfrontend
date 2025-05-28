@@ -2,8 +2,13 @@
 import { useEffect, useRef } from "react";
 import styles from './ExperienceSection.module.css';
 
-const ExperienceSection = () => {
-    const phoneVideoUrl = "/videos/reel.mp4"
+const ExperienceSection = ({ phoneVideoUrl, phoneFallback, tabVideoUrl, tabFallback }: {
+    phoneVideoUrl: string,
+    phoneFallback: string,
+    tabVideoUrl: string,
+    tabFallback: string
+}) => {
+
     const phoneVideoRef = useRef<HTMLVideoElement | null>(null);
     useEffect(() => {
         const timeout = setTimeout(() => {
@@ -15,7 +20,9 @@ const ExperienceSection = () => {
             clearTimeout(timeout);
         };
     }, [phoneVideoUrl]);
-    const tabVideoUrl = "/videos/video.mp4"
+
+
+
     const tabVideoRef = useRef<HTMLVideoElement | null>(null);
     useEffect(() => {
         const timeout = setTimeout(() => {
@@ -40,6 +47,7 @@ const ExperienceSection = () => {
                         src="/images/laptop-frame.png"
                     />
                 </div>
+
                 <div className={styles.phoneContainer}>
                     <video
                         className={`${styles.phoneVideo}`}
@@ -48,28 +56,29 @@ const ExperienceSection = () => {
                         muted
                         autoPlay
                         playsInline
-                        poster={"/images/reelfallback.png"}
+                        poster={phoneFallback}
                         preload="auto"
                     >
                         Your browser does not support the video tag.
                     </video>
                     <img src="/images/phone-frame.png" alt="phone frame" className={styles.phoneFrame} />
                 </div>
-                {/* 
+
                 <div className={styles.tabContainer}>
                     <video
-                        className={`${styles.video}`}
+                        className={`${styles.tabVideo}`}
                         ref={tabVideoRef}
                         loop
                         muted
                         autoPlay
                         playsInline
-                        poster={"/images/homeFallback.png"}
+                        poster={tabFallback}
                         preload="auto"
                     >
                         Your browser does not support the video tag.
                     </video>
-                </div> */}
+                    <img src="/images/tablet-frame.png" alt="" />
+                </div>
             </div>
         </div>
     );
