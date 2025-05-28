@@ -15,59 +15,51 @@ export default function useHeader() {
       subLink: [
         {
           label: "Acne Cleanup",
-          url: "/treatments/acne-cleanup-3",
+          url: "/treatments/acne-cleanup-4",
         },
         {
-          label: "Anti-Aging Treatment",
-          url: "/treatments/anti-aging-solution-1",
+          label: "Bridal Skin Treatment",
+          url: "/treatments/bridal-skin-treatment-5",
         },
         {
-          label: "Laser Hair Removal",
-          url: "/treatments/laser-hair-removal-1",
+          label: "Carbon Laser",
+          url: "/treatments/carbon-laser-6",
         },
         {
-          label: "PRP Treatment",
-          url: "/treatments/prp-solution-1",
+          label: "Facial Fillers",
+          url: "/treatments/facial-filler-7",
         },
         {
-          label: "Acne Treatment",
-          url: "/treatments/acne-solution-1",
+          label: "Androgenic Alopecia",
+          url: "/treatments/androgenic-alopecia-8",
         },
         {
-          label: "Anti-Aging Treatment",
-          url: "/treatments/anti-aging-solution-1",
+          label: "Anti-Dandruff",
+          url: "/treatments/anti-dandruff-9",
         },
         {
-          label: "Laser Hair Removal",
-          url: "/treatments/laser-hair-removal-1",
+          label: "Hair Fall",
+          url: "/treatments/hair-fall-10",
         },
         {
-          label: "PRP Treatment",
-          url: "/treatments/prp-solution-1",
+          label: "Hair PRP",
+          url: "/treatments/hair-prp-11",
         },
         {
-          label: "Laser Hair Removal",
-          url: "/treatments/laser-hair-removal-1",
-        },
-        {
-          label: "PRP Treatment",
-          url: "/treatments/prp-solution-1",
-        },
-        {
-          label: "Acne Treatment",
-          url: "/treatments/acne-solution-1",
-        },
-        {
-          label: "Anti-Aging Treatment",
-          url: "/treatments/anti-aging-solution-1",
+          label: "Tattoo Removal",
+          url: "/treatments/tattoo-removal-15",
         },
         {
           label: "Laser Hair Removal",
-          url: "/treatments/laser-hair-removal-1",
+          url: "/treatments/hair-removal-14",
         },
         {
-          label: "PRP Treatment",
-          url: "/treatments/prp-solution-1",
+          label: "Accidental Scar",
+          url: "/treatments/accidental-scar-12",
+        },
+        {
+          label: "Birthmark Removal",
+          url: "/treatments/birthmark-removal-13",
         },
       ],
     },
