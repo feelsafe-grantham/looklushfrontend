@@ -131,7 +131,7 @@
     margin-right: 30px;
   }
   .headerContainer {
-    border-bottom: 1px solid var(--primary-text);
+    border-bottom: 1px solid var(--text-light-color);
     padding-bottom: 7px;
     position: relative;
   }
