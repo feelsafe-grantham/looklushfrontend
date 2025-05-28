@@ -56,13 +56,11 @@ const SwiperCard = ({ cardsData }: { cardsData: ServiceCard[] }) => {
         setIsDragging(true);
     };
 
-
-
     const topCard = cards[cards.length - 1];
+
     useEffect(() => {
         setCards(cardsData);
     }, [cardsData]);
-
 
     return (
         <div className={styles.swipeContainer}>
@@ -77,7 +75,7 @@ const SwiperCard = ({ cardsData }: { cardsData: ServiceCard[] }) => {
                         style={{
                             backgroundImage: `url(${card.image})`,
                             transform: isTop
-                                ? `translate(${translate.x}px, ${translate.y}px) rotate(${translate.x * 0.05}deg)`
+                                ? `translate(${translate.x}px, ${translate.y}px) rotate(${translate.x === 0 ? -4 : translate.x * 0.05}deg)`
                                 : "none",
                             zIndex: i,
                             transition: isDragging ? "none" : "transform 0.3s ease",
