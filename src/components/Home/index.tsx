@@ -30,45 +30,57 @@ const Home = async () => {
                 <CarouselContainer />
             </Suspense>
             <ExpertCard />
-            <SectionHeading line1="Our Celebrity Clients" />
-            <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
-            <img
-                alt="Celebrity"
-                src="/images/20-years.png"
-                className={`${styles.celebrityImage}`}
-            />
-            <SectionHeading line1="20 years of Experience" />
-            <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
-            <ExperienceContainer />
+            <section className={`${styles.sectionContainer}`}>
+                <SectionHeading line1="Our Celebrity Clients" />
+                <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
+                <img
+                    alt="Celebrity"
+                    src="/images/20-years.png"
+                    className={`${styles.celebrityImage}`}
+                />
+            </section>
+            <section className={`${styles.sectionContainer}`}>
+                <SectionHeading line1="20 years of Experience" />
+                <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
+                <ExperienceContainer />
+            </section>
             <Suspense fallback={<ReelContainerShimmer />}>
                 <ReelContainer />
             </Suspense>
-            <SectionHeading
-                line1="Experience the art of Caring"
-                line2="with Dr. Poonam Patel"
-            />
-            <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
-            <Suspense fallback={<VideoShimmer />}>
-                <VideoContainer
-                    endpoint={ENDPOINTS.HOMEVIDEO}
-                    isOverlay={true}
+            <section className={`${styles.sectionContainer}`}>
+                <SectionHeading
+                    line1="Experience the art of Caring"
+                    line2="with Dr. Poonam Patel"
                 />
-            </Suspense>
+                <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
+                <Suspense fallback={<VideoShimmer />}>
+                    <VideoContainer
+                        endpoint={ENDPOINTS.HOMEVIDEO}
+                        isOverlay={true}
+                    />
+                </Suspense>
+            </section>
             <Suspense fallback={<CompareSliderShimmer />}>
                 <CompareSliderContainer />
             </Suspense>
-            <SectionHeading line1="Nothing Complex Here" />
-            <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
-            <Suspense fallback={<PriceTableShimmer />}>
-                <PriceTableContainer />
-            </Suspense>
-            <SectionHeading
-                line1="Welcome to Looklush Asthetic"
-                line2="& Laser Center"
-            />
-            <ServicesContainer />
-            <SectionHeading line1="Frequently Asked Questions" line2="& Answers" />
-            <Faqs />
+            <section className={`${styles.sectionContainer}`}>
+                <SectionHeading line1="Nothing Complex Here" />
+                <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
+                <Suspense fallback={<PriceTableShimmer />}>
+                    <PriceTableContainer />
+                </Suspense>
+            </section>
+            <section className={`${styles.sectionContainer}`}>
+                <SectionHeading
+                    line1="Welcome to Looklush Asthetic"
+                    line2="& Laser Center"
+                />
+                <ServicesContainer />
+            </section>
+            <section className={`${styles.sectionContainer}`}>
+                <SectionHeading line1="Frequently Asked Questions" line2="& Answers" />
+                <Faqs />
+            </section>
         </div>
     );
 };
