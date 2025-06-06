@@ -69,6 +69,8 @@
   z-index: 10;
   color: var(--text-white-color);
   font-size: 13px;
+  max-height: 200px;
+  overflow-y: scroll;
 }
 
 .comment {

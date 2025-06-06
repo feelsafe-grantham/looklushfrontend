@@ -54,7 +54,7 @@ const ReelCard = ({ Reel }: { Reel: VideoTestimonial }) => {
                 {/* <source src={"/home/video/videoBag.mp4"} type="video/mp4" /> */}
                 Your browser does not support the video tag.
             </video>
-            <div className={styles.commentBox}>
+            <div className={`${styles.commentBox} scrollbar-hidden`}>
                 {comments.map((c: any, i: any) => (
                     <div key={i} className={styles.comment}><span className={styles.user}>{c.user}</span> {c.message}</div>
                 ))}
