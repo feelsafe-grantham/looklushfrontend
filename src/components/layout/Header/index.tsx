@@ -57,31 +57,9 @@ const Header = () => {
             <ul className={`${styles.headerLinksContainer} ${isOpen ? styles.open : ""}`}>
                 {links.map((link) => (
                     <li key={link.label} className={`${styles.headerLink}`}>
-                        {/* <div className={styles.mainLinkWrapper}>
-                            <Link
-                                href={link.url}
-                                onClick={closeMenu}
-                                aria-label={`Navigate to ${link.label}`}
-                                className={`${isActive(link.url) ? styles.linkActive : "not"}`}
-                                title={`Navigate to ${link.label}`}
-                                onMouseEnter={() => handleMouseEnter(link.label)}
-                                onMouseLeave={handleMouseLeave}
 
-                            >
-                                {link.label}
-                            </Link>
-
-                            {isMobile && link?.subLink && link?.subLink?.length > 0 && (
-                                <button
-                                    className={styles.subMenuToggle}
-                                    onClick={() => toggleSubMenu(link.label)}
-                                >
-                                    {activeSubMenu === link.label ? <FaChevronUp /> : <FaChevronDown />}
-                                </button>
-                            )}
-                        </div> */}
                         <div className={styles.mainLinkWrapper}>
-                            <div className={styles.linkTextWrapper}> {/* Wrapper for link text */}
+                            <div className={styles.linkTextWrapper}>
                                 <Link
                                     href={link.url}
                                     onClick={closeMenu}
@@ -109,7 +87,7 @@ const Header = () => {
                         {shouldShowSubmenu(link) && link.label &&
                             <ul
                                 onMouseLeave={handleMouseLeave}
-                                className={`${styles.headerSubLinksContainer}`}
+                                className={`${styles.headerSubLinksContainer} ${link.subLink.length < 5 && styles.oneCol}`}
                                 onMouseEnter={() => handleMouseEnter(link.label)}
                             >
 
