@@ -4,6 +4,7 @@ import { ApiResponse, HeaderSubLinkType } from "@/lib/types";
 import { useState, useEffect } from "react";
 import { apiClient } from "@/lib/api/apiClient";
 import { ENDPOINTS } from "@/lib/api/endpoints";
+import { FORMSPREE } from "@/data";
 const Form = () => {
     const sittings = [1, 2, 3, 4, 5, 6, 7]
     const [options, setOptions] = useState<string[]>([])
@@ -22,7 +23,7 @@ const Form = () => {
     return (
         <form
             method="POST"
-            action="https://formspree.io/f/{your_form_id}"
+            action={FORMSPREE}
             className={`${styles.form} ${styles.formBg}`}
         >
             <input name="name" type="text" placeholder="Name" className={`${styles.formInput}`} />

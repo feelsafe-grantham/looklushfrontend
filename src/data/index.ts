@@ -32,3 +32,5 @@ export const contactData = {
   number2: "9322817696",
   email: "drpatelpoonam@gmail.com",
 };
+
+export const FORMSPREE = "";

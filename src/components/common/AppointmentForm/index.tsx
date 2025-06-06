@@ -4,6 +4,7 @@ import { ApiResponse, HeaderSubLinkType } from "@/lib/types";
 import { useState, useEffect } from "react";
 import { apiClient } from "@/lib/api/apiClient";
 import { ENDPOINTS } from "@/lib/api/endpoints";
+import { FORMSPREE } from "@/data";
 
 const AppointmentForm = () => {
   const sittings = [1, 2, 3, 4, 5, 6, 7]
@@ -23,7 +24,7 @@ const AppointmentForm = () => {
   return (
     <div className={styles.appointmentFormContainer}>
       <form
-        action="https://formspree.io/f/{your_form_id}"
+        action={FORMSPREE}
         method="POST"
         className={styles.form}
       >
