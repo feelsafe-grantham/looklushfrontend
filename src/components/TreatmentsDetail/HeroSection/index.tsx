@@ -9,7 +9,7 @@ const TreatmentHeroSection = ({ data }: { data: TreatmentDetailType }) => {
     const handleBtnClick = () => {
         openModal(
             {
-                header: "Contact Us",
+                header: "Make a Booking",
                 content: <Form />,
                 animation: "scale",
             }

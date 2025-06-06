@@ -4,7 +4,7 @@ import { useModal } from "@/components/ui/Modal/useModal";
 
 
 export default function Problems() {
-  const { closeModal, isOpen, openModal, options } = useModal();
+  const { openModal } = useModal();
   return <div className="my-4">
     <button
       onClick={() =>

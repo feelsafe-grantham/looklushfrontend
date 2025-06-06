@@ -20,7 +20,7 @@ const Header = () => {
     const handleBookNow = () => {
         openModal(
             {
-                header: "Contact Us",
+                header: "Schedule Your Treatment",
                 content: <Form />,
                 animation: "scale",
             }

@@ -8,7 +8,7 @@ const PriceTabel = ({ priceData }: { priceData: PriceItem[] }) => {
   const handleBtnClick = () => {
     openModal(
       {
-        header: "Contact Us",
+        header: "Book a Session",
         content: <Form />,
         animation: "scale",
       }
