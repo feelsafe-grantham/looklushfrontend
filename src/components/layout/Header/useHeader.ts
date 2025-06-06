@@ -1,9 +1,11 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { HeaderLinkType } from "@/lib/types";
+import { ApiResponse, HeaderLinkType, HeaderSubLinkType } from "@/lib/types";
+import { apiClient } from "@/lib/api/apiClient";
+import { ENDPOINTS } from "@/lib/api/endpoints";
 export default function useHeader() {
-  const links: HeaderLinkType[] = [
+  const [links, setLinks] = useState<HeaderLinkType[]>([
     {
       label: "Home",
       url: "/",
@@ -92,7 +94,7 @@ export default function useHeader() {
       url: "/faqs",
       subLink: [],
     },
-  ];
+  ]);
   const pathname = usePathname();
   const isActive = (url: string) => pathname === url;
   const [isOpen, setIsOpen] = useState(false);
@@ -134,6 +136,29 @@ export default function useHeader() {
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const fetchHeaderLink = async () => {
+    try {
+      const res: ApiResponse<HeaderSubLinkType[]> = await apiClient.get(
+        ENDPOINTS.GETHEADERLINKS
+      );
+      const updatedLinks: HeaderLinkType[] = links.map((link) => {
+        if (link.label === "Treatments") {
+          return {
+            ...link,
+            subLink: res.data,
+          };
+        }
+        return link;
+      });
+      setLinks(updatedLinks);
+    } catch (error) {
+      console.error("this is error: ", error);
+    }
+  };
+  useEffect(() => {
+    fetchHeaderLink();
   }, []);
 
   return {

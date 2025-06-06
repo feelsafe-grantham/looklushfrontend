@@ -1,4 +1,6 @@
 export const ENDPOINTS = {
+  //header
+  GETHEADERLINKS: "/get-problems-link/",
   //home page here
   CAROUSEL: "/home-carousel/",
   REELS: "/get-all-video-testimonials/",

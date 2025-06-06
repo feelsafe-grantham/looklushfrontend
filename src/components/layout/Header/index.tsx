@@ -29,22 +29,21 @@ const Header = () => {
     return (
         <header className={`${styles.headerContainer}`}>
             <div className={`${styles.hamburgerContainer}`} onClick={toggleMenu}>
-                {
-                    isOpen ? (
-                        <img
-                            src="/images/close.png"
-                            alt="Close menu"
-                            className={`${styles.hamburger} ${styles.logoheight}`}
-                            onClick={closeMenu}
-                        />
-                    ) : (
-                        <img
-                            src="/images/open.png"
-                            alt="Open menu"
-                            className={`${styles.hamburger} ${styles.logoheight}`}
-                            onClick={toggleMenu}
-                        />
-                    )}
+                {isOpen ? (
+                    <img
+                        src="/images/close.png"
+                        alt="Close menu"
+                        className={`${styles.hamburger} ${styles.logoheight}`}
+                        onClick={closeMenu}
+                    />
+                ) : (
+                    <img
+                        src="/images/open.png"
+                        alt="Open menu"
+                        className={`${styles.hamburger} ${styles.logoheight}`}
+                        onClick={toggleMenu}
+                    />
+                )}
             </div>
             <div className={`${styles.logoContainer}`}>
                 <Link href="/" >
