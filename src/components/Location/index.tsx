@@ -21,7 +21,7 @@ const LocationComp = () => {
       <LocationCardHor location={GURUGRAM_ADDRESS} />
       <AppointmentForm />
       <SectionHeading line1="Visit Us" />
-      <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
+      <SectionHeadPara para="Find us at a convenient location near you—our team is ready to welcome you and guide you through every step of your care." />
       <Suspense fallback={<VideoShimmer />}>
         <VideoContainer endpoint={ENDPOINTS.LOCATIONVIDEO} />
       </Suspense>

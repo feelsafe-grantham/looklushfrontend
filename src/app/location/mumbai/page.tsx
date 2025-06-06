@@ -25,7 +25,7 @@ export default function Location() {
     <LocationCardHor location={MUMBAI_ADDRESS} />
     <AppointmentForm />
     <SectionHeading line1="Visit Us" />
-    <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
+    <SectionHeadPara para="Located in the heart of Mumbai, Looklush Clinic offers world-class aesthetic care with personalized attention in a calm and modern setting." />
     <Suspense fallback={<VideoShimmer />}>
       <VideoContainer endpoint={ENDPOINTS.LOCATIONVIDEO} />
     </Suspense>

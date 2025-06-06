@@ -25,7 +25,7 @@ export default function Location() {
     <LocationCardHor location={GURUGRAM_ADDRESS} />
     <AppointmentForm />
     <SectionHeading line1="Visit Us" />
-    <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
+    <SectionHeadPara para="Our Gurugram clinic offers cutting-edge treatments in a serene, discreet space—designed for clients who value both expertise and comfort." />
     <Suspense fallback={<VideoShimmer />}>
       <VideoContainer endpoint={ENDPOINTS.LOCATIONVIDEOSEC} />
     </Suspense>

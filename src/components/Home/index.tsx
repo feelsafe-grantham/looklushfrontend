@@ -32,7 +32,7 @@ const Home = async () => {
             <ExpertCard />
             <section className={`${styles.sectionContainer}`}>
                 <SectionHeading line1="Our Celebrity Clients" />
-                <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
+                <SectionHeadPara para="Looklush Clinic is trusted by well-known personalities who value privacy, precision, and outstanding aesthetic results with every visit." />
                 <img
                     alt="Celebrity"
                     src="/images/20-years.png"
@@ -41,7 +41,7 @@ const Home = async () => {
             </section>
             <section className={`${styles.sectionContainer}`}>
                 <SectionHeading line1="20 years of Experience" />
-                <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
+                <SectionHeadPara para="With two decades of hands-on expertise, Looklush Clinic offers time-tested treatments rooted in clinical knowledge and patient-first care." />
                 <ExperienceContainer />
             </section>
             <Suspense fallback={<ReelContainerShimmer />}>
@@ -52,7 +52,7 @@ const Home = async () => {
                     line1="Experience the art of Caring"
                     line2="with Dr. Poonam Patel"
                 />
-                <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
+                <SectionHeadPara para="Guided by compassion and backed by skill, Dr. Poonam Patel brings a unique blend of medical excellence and personal attention to every case." />
                 <Suspense fallback={<VideoShimmer />}>
                     <VideoContainer
                         endpoint={ENDPOINTS.HOMEVIDEO}
@@ -65,7 +65,7 @@ const Home = async () => {
             </Suspense>
             <section className={`${styles.sectionContainer}`}>
                 <SectionHeading line1="Nothing Complex Here" />
-                <SectionHeadPara para="Looklush clinic treats each patient with empathy and discretion. A patient arriving at Looklush Clinic is educated about their condition prior to treatment." />
+                <SectionHeadPara para="Our process is clear and personalized—no jargon, no confusion—just safe, straightforward care from consultation to recovery." />
                 <Suspense fallback={<PriceTableShimmer />}>
                     <PriceTableContainer />
                 </Suspense>
