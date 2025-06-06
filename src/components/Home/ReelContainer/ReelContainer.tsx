@@ -30,7 +30,7 @@ const ReelContainerComp = ({ reels, showButton = true }: { reels: VideoTestimoni
 
     return (
         <div className={`${styles.reelWrapper}`}>
-            <div ref={reelContainerRef} className={`${styles.reelContainer} scrollbar-hidden`}>
+            <div ref={reelContainerRef} className={`${styles.reelContainer} `}>
                 {reels.map((reel, index) => <ReelCard key={index} Reel={reel} />)}
             </div>
             {showButton && <button className={`${styles.button} ${styles.prev}`} onClick={handlePrev}>
