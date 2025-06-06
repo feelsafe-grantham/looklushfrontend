@@ -27,11 +27,10 @@ const LaserBurnSection = () => {
     <div className={styles.container}>
       <div className={styles.imageWrapper}>
         <Carousel showButtons={true}>
-          <img src="/images/carousel1.png" alt="Image 1" />
-          <img src="/images/carousel2.png" alt="Image 1" />
-          <img src="/images/carousel3.png" alt="Image 1" />
-          <img src="/images/carousel4.png" alt="Image 1" />
-          <img src="/images/carousel5.png" alt="Image 1" />
+          <img src="/images/blog1.png" alt="Image 1" />
+          <img src="/images/blog2.png" alt="Image 1" />
+          <img src="/images/blog3.png" alt="Image 1" />
+          <img src="/images/blog4.png" alt="Image 1" />
         </Carousel>
       </div>
       <h2 className={styles.title}>Know about Your Skin</h2>

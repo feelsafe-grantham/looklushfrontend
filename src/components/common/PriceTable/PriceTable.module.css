@@ -1,3 +1,8 @@
+.priceTableContainer {
+  max-height: 500px;
+  max-height: 500px;
+  overflow: scroll;
+}
 .priceTable {
   margin: 0px auto;
   width: var(--max-width-container);
