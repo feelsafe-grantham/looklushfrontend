@@ -36,8 +36,6 @@
   border: 1px solid var(--bg-theme-color);
 }
 
-.formContainer {
-}
 @media (max-width: 1000px) {
   .serviesLinksContainer {
     display: none;
@@ -51,7 +49,7 @@
     display: none;
   }
   .servicesContainer {
-    grid-template-columns: 350px;
+    grid-template-columns: 320px;
     grid-template-rows: 1fr 1fr;
     grid-auto-flow: row;
     gap: 30px 0px;
