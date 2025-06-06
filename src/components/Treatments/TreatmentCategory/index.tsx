@@ -19,7 +19,13 @@ const TreatmentCategory = ({ heading, cards }: { heading: string, cards: Problem
                         <span className={`${styles.star} ${styles.review}`}></span>
                         <span className={styles.review}>{card.no_of_reviews}+ reviews</span>
                     </div>
-                    <Link href={`/treatments/${generateBlogSlug(card.title, card.id)}`} title={generateBlogSlug(card.title, card.id)} className={styles.button}>{card.button_text}</Link>
+                    <Link
+                        className={styles.button}
+                        title={generateBlogSlug(card.title, card.id)}
+                        href={`/treatments/${generateBlogSlug(card.title, card.id)}`}
+                    >
+                        {card.button_text}
+                    </Link>
                 </div>
             ))}
         </div>
