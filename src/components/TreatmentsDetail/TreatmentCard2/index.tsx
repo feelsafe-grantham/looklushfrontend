@@ -1,5 +1,7 @@
 import { ProblemCardsType } from "@/lib/types";
 import styles from "./TreatmentCard2.module.css"
+import Link from "next/link";
+import { generateBlogSlug } from "@/lib/helper";
 const TreatmentCard2 = ({ card }: { card: ProblemCardsType }) => {
     return (
         <div className={styles.treatmentCard}>
@@ -24,7 +26,12 @@ const TreatmentCard2 = ({ card }: { card: ProblemCardsType }) => {
                 </div>
             </div>
 
-            <button className={styles.button}>{card.button_text}!</button>
+            <Link
+                className={styles.button}
+                href={`/treatments/${generateBlogSlug(card.title, card.id)}`}
+            >
+                {card.button_text}!
+            </Link>
         </div>
     )
 }

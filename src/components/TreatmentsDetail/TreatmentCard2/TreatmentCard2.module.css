@@ -19,6 +19,12 @@
   font-size: 20px;
   font-weight: 600;
   margin: 12px 0 8px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .description {
@@ -62,13 +68,10 @@
 }
 
 .button {
-  width: 100%;
   background-color: var(--bg-theme-dark);
   color: var(--text-white-color);
-  border: none;
   padding: 12px 24px;
-  border-radius: 8px;
+  border-radius: var(--standard-border-radius);
   font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  display: block;
 }
