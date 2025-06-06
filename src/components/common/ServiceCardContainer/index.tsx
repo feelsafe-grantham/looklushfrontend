@@ -10,7 +10,7 @@ async function fetchServices() {
         const data = res?.data;
         return data;
     } catch (err) {
-        console.log("Error occured in fetching compare cards ", err);
+        console.error("Error occured in fetching compare cards ", err);
         return []
     }
 }

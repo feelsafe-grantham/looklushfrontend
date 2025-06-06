@@ -8,7 +8,7 @@ async function fetchBlogs() {
         const res: ApiResponse<BlogType[]> = await apiClient.get(ENDPOINTS.BLOGS);
         return res?.data;
     } catch (error) {
-        console.log("Error while fetching blogs: ", error);
+        console.error("Error while fetching blogs: ", error);
         return [];
     }
 }

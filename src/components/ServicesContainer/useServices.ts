@@ -23,7 +23,7 @@ const useServices = () => {
       setSelectedImages(data[0].images);
       setActiveLink(data[0].name);
     } catch (error) {
-      console.log("Error while fetching services: ", error);
+      console.error("Error while fetching services: ", error);
       return [];
     } finally {
       setLoading(false);

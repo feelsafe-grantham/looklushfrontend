@@ -7,7 +7,7 @@ async function fetchTableData() {
         const res: ApiResponse<PriceItem[]> = await apiClient.get(ENDPOINTS.GETPRICETABLE);
         return res.data;
     } catch (error) {
-        console.log("Error while fetching table data: ", error);
+        console.error("Error while fetching table data: ", error);
         return [];
     }
 }

@@ -9,7 +9,7 @@ async function fetchRelatedProblemCards(id: number) {
         const res: ApiResponse<ProblemCatType> = await apiClient.get(`${ENDPOINTS.PROBLEMCARDSRELATED}${id}`);
         return res?.data;
     } catch (error) {
-        console.log("this is error: ", error)
+        console.error("this is error: ", error)
     }
 }
 const TreatmentCardContainer2 = async ({ id }: { id?: number }) => {

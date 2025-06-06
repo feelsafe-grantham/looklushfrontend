@@ -14,10 +14,10 @@ const useResult = (id: number | undefined) => {
         const res: ApiResponse<ResultSection> = await apiClient.get(
           `${ENDPOINTS.GETRESULTDELIVERED}${id}`
         );
-        console.log("this is res", res);
+
         setResult(res.data);
       } catch (error) {
-        console.log("this is error", error);
+        console.error("this is error", error);
       } finally {
         setLoading(false);
       }

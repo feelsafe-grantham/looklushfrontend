@@ -21,9 +21,18 @@
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .option {
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
   font-weight: 500;
   color: var(--text-dark-color);
 }

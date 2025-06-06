@@ -1,7 +1,20 @@
+"use client"
 import { TreatmentDetailType } from "@/lib/types";
 import styles from "./TreatmentHeroSection.module.css"
 import CtaButton from "@/components/ui/CtaButton";
+import Form from "@/components/common/Form";
+import { useModal } from "@/components/ui/Modal/useModal";
 const TreatmentHeroSection = ({ data }: { data: TreatmentDetailType }) => {
+    const { openModal } = useModal();
+    const handleBtnClick = () => {
+        openModal(
+            {
+                header: "Contact Us",
+                content: <Form />,
+                animation: "scale",
+            }
+        )
+    }
     return (
         <div className={`${styles.treatmentHeroSection}`}>
             <img className={`${styles.treatmentLeafRight}`} src="/images/treatment-leaf.png" alt="treatment-leaf" />
@@ -29,8 +42,7 @@ const TreatmentHeroSection = ({ data }: { data: TreatmentDetailType }) => {
                     </div>
                 </div>
                 <div className={`${styles.buttonContainer}`}>
-
-                    <CtaButton text="Book Now" />
+                    <CtaButton onClick={handleBtnClick} text="Book Now" />
                 </div>
             </div>
             <div className={`${styles.heroImageContainer}`}>

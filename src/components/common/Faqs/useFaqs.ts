@@ -33,7 +33,7 @@ const useFaqs = (): UseFaqsReturn => {
         setActiveCategoryInternal(res.data[0]);
         setActiveQuestionInternal(res.data[0].faqs[0]);
       } catch (error) {
-        console.log("this is error", error);
+        console.error("this is error", error);
       } finally {
         setLoading(false);
       }

@@ -11,10 +11,8 @@ const ResultsSection = ({ id }: { id: number | undefined }) => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       if (videoRef.current && result?.video_url) {
-        console.log("This is url: ", result.video_url);
+
         videoRef.current.src = result.video_url;
-      } else {
-        console.log("This is not url: ", result?.video_url);
       }
     }, 300);
 
