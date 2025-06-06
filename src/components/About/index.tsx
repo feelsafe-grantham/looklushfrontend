@@ -160,9 +160,7 @@ const About = () => {
           "Because Your Skin Deserves the Best"
         </p>
         <p className={`${styles.visionText}`}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex neque
-          placeat saepe minima sequi aliquam, aliquid doloribus dolor rerum
-          nulla?
+          At Looklush Aesthetic & Laser Centre, our vision is to deliver the best experience in skin and hair treatments, where client care is our first priority. We truly believe in transforming confidence through care.
         </p>
       </div>
       <SectionHeading line1="About Us!" />
@@ -190,9 +188,9 @@ const About = () => {
           </Link>
         ))}
       </div>
-      <Suspense fallback={<CarouselShimmer />}>
+      {/* <Suspense fallback={<CarouselShimmer />}>
         <ServiceCardContainer />
-      </Suspense>
+      </Suspense> */}
       <SectionHeading line1="Questions About Us!" />
       <Faqs />
     </div>

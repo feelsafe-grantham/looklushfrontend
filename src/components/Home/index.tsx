@@ -1,3 +1,5 @@
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
 import Faqs from "../common/Faqs";
 import styles from "./Home.module.css";
 import ReelContainer from "./ReelContainer";
@@ -7,20 +9,18 @@ import SectionHeadPara from "../common/SectionHeadPara";
 import CarouselContainer from "../common/CarouselContainer";
 import CarouselShimmer from "../common/Loading/CarouselShimmer";
 import CompareSliderContainer from "../common/CompareSliderContainer";
-import dynamic from "next/dynamic";
-import { Suspense } from "react";
+import { ENDPOINTS } from "@/lib/api/endpoints";
+import ServicesContainer from "../ServicesContainer";
+import VideoShimmer from "../common/Loading/VideoShimmer";
+import ExperienceContainer from "./ExperienceSection/Container";
+import PriceTableShimmer from "../common/Loading/PriceTableShimmer";
+import PriceTableContainer from "../common/PriceTable/PriceContainer";
+import CompareSliderShimmer from "../common/Loading/CompareSliderShimmer";
+import { ReelContainerShimmer } from "../common/Loading/ReelContainerShimmer";
 const VideoContainer = dynamic(() => import("../common/Video/VideoContainer"), {
     ssr: true,
     loading: () => <VideoShimmer />,
 });
-import { ENDPOINTS } from "@/lib/api/endpoints";
-import PriceTableContainer from "../common/PriceTable/PriceContainer";
-import ServicesContainer from "../ServicesContainer";
-import { ReelContainerShimmer } from "../common/Loading/ReelContainerShimmer";
-import VideoShimmer from "../common/Loading/VideoShimmer";
-import CompareSliderShimmer from "../common/Loading/CompareSliderShimmer";
-import PriceTableShimmer from "../common/Loading/PriceTableShimmer";
-import ExperienceContainer from "./ExperienceSection/Container";
 
 const Home = async () => {
 
