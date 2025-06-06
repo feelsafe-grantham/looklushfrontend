@@ -30,7 +30,6 @@ const AppointmentForm = () => {
         <div className={styles.formInputContainer}>
           <input
             className={styles.formInput}
-            placeholder="Choose Date"
             type="date"
             name="appointment_date"
             required

@@ -1,5 +1,5 @@
-.appointmentFormContainer {
-}
+/* .appointmentFormContainer {
+} */
 .formInputContainer {
   padding: 40px 0;
   display: flex;
@@ -16,19 +16,19 @@
   color: var(--text-dark-color);
   cursor: pointer;
   background-color: rgb(218, 215, 215);
+  width: 180px;
 }
 .formSelect {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  width: 150px;
+
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .option {
-  width: 150px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
