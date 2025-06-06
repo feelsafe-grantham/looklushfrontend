@@ -21,17 +21,17 @@
   scale: 1.1;
   margin-bottom: 1rem;
 }
-.footer {
-}
+/* .footer {
+} */
 .contentSection {
   display: grid;
   grid-template-columns: 100px 1.2fr 0.8fr;
   gap: 30px;
   padding: 16px 5px;
 }
-.menuSection {
-  /* Left Section */
-}
+/* .menuSection {
+
+} */
 
 .heading {
   font-size: 20px;
@@ -48,8 +48,8 @@
   justify-content: space-around;
 }
 
-.menuItem {
-}
+/* .menuItem {
+} */
 
 .followSection {
   display: flex;
