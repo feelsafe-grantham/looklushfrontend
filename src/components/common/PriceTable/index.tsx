@@ -1,7 +1,19 @@
+"use client"
 import { PriceItem } from "@/lib/types";
 import styles from "./PriceTable.module.css";
-import Link from "next/link";
+import Form from "../Form";
+import { useModal } from "@/components/ui/Modal/useModal";
 const PriceTabel = ({ priceData }: { priceData: PriceItem[] }) => {
+  const { openModal } = useModal();
+  const handleBtnClick = () => {
+    openModal(
+      {
+        header: "Contact Us",
+        content: <Form />,
+        animation: "scale",
+      }
+    )
+  }
   return (
     <div className={`${styles.priceTableContainer}`}>
       <table className={`${styles.priceTable}`}>
@@ -32,9 +44,12 @@ const PriceTabel = ({ priceData }: { priceData: PriceItem[] }) => {
                 {item.value.split(" ").slice(1).join(" ")}
               </td>
               <td className={styles.tableData}>
-                <Link href={"/location"} className={styles.bookButton}>
+                {/* <Link href={"/location"} className={styles.bookButton}>
                   {item.achievement}
-                </Link>
+                </Link> */}
+                <button onClick={handleBtnClick} className={styles.bookButton}>
+                  {item.achievement}
+                </button>
               </td>
             </tr>
           ))}
