@@ -1,6 +1,6 @@
 "use client";
-import { ApiResponse, HeaderSubLinkType } from "@/lib/types";
 import styles from "./AppointmentForm.module.css";
+import { ApiResponse, HeaderSubLinkType } from "@/lib/types";
 import { useState, useEffect } from "react";
 import { apiClient } from "@/lib/api/apiClient";
 import { ENDPOINTS } from "@/lib/api/endpoints";
