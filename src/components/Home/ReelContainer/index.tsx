@@ -1,5 +1,4 @@
 import { apiClient } from "@/lib/api/apiClient";
-import ReelCard from "../ReelCard";
 import styles from "./ReelContainer.module.css"
 import { ENDPOINTS } from "@/lib/api/endpoints";
 import { ApiResponse, VideoTestimonial } from "@/lib/types";

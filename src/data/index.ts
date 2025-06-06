@@ -13,7 +13,7 @@ export const GURUGRAM_ADDRESS = {
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3409.407606528541!2d77.0672146!3d28.390483300000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d23e57254a367%3A0xe6839110da1ff1cc!2sLooklush%20Aesthetic%20%26%20Laser%20Centre!5e1!3m2!1sen!2sin!4v1748327298319!5m2!1sen!2sin",
   city: "Gurugram",
   address:
-    "M3M Urban Mall , R3 / 108, Sector 167 , Golf Course extension Road, Gurugram, Haryana ",
+    "R3, M3M Urbana mall, 108, Golf course extension Road, Sector 67, Gurugram, Haryana 122001",
   phone: "+91 93228 17696",
   email: "drpatelpoonam@gmail.com",
   visit_link: "https://maps.app.goo.gl/P1k6XJHxwtPji4L39",

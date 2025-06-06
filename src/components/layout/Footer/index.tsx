@@ -1,7 +1,7 @@
 import Form from "@/components/common/Form";
 import styles from "./Footer.module.css";
 import { MUMBAI_ADDRESS, GURUGRAM_ADDRESS, SOCIAL_MEDIA } from "@/data";
-import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 const Footer = () => {
   const tags = [
@@ -58,8 +58,8 @@ const Footer = () => {
                     </Link>
                   </div>
                   <div className={styles.iconWrapper}>
-                    <Link target="_blank" href={SOCIAL_MEDIA.twitter}>
-                      <FaTwitter className={styles.icon} />
+                    <Link target="_blank" href={SOCIAL_MEDIA.instagram}>
+                      <FaInstagram className={styles.icon} />
                     </Link>
                   </div>
                 </div>
@@ -86,7 +86,7 @@ const Footer = () => {
                       />
                       <div className={styles.instagramOverlay}>
                         <img
-                          src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
+                          src="/images/instafooter.png"
                           alt="Instagram Icon"
                           className={styles.instagramIcon}
                         />
