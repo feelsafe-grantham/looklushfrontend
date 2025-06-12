@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import { apiClient } from "@/lib/api/apiClient";
 import { ENDPOINTS } from "@/lib/api/endpoints";
 import { FORMSPREE } from "@/data";
+import { useModal } from "@/components/ui/Modal/useModal";
+import Form from "../Form";
 
 const AppointmentForm = () => {
   const sittings = [1, 2, 3, 4, 5, 6, 7]
@@ -21,11 +23,22 @@ const AppointmentForm = () => {
   useEffect(() => {
     fetchTreatments();
   }, [])
+  const { openModal, closeModal } = useModal();
+  const handleBtnClick = () => {
+    openModal(
+      {
+        header: "Book a Session",
+        content: <NewForm closeModal={closeModal} />,
+        animation: "scale",
+      }
+    )
+  }
+
+
   return (
     <div className={styles.appointmentFormContainer}>
-      <form
-        action={FORMSPREE}
-        method="POST"
+      <div
+
         className={styles.form}
       >
         <div className={styles.formInputContainer}>
@@ -63,13 +76,25 @@ const AppointmentForm = () => {
 
           </select>
 
-          <button type="submit" className={styles.bookButton}>
+          <button onClick={handleBtnClick} className={styles.bookButton}>
             Book Now!
           </button>
         </div>
-      </form>
+      </div>
     </div>
   );
 };
 
 export default AppointmentForm;
+
+const NewForm = ({ closeModal }: { closeModal: () => void }) => {
+  return (
+    <div
+      className={`${styles.form} ${styles.formBg}`}
+    >
+      <input name="name" type="text" placeholder="Name" className={`${styles.formInputModal}`} />
+      <input name="email" type="text" placeholder="Email" className={`${styles.formInputModal}`} />
+      <button onClick={closeModal} className={`${styles.formButton}`}>Submit</button>
+    </div>
+  )
+}
