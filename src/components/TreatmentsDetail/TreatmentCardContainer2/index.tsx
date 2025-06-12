@@ -13,104 +13,11 @@ async function fetchRelatedProblemCards(id: number) {
     }
 }
 const TreatmentCardContainer2 = async ({ id }: { id?: number }) => {
-    // const treatmentCards: ProblemCardsType[] = [
-    //     {
-    //         id: 1,
-    //         title: "Laser Hair Removal",
-    //         description:
-    //             "Look Lush Clinic treats each patient with empathy and discretion. A patient arriving at",
-    //         review: "4.8",
-    //         no_of_reviews: "300+",
-    //         image: "/images/after1.png",
-    //         button_text: "Book here",
-    //     },
-    //     {
-    //         id: 2,
-    //         title: "Laser Hair Removal",
-    //         description:
-    //             "Look Lush Clinic treats each patient with empathy and discretion. A patient arriving at",
-    //         review: " 4.8",
-    //         no_of_reviews: "300+",
-    //         image: "/images/after1.png",
-    //         button_text: "Book here",
-    //     },
-    //     {
-    //         id: 3,
-    //         title: "Laser Hair Removal",
-    //         description:
-    //             "Look Lush Clinic treats each patient with empathy and discretion. A patient arriving at",
-    //         review: " 4.8",
-    //         no_of_reviews: "300+",
-    //         image: "/images/after1.png",
-    //         button_text: "Book here",
-    //     },
-    //     {
-    //         id: 4,
-    //         title: "Laser Hair Removal",
-    //         description:
-    //             "Look Lush Clinic treats each patient with empathy and discretion. A patient arriving at",
-    //         review: " 4.8",
-    //         no_of_reviews: "300+",
-    //         image: "/images/after1.png",
-    //         button_text: "Book here",
-    //     },
-    //     {
-    //         id: 5,
-    //         title: "Laser Hair Removal",
-    //         description:
-    //             "Look Lush Clinic treats each patient with empathy and discretion. A patient arriving at",
-    //         review: " 4.8",
-    //         no_of_reviews: "300+",
-    //         image: "/images/after1.png",
-    //         button_text: "Book here",
-    //     },
-    //     {
-    //         id: 6,
-    //         title: "Laser Hair Removal",
-    //         description:
-    //             "Look Lush Clinic treats each patient with empathy and discretion. A patient arriving at",
-    //         review: " 4.8",
-    //         no_of_reviews: "300+",
-    //         image: "/images/after1.png",
-    //         button_text: "Book here",
-    //     },
-    //     {
-    //         id: 7,
-    //         title: "Laser Hair Removal",
-    //         description:
-    //             "Look Lush Clinic treats each patient with empathy and discretion. A patient arriving at",
-    //         review: " 4.8",
-    //         no_of_reviews: "300+",
-    //         image: "/images/after1.png",
-    //         button_text: "Book here",
-    //     },
-    //     {
-    //         id: 8,
-    //         title: "Laser Hair Removal",
-    //         description:
-    //             "Look Lush Clinic treats each patient with empathy and discretion. A patient arriving at",
-    //         review: " 4.8",
-    //         no_of_reviews: "300+",
-    //         image: "/images/after1.png",
-    //         button_text: "Book here",
-    //     },
-    //     {
-    //         id: 9,
-    //         title: "Laser Hair Removal",
-    //         description:
-    //             "Look Lush Clinic treats each patient with empathy and discretion. A patient arriving at",
-    //         review: " 4.8",
-    //         no_of_reviews: "300+",
-    //         image: "/images/after1.png",
-    //         button_text: "Book here",
-    //     },
 
-    // ]
     const treatmensts: ProblemCatType | undefined = await fetchRelatedProblemCards(id!);
     if (treatmensts?.cards?.length === 0) notFound();
     return (
         <div className={`${styles.treatmentCardContainer}`}>
-
             {treatmensts?.cards?.map((card, index) => <TreatmentCard2 key={index} card={card} />)}
         </div>
     )

@@ -3,10 +3,11 @@
   gap: 20px;
 }
 .patientImageContainer {
-  display: grid;
+  display: flex;
   place-content: center;
-  place-items: center;
-  grid-auto-flow: column;
+  justify-content: flex-start;
+  width: 100%;
+  overflow-x: scroll;
   gap: 20px;
 }
 .patientImage {
@@ -49,17 +50,7 @@
   gap: 24px;
 }
 
-@media (max-width: 1000px) {
-  .patientImageContainer {
-    grid-auto-flow: row;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media (max-width: 500px) {
-  .patientImageContainer {
-    grid-template-columns: repeat(1, 1fr);
-  }
   .gridContainer {
     grid-template-columns: repeat(1, 1fr);
   }
