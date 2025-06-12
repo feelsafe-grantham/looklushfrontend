@@ -12,7 +12,8 @@
   --text-dark-color: #333333;
   --text-light-color: #606060;
   --font-montserrat: var(--font-montserrat);
-  --font-sour-gummy: var(--font-sour-gummy);
+  /* --font-sour-gummy: var(--font-sour-gummy); */
+  --font-sour-gummy: var(--font-montserrat);
   --text-primary-color: var(--text-light-color);
   --max-width-container: 1200px;
   --standard-border-radius: 10px;

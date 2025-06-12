@@ -16,11 +16,11 @@ const montserrat = Montserrat({
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-const sourGummy = Sour_Gummy({
-  subsets: ["latin"],
-  variable: "--font-sour-gummy",
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
+// const sourGummy = Sour_Gummy({
+//   subsets: ["latin"],
+//   variable: "--font-sour-gummy",
+//   weight: ["400", "500", "600", "700", "800", "900"],
+// });
 
 
 export default function RootLayout({
@@ -31,7 +31,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} ${sourGummy.variable} antialiased`}
+        // ${sourGummy.variable}
+        className={`${montserrat.variable}  antialiased`}
       >
         <ModalProvider>
           <TopBar />
