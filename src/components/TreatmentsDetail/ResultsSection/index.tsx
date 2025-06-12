@@ -34,11 +34,11 @@ const ResultsSection = ({ id }: { id: number | undefined }) => {
               <img key={index} src={image.image} alt="Male patient" />
             ))}
           </div>
-          <div className={styles.dots}>
+          {/* <div className={styles.dots}>
             <span className={styles.dot}></span>
             <span className={styles.dot}></span>
             <span className={styles.dot}></span>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className={styles.videoSection}>

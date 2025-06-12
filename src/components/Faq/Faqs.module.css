@@ -38,9 +38,11 @@
 /* faq section starts */
 .faqProblemContainer {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
-  flex-wrap: wrap;
   justify-content: center;
+  overflow-x: scroll;
+  width: 100%;
   gap: 100px;
 }
 .iconWrapper {
