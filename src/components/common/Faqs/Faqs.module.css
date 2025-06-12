@@ -1,9 +1,12 @@
 /* faq section starts */
 .faqContainer {
+  overflow: scroll;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 100px;
+  flex-wrap: nowrap;
 }
 .iconWrapper {
   display: flex;
@@ -127,6 +130,5 @@
 @media (max-width: 1150px) {
   .faqContainer {
     gap: 50px;
-    flex-wrap: wrap;
   }
 }

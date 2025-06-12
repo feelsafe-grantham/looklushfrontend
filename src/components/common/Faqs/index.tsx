@@ -10,21 +10,22 @@ const Faqs = () => {
     return (
         <>
 
-            {loading ? <FaqCatShimmer /> : <div className={`${styles.faqContainer}`}>
-                {faqCategories.map((faqCat,) => (
-                    <div key={faqCat.id} onClick={() => { setActiveCategory(faqCat.id) }} className={styles.iconWrapper}>
-                        <div className={styles.imageContainer}>
-                            <img src={faqCat.image} className={styles.faqImage} />
-                            <img
-                                src="/images/faqborder.png"
-                                alt={faqCat.text}
-                                className={styles.border}
-                            />
+            {loading ? <FaqCatShimmer /> :
+                <div className={`${styles.faqContainer}`}>
+                    {faqCategories.map((faqCat,) => (
+                        <div key={faqCat.id} onClick={() => { setActiveCategory(faqCat.id) }} className={styles.iconWrapper}>
+                            <div className={styles.imageContainer}>
+                                <img src={faqCat.image} className={styles.faqImage} />
+                                <img
+                                    src="/images/faqborder.png"
+                                    alt={faqCat.text}
+                                    className={styles.border}
+                                />
+                            </div>
+                            <p className={styles.label}>{faqCat.text}</p>
                         </div>
-                        <p className={styles.label}>{faqCat.text}</p>
-                    </div>
-                ))}
-            </div>}
+                    ))}
+                </div>}
 
             {loading ? <FaqAnsShimmer /> : <div className={`${styles.qnaContainer}`}>
                 <ul className={`${styles.questionsContainer}`}>
