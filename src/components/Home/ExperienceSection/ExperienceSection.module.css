@@ -32,7 +32,7 @@
 .phoneContainer {
   z-index: 2;
   position: absolute;
-  background-image: url("/images/phone-frame.png");
+  /* background-image: url("/images/phone-frame.png"); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -49,21 +49,22 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 110%;
   height: 100%;
-  object-fit: contain;
+  /* object-fit: contain; */
   z-index: 2;
   pointer-events: none;
 }
 .phoneVideo {
   z-index: 1;
   position: absolute;
-  top: 1%;
-  left: 9%;
-  width: 82%;
-  height: 97.9%;
-  object-fit: cover;
-  border-radius: 1vw;
+  /* border: 2px solid red; */
+  /* top: 1%; */
+  /* left: 9%; */
+  width: 99%;
+  /* height: 97.9%; */
+  /* object-fit: cover; */
+  border-radius: 20px;
 }
 
 .tabContainer {

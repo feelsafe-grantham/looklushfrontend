@@ -61,7 +61,7 @@ const ExperienceSection = ({ phoneVideoUrl, phoneFallback, tabVideoUrl, tabFallb
                     >
                         Your browser does not support the video tag.
                     </video>
-                    <img src="/images/phone-frame.png" alt="phone frame" className={styles.phoneFrame} />
+                    <img src="/images/phone-frame-updated.png" alt="phone frame" className={styles.phoneFrame} />
                 </div>
 
                 <div className={styles.tabContainer}>
