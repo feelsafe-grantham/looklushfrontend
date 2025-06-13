@@ -1,6 +1,6 @@
 /* faq section starts */
 .faqContainer {
-  overflow-x: scroll;
+  overflow-x: auto;
   width: 100%;
   display: flex;
   align-items: center;

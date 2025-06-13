@@ -59,7 +59,7 @@
     width: 100%;
     max-width: 95%;
     margin: auto auto;
-    overflow-x: scroll;
+    overflow-x: auto;
     border-radius: var(--standard-border-radius);
   }
   .tableData,

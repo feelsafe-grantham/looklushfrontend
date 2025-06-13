@@ -6,6 +6,6 @@
   place-content: center;
   justify-content: flex-start;
   width: 100%;
-  overflow-x: scroll;
+  overflow-x: auto;
   gap: 25px;
 }

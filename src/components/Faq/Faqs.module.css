@@ -41,7 +41,7 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  overflow-x: scroll;
+  overflow-x: auto;
   width: 100%;
   gap: 100px;
 }
