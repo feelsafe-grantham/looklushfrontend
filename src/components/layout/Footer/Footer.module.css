@@ -139,8 +139,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--bg-theme-dark);
-  color: var(--text-white-color);
+  background-color: var(--bg-primary-color);
+  color: var(--text-dark-color);
 
   padding: 5px 30px;
   border-radius: 30px;
