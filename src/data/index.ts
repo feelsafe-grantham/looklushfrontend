@@ -29,7 +29,7 @@ export const SOCIAL_MEDIA = {
 
 export const contactData = {
   number1: "9322817696",
-  number2: "9322817696",
+  number2: "9082640898",
   email: "drpatelpoonam@gmail.com",
 };
 

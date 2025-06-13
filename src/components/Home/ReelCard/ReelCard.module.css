@@ -70,7 +70,7 @@
   color: var(--text-white-color);
   font-size: 13px;
   max-height: 200px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .comment {

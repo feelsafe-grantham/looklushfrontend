@@ -127,7 +127,7 @@
 .answer {
   height: 350px;
   padding: 20px 40px;
-  overflow-y: scroll;
+  overflow-y: auto;
   border-radius: var(--standard-border-radius);
   color: var(--text-light-color);
   font-size: 18px;
