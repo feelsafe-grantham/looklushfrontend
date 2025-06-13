@@ -15,7 +15,7 @@ const PriceTabel = ({ priceData }: { priceData: PriceItem[] }) => {
     )
   }
   return (
-    <div className={`${styles.priceTableContainer} scrollbar-hidden`}>
+    <div className={`${styles.priceTableContainer} `}>
       <table className={`${styles.priceTable} `}>
         <thead>
           <tr className={`  ${styles.tableHeaderRow}`}>

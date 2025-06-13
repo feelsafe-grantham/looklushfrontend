@@ -1,7 +1,9 @@
 .priceTableContainer {
+  max-width: var(--max-width-container);
+  margin: auto;
   max-height: 500px;
-  max-height: 500px;
-  overflow: scroll;
+  overflow: auto;
+  overflow-x: hidden;
 }
 .priceTable {
   margin: 0px auto;
@@ -61,6 +63,7 @@
     margin: auto auto;
     overflow-x: auto;
     border-radius: var(--standard-border-radius);
+    overflow-x: auto;
   }
   .tableData,
   .tableHeader {
