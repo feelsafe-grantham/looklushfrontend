@@ -168,7 +168,10 @@ const NewForm = ({
         value={userData.email}
         onChange={handleUserChange}
       />
-      <button onClick={handleSubmit} className={styles.formButton}>
+      <button
+        onClick={handleSubmit}
+        className={styles.formButton}
+      >
         Submit
       </button>
     </div>
