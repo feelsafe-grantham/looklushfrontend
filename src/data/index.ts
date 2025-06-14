@@ -33,4 +33,4 @@ export const contactData = {
   email: "drpatelpoonam@gmail.com",
 };
 
-export const FORMSPREE = "https://formspree.io/f/mrbkkzvv";
+export const FORMSPREE = "https://formspree.io/f/xgvyyedo";

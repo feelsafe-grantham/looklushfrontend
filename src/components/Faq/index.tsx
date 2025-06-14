@@ -56,7 +56,7 @@ const Faqs = () => {
               <div className={styles.imageContainer}>
                 <img src={faqCat.image} className={styles.faqImage} />
                 <img
-                  src="/images/faqborder.png"
+                  src="/images/faq-border-temp.png"
                   alt={faqCat.text}
                   className={styles.border}
                 />
