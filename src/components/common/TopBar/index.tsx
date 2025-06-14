@@ -4,7 +4,7 @@ import { staticImages } from "@/utils/staticNames";
 import { useModal } from "@/components/ui/Modal/useModal";
 import Form from "../Form";
 const TopBar = () => {
-    const { openModal } = useModal();
+    const { openModal, closeModal } = useModal();
     const handleBtnClick = () => {
         openModal(
             {

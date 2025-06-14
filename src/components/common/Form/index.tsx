@@ -7,8 +7,10 @@ import { ENDPOINTS } from "@/lib/api/endpoints";
 import { FORMSPREE } from "@/data";
 import { useAlert } from "@/context/AlertContext";
 import { submitFormData } from "@/lib/helper";
+import { useModal } from "@/components/ui/Modal/useModal";
 const Form = () => {
     const { showAlert } = useAlert();
+    const { closeModal } = useModal();
     const [options, setOptions] = useState<string[]>([])
     const [loading, setLoading] = useState(false)
     const fetchTreatments = async () => {
@@ -68,6 +70,7 @@ const Form = () => {
                     treatment: 'select',
                     message: '',
                 });
+                closeModal();
             }
             else {
                 showAlert("Form submission failed!", "error");
@@ -84,7 +87,6 @@ const Form = () => {
         <form
             method="POST"
             onSubmit={handleSubmit}
-            // action={FORMSPREE}
             className={`${styles.form} ${styles.formBg}`}
         >
             <input
