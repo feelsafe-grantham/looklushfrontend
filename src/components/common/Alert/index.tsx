@@ -2,12 +2,7 @@ import React, { useState, useEffect } from "react";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import { AlertType } from "@/lib/types";
-const MUI_SNACKBAR: Record<AlertType, AlertType> = {
-    success: "success",
-    error: "error",
-    warning: "warning",
-    info: "info"
-};
+const type: AlertType = "success"
 interface ShowAlertProps {
     setHandler: React.Dispatch<React.SetStateAction<{ message: string; type: AlertType } | null>>;
     state?: AlertType;
@@ -16,16 +11,17 @@ interface ShowAlertProps {
 
 const ShowAlert: React.FC<ShowAlertProps> = ({
     setHandler,
-    state = MUI_SNACKBAR.success,
+    state = type,
     message = "Successfully done",
 }) => {
     const [open, setOpen] = useState(false);
     const vertical = "top";
     const horizontal = "center";
 
-    // Update handleClose to match Snackbar's event signature
+
     const handleClose = (event: React.SyntheticEvent | Event, reason: any) => {
         if (reason === "clickaway") {
+
             return;
         }
         if (typeof setHandler === "function") setHandler(null);
@@ -40,7 +36,7 @@ const ShowAlert: React.FC<ShowAlertProps> = ({
         <Snackbar
             anchorOrigin={{ vertical, horizontal }}
             open={open}
-            autoHideDuration={2000}
+            autoHideDuration={1500}
             onClose={handleClose}
         >
             <Alert
