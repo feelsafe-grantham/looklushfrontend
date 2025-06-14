@@ -10,6 +10,7 @@ import { submitFormData } from "@/lib/helper";
 const Form = () => {
     const { showAlert } = useAlert();
     const [options, setOptions] = useState<string[]>([])
+    const [loading, setLoading] = useState(false)
     const fetchTreatments = async () => {
         try {
             const res: ApiResponse<HeaderSubLinkType[]> = await apiClient.get(ENDPOINTS.GETHEADERLINKS);
@@ -55,7 +56,7 @@ const Form = () => {
                 showAlert("Please enter a valid email address", "info");
                 return;
             }
-
+            setLoading(true)
             const result = await submitFormData(formData, FORMSPREE);
 
             if (result) {
@@ -74,6 +75,9 @@ const Form = () => {
 
         } catch (error) {
             showAlert("Form submission failed!", "error");
+        }
+        finally {
+            setLoading(false)
         }
     };
     return (
@@ -130,7 +134,10 @@ const Form = () => {
                 value={formData.message}
                 onChange={handleChange} // Handle all changes with one function
             />
-            <button type="submit" className={`${styles.formButton}`}>Submit</button>
+            <button disabled={loading} type="submit" className={`${styles.formButton}`}
+            >
+                {loading ? "Submitting..." : "Submit"}
+            </button>
         </form>
     )
 }

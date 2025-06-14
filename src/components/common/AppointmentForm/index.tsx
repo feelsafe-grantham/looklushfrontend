@@ -19,6 +19,13 @@ const AppointmentForm = () => {
     treatment: "",
     sittings: "",
   });
+  const resetForm = () => {
+    setFormData({
+      appointmentDate: "",
+      treatment: "",
+      sittings: "",
+    });
+  };
 
   const fetchTreatments = async () => {
     try {
@@ -49,7 +56,7 @@ const AppointmentForm = () => {
 
     openModal({
       header: "Complete Your Booking",
-      content: <NewForm closeModal={closeModal} selectedData={formData} />,
+      content: <NewForm closeModal={closeModal} selectedData={formData} resetForm={resetForm} />,
       animation: "scale",
     });
   };
@@ -113,6 +120,7 @@ export default AppointmentForm;
 const NewForm = ({
   closeModal,
   selectedData,
+  resetForm,
 }: {
   closeModal: () => void;
   selectedData: {
@@ -120,7 +128,9 @@ const NewForm = ({
     treatment: string;
     sittings: string;
   };
+  resetForm: () => void;
 }) => {
+  const [loading, setLoading] = useState(false);
   const [userData, setUserData] = useState({ name: "", email: "", phone: "" });
   const { showAlert } = useAlert();
   const handleUserChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -151,10 +161,12 @@ const NewForm = ({
     };
 
     try {
+      setLoading(true);
       const result = await submitFormData(fullData, FORMSPREE);
       if (result) {
         showAlert("Form submitted successfully!", "success");
         closeModal();
+        resetForm();
       }
       else {
         showAlert("Form submission failed!", "error");
@@ -162,6 +174,9 @@ const NewForm = ({
     } catch (error) {
       showAlert("Form submission failed!", "error");
       console.error("Submission failed:", error);
+    }
+    finally {
+      setLoading(false);
     }
   };
 
@@ -192,10 +207,12 @@ const NewForm = ({
         onChange={handleUserChange}
       />
       <button
+        type="submit"
+        disabled={loading}
         onClick={handleSubmit}
         className={styles.formButton}
       >
-        Submit
+        {loading ? "Submitting..." : "Submit"}
       </button>
     </div>
   );
