@@ -5,11 +5,15 @@ import { useState, useEffect } from "react";
 import { apiClient } from "@/lib/api/apiClient";
 import { ENDPOINTS } from "@/lib/api/endpoints";
 import { useModal } from "@/components/ui/Modal/useModal";
+import { useAlert } from "@/context/AlertContext";
+import { submitFormData } from "@/lib/helper";
+import { FORMSPREE } from "@/data";
 
 const AppointmentForm = () => {
+  const { showAlert } = useAlert();
+  const { openModal, closeModal } = useModal();
   const sittings = [1, 2, 3, 4, 5, 6, 7];
   const [options, setOptions] = useState<string[]>([]);
-
   const [formData, setFormData] = useState({
     appointmentDate: "",
     treatment: "",
@@ -30,7 +34,7 @@ const AppointmentForm = () => {
     fetchTreatments();
   }, []);
 
-  const { openModal, closeModal } = useModal();
+
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -39,9 +43,8 @@ const AppointmentForm = () => {
 
   const handleBtnClick = () => {
     if (!formData.appointmentDate || !formData.treatment || !formData.sittings) {
-      alert("Please complete all fields before proceeding.");
+      showAlert("Please complete all fields before proceeding", "info");
       return;
-
     }
 
     openModal({
@@ -105,9 +108,7 @@ const AppointmentForm = () => {
 
 export default AppointmentForm;
 
-// ----------------
-// MODAL FORM COMPONENT
-// ----------------
+
 
 const NewForm = ({
   closeModal,
@@ -120,32 +121,46 @@ const NewForm = ({
     sittings: string;
   };
 }) => {
-  const [userData, setUserData] = useState({ name: "", email: "" });
-
+  const [userData, setUserData] = useState({ name: "", email: "", phone: "" });
+  const { showAlert } = useAlert();
   const handleUserChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setUserData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async () => {
-    if (!userData.name || !userData.email) {
-      alert("Please enter your name and email.");
+    if (!userData.name) {
+      showAlert("Please enter your name before proceeding", "info");
       return;
     }
-
+    if (!userData.phone && !userData.email) {
+      showAlert("Please enter your email or phone before proceeding", "info");
+      return;
+    }
+    if (userData.phone && userData.phone.length < 10) {
+      showAlert("Phone number should be at least 10 digits", "info");
+      return;
+    }
+    if (userData.email && !userData.email.includes("@")) {
+      showAlert("Please enter a valid email address", "info");
+      return;
+    }
     const fullData = {
       ...selectedData,
       ...userData,
     };
 
     try {
-      // Replace this with actual API call if needed
-
-
-      // Simulate success
-      alert("Appointment booked successfully!");
-      closeModal();
+      const result = await submitFormData(fullData, FORMSPREE);
+      if (result) {
+        showAlert("Form submitted successfully!", "success");
+        closeModal();
+      }
+      else {
+        showAlert("Form submission failed!", "error");
+      }
     } catch (error) {
+      showAlert("Form submission failed!", "error");
       console.error("Submission failed:", error);
     }
   };
@@ -158,6 +173,14 @@ const NewForm = ({
         placeholder="Name"
         className={styles.formInputModal}
         value={userData.name}
+        onChange={handleUserChange}
+      />
+      <input
+        name="phone"
+        type="tel"
+        placeholder="Phone"
+        className={styles.formInputModal}
+        value={userData.phone}
         onChange={handleUserChange}
       />
       <input
