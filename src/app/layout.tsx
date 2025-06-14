@@ -9,6 +9,7 @@ import Modal from "@/components/ui/Modal/Modal";
 import { ModalProvider } from "@/components/ui/Modal/ModalProvider";
 import WhatsappIcon from "@/components/ui/CTA/Icons/Whatsapp";
 import MessageBot from "@/components/ui/CTA/MessageBot";
+import { AlertProvider } from "@/context/AlertContext";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -34,15 +35,17 @@ export default function RootLayout({
         // ${sourGummy.variable}
         className={`${montserrat.variable}  antialiased`}
       >
-        <ModalProvider>
-          <TopBar />
-          <Header />
-          {children}
-          <Footer />
-          <WhatsappIcon />
-          <MessageBot />
-          <Modal />
-        </ModalProvider>
+        <AlertProvider>
+          <ModalProvider>
+            <TopBar />
+            <Header />
+            {children}
+            <Footer />
+            <WhatsappIcon />
+            <MessageBot />
+            <Modal />
+          </ModalProvider>
+        </AlertProvider>
       </body>
     </html>
   );

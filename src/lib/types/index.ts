@@ -187,3 +187,5 @@ export interface AddressType {
   email: string;
   visit_link?: string;
 }
+
+export type AlertType = "success" | "info" | "warning" | "error";
