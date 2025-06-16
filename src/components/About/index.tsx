@@ -53,7 +53,7 @@ const About = () => {
   const cardData = [
     {
       image: "/images/graph1.png",
-      description: "Over 115 experienced MD-certified dermatologists.",
+      description: "Experienced MD-certified dermatologists.",
     },
     {
       image: "/images/consult2.png",
@@ -77,7 +77,7 @@ const About = () => {
     {
       image: "/images/clients6.png",
       description:
-        "Served 7,50,000+ happy clients with a 95% satisfaction rate.",
+        "Served 2,00,000+ happy clients with a 95% satisfaction rate.",
     },
   ];
   const social = [
