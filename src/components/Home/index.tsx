@@ -72,7 +72,7 @@ const Home = async () => {
             </section>
             <section className={`${styles.sectionContainer}`}>
                 <SectionHeading
-                    line1="Welcome to Looklush Asthetic"
+                    line1="Welcome to Looklush Aesthetics"
                     line2="& Laser Center"
                 />
                 <ServicesContainer />

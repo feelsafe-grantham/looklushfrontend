@@ -80,7 +80,7 @@ const Footer = () => {
                   .map((_, idx) => (
                     <div key={idx} className={styles.instagramImageWrapper}>
                       <img
-                        src={`/images/problem${idx + 1}.png`}
+                        src={`/images/problem${idx + 1}.jpg`}
                         alt={`Instagram ${idx + 1}`}
                         className={styles.instagramImage}
                       />
