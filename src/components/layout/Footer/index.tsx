@@ -106,6 +106,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div className={`${styles.footerBottomBar} ${styles.bottomLinksContainer}`}>
+        <Link className={`${styles.bottomLinks}`} href="/terms-and-conditions">Terms & Conditions</Link>
+        <Link className={`${styles.bottomLinks}`} href="/privacy-policy">Privacy Policy</Link>
+        <Link className={`${styles.bottomLinks}`} href="/disclaimer">Disclaimer</Link>
+
+      </div>
       <div className={`${styles.footerBottomBar}`}>
         &copy; 2025 Looklush . All rights reserved.
       </div>

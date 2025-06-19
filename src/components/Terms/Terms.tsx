@@ -1,36 +1,87 @@
+import { contactData, MUMBAI_ADDRESS } from "@/data";
+import Link from "next/link";
 import styles from "./Terms.module.css";
 const TermsComp = () => {
+    const termsAndConditions = [
+        {
+            id: 1,
+            text: "All prices are inclusive of GST, wherever applicable."
+        },
+        {
+            id: 2,
+            text: "Payments can be made via Cash (As per Income Tax Regulations) / online transfer/Debit Card/ Credit Card/ UPI Payments/ Demand Draft/ Cheque in favor of Looklush Aesthetic and Laser Center. In case of cheque payments, treatments will be initiated only after confirmation of payment credited to SHRPL."
+        },
+        {
+            id: 3,
+            text: "Treatments are rendered only to the extent of the amount paid towards the package."
+        },
+        {
+            id: 4,
+            text: "All treatments are non-refundable."
+        },
+        {
+            id: 5,
+            text: "In case a patient is unable to continue treatment because of medical issues, the same will be reviewed by the Medical Review Committee and only in cases of documented medical co-morbidities, a credit note may be given for the unutilized amount which can be utilized towards customer referrals/any other packages/treatments/products etc."
+        },
+        {
+            id: 6,
+            text: "All credit notes and gift vouchers will have to be fully utilized within one year of their issuance."
+        },
+        {
+            id: 7,
+            text: "Exchange shall be done only in the case of defective products and has to be done within ten (10) days of purchase, along with a valid copy of the purchase receipt. Exchange of products is only permissible at the same clinic location from where the purchase was made. In other cases, exchanged can be given only if the product is unopened, unused, and in its original packaging and within ten (10) days of purchase."
+        },
+        {
+            id: 8,
+            text: "Products bought under discount/promotional schemes cannot be exchanged."
+        },
+        {
+            id: 9,
+            text: "Any disputes arising from these terms and conditions or the treatments provided shall be resolved amicably. If unresolved, they will be subject to the jurisdiction of the courts in Secunderabad, Telangana."
+        },
+        {
+            id: 10,
+            text: "For further reference, please retain the original receipt issued to you for any product or treatment."
+        },
+        {
+            id: 11,
+            text: "By availing our services, you agree to the above terms and conditions. Further we reserve the right to alter/modify any terms and condition at any point of time without assigning any reason or intimation whatsoever."
+        },
+        {
+            id: 12,
+            text: "By using the website and/or filling up the enquiry form at Olivaclinic.com or our promotional landing pages, you authorize us to contact you via email or phone call, SMS or WhatsApp. We may call you to schedule appointments, offer you our services for treatment you have opted for, and send you promotional offers running at our clinics. Additionally, irrespective of the fact that you have registered yourself under DND or DNC or NCPR service, you still authorize us to send you SMS or give you a call for the above-mentioned purposes."
+        }
+    ];
+
     return (
         <div className={styles.container}>
             <h1>Terms and Conditions</h1>
-            <p>Last updated: June 16, 2025</p>
+            <h3>ON SALES ORDER BEING ISSUED IN CLINIC.</h3>
+            <ol type="a">
+                {termsAndConditions.map((item) => (
+                    <li key={item.id}>{item.text}</li>
+                ))}
+            </ol>
 
-            <p>Welcome to LookLush Aesthetic & Laser Centre! These terms and conditions outline the rules and regulations for the use of our services and website, located at <strong>looklush.in</strong>.</p>
-
-            <h2>1. Acceptance of Terms</h2>
-            <p>By accessing this website, you agree to comply with these terms. If you disagree with any part, please do not use our services.</p>
-
-            <h2>2. Services</h2>
-            <p>We offer aesthetic, cosmetic, and dermatological services. All procedures are subject to consultation and patient eligibility.</p>
-
-            <h2>3. Appointments & Cancellations</h2>
-            <p>Please notify us at least 24 hours in advance for cancellations. Late cancellations or no-shows may be charged a fee.</p>
-
-            <h2>4. Intellectual Property</h2>
-            <p>Content on this website is the property of LookLush and may not be copied or reused without written permission.</p>
-
-            <h2>5. Limitations</h2>
-            <p>We are not liable for indirect losses or complications arising from treatments unless due to negligence.</p>
-
-            <h2>6. Locations & Hours</h2>
-            <p><strong>Mumbai:</strong> 101, Ahimsa Height, Malad West, Mumbai<br />
-                <strong>Gurugram:</strong> R3, M3M Urbana Mall, Sector 67, Gurugram<br />
-                <strong>Hours:</strong> Mon-Sat 11:00AM - 08:00PM</p>
-
-            <h2>7. Contact Us</h2>
-            <p>Email: <a href="mailto:drpatelpoonam@gmail.com">drpatelpoonam@gmail.com</a><br />
-                Phone (Mumbai): +91 93228 17696<br />
-                Phone (Gurugram): +91 90826 40898</p>
-        </div>)
+            <div className={styles.address}>
+                <h2>Looklush Aesthetic and Laser Center</h2>
+                <p>{MUMBAI_ADDRESS.address}</p>
+                <p>
+                    <strong>Email: </strong>
+                    <Link target="_blank" href={`mailto:${MUMBAI_ADDRESS.email}`} >{MUMBAI_ADDRESS.email}</Link>
+                </p>
+                <p>
+                    <strong>Phone: </strong>
+                    <Link href={`tel:${contactData.number1}`}>+91 {contactData.number1}</Link>
+                </p>
+                <p>
+                    <strong>Clinics: </strong>
+                    <Link className="mx-2" href={"https://looklush.in/location/gurugram"}>GURGAON</Link>
+                    |
+                    <Link className="mx-2" href={"https://looklush.in/location/mumbai"}>MUMBAI</Link>
+                </p>
+            </div>
+        </div>
+    )
 }
 export default TermsComp;
