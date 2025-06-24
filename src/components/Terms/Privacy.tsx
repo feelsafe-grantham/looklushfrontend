@@ -47,7 +47,20 @@ const PrivacyComp = () => {
             <h1>{privacyPolicy.clinicName} - Privacy Policy</h1>
 
             <section>
-                <h2>Commitment to Privacy</h2>
+                <div className="flex gap-4">
+
+                    <h4>Effective Date:</h4> <p>21 / june /2025 </p>
+                </div>
+                <div className="flex gap-4">
+
+                    <h4>Website:</h4> <Link href="https://looklush.in">Looklush.in </Link>
+                </div>
+                <p>At Looklush Aesthetic & Laser Centre, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and protect your personal information when you interact with our services or visit our website.
+                </p>
+
+            </section>
+            <section>
+                <h2>Information We Collect</h2>
                 <p>{privacyPolicy.commitment}</p>
             </section>
 
