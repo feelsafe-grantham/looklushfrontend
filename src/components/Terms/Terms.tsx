@@ -57,18 +57,80 @@ const TermsComp = () => {
         <div className={styles.container}>
             <h1>Terms and Conditions</h1>
             <h3>ON SALES ORDER BEING ISSUED IN CLINIC.</h3>
-            <ol type="a">
+            {/* <ol type="a">
                 {termsAndConditions.map((item) => (
                     <li key={item.id}>{item.text}</li>
                 ))}
-            </ol>
+            </ol> */}
+            <section>
+                <h2>Terms & Conditions</h2>
+                <p>By using this website or booking any services, you agree to be bound by these Terms & Conditions.</p>
+            </section>
+
+            <section>
+                <h2>Services</h2>
+                <p>Looklush Aesthetic & Laser Centre offers aesthetic, cosmetic, and dermatological treatments. These services are performed by licensed or trained professionals, and all advice is given with professional discretion.</p>
+            </section>
+
+            <section>
+                <h2>Bookings & Payments</h2>
+                <p>All appointments must be confirmed via WhatsApp, call, or website form.</p>
+                <p>Payment must be completed before or during the treatment.</p>
+                <p>Prices are subject to change without prior notice.</p>
+            </section>
+
+            <section>
+                <h2>Cancellations & Refunds</h2>
+                <p>Cancellations must be made at least 24 hours in advance.</p>
+                <p><strong>Refund Policy:</strong> Due to the personalized nature of our services, all purchases are non-refundable once booked and paid. Refunds will only be considered in cases of failed or duplicate payments or if Looklush is unable to provide the service.</p>
+            </section>
+
+            <section>
+                <h2>Medical Disclaimer</h2>
+                <p>Results may vary per individual. Clients must disclose all medical history and any pre-existing conditions. We are not liable for any complications due to undisclosed medical information.</p>
+            </section>
+
+            <section>
+                <h2>Website Usage</h2>
+                <p>By using our site, you agree not to:</p>
+                <ul>
+                    <li>Republish, copy, or reuse our content without permission</li>
+                    <li>Upload harmful code or attempt to hack the system</li>
+                    <li>Misuse forms or impersonate others</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Intellectual Property</h2>
+                <p>All images, logos, videos, and text on our website are the property of Looklush and cannot be copied, modified, or used without written consent.</p>
+            </section>
+
+            <section>
+                <h2>Limitation of Liability</h2>
+                <p>We are not responsible for:</p>
+                <ul>
+                    <li>Unintended reactions or side effects from treatments</li>
+                    <li>Website downtime or booking platform issues</li>
+                    <li>Services from third-party providers or external links</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Governing Law</h2>
+                <p>These Terms are governed by the laws of India, and any disputes will be handled in Mumbai, Maharashtra.</p>
+            </section>
+
+            <section>
+                <h2>Contact</h2>
+                <p>For questions or support, please reach out to us at: <a href="mailto:help@looklush.in">help@looklush.in</a></p>
+            </section>
 
             <div className={styles.address}>
                 <h2>Looklush Aesthetic and Laser Center</h2>
                 <p>{MUMBAI_ADDRESS.address}</p>
                 <p>
                     <strong>Email: </strong>
-                    <Link target="_blank" href={`mailto:${MUMBAI_ADDRESS.email}`} >{MUMBAI_ADDRESS.email}</Link>
+                    <Link target="_blank" href={`mailto:${MUMBAI_ADDRESS.emailHelp}`} >{MUMBAI_ADDRESS.emailHelp}</Link>
                 </p>
                 <p>
                     <strong>Phone: </strong>

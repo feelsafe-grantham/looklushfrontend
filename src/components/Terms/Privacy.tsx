@@ -47,70 +47,73 @@ const PrivacyComp = () => {
             <h1>{privacyPolicy.clinicName} - Privacy Policy</h1>
 
             <section>
-                <div className="flex gap-4">
-
-                    <h4>Effective Date:</h4> <p>21 / june /2025 </p>
-                </div>
-                <div className="flex gap-4">
-
-                    <h4>Website:</h4> <Link href="https://looklush.in">Looklush.in </Link>
-                </div>
-                <p>At Looklush Aesthetic & Laser Centre, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and protect your personal information when you interact with our services or visit our website.
-                </p>
-
-            </section>
-            <section>
                 <h2>Information We Collect</h2>
-                <p>{privacyPolicy.commitment}</p>
+                <p>At Looklush Aesthetic & Laser Centre, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and protect your personal information when you interact with our services or visit our website.</p>
             </section>
 
             <section>
                 <h2>What Information We Collect</h2>
-                <p>{privacyPolicy.informationCollected.description}</p>
-                <p>{privacyPolicy.informationCollected.emailCollection}</p>
+                <p>We collect the following types of information:</p>
+                <ul>
+                    <li><strong>Personal Information:</strong> Name, phone number, email, age, address (only if provided).</li>
+                    <li><strong>Medical Information:</strong> Treatment history, health concerns, or any voluntarily shared medical details.</li>
+                    <li><strong>Technical Data:</strong> Device type, IP address, browser type, and usage data via analytics tools.</li>
+                    <li><strong>Booking & Transaction Info:</strong> Appointment details, payment history, and service feedback.</li>
+                </ul>
             </section>
 
             <section>
                 <h2>How We Use Your Information</h2>
-                <p>{privacyPolicy.usageOfInformation.description}</p>
-                <p>{privacyPolicy.usageOfInformation.disclosure}</p>
-                <p>{privacyPolicy.usageOfInformation.privacyCommitment}</p>
+                <p>We use your information to:</p>
+                <ul>
+                    <li>Confirm bookings and treatment schedules</li>
+                    <li>Deliver safe and effective services</li>
+                    <li>Send service updates, reminders, or promotions</li>
+                    <li>Improve user experience and service quality</li>
+                    <li>Maintain records for internal compliance</li>
+                </ul>
             </section>
 
             <section>
-                <h2>Editorial Integrity</h2>
-                <p>{privacyPolicy.editorialIntegrity.description}</p>
+                <h2>Sharing Your Information</h2>
+                <p>We do not sell or trade your information. We may share it:</p>
+                <ul>
+                    <li>Internally with our trained medical staff</li>
+                    <li>With trusted third-party platforms (e.g., WhatsApp, email, Meta Pixel)</li>
+                    <li>As required by Indian law or government authorities</li>
+                </ul>
             </section>
 
             <section>
-                <h2>Third-Party Disclosure</h2>
-                <p>{privacyPolicy.thirdParties.description}</p>
-                <p>{privacyPolicy.thirdParties.marketing}</p>
+                <h2>Data Security</h2>
+                <p>We follow industry best practices to keep your data secure using encrypted tools, access controls, and secure servers. However, no online system is 100% secure.</p>
             </section>
 
             <section>
-                <h2>Cookies</h2>
-                <p>{privacyPolicy.cookies.description}</p>
-                <p>{privacyPolicy.cookies.cookieDetails}</p>
+                <h2>Your Rights</h2>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Request access to your data</li>
+                    <li>Ask for correction or deletion</li>
+                    <li>Opt out of promotional messages</li>
+                </ul>
             </section>
 
             <section>
-                <h2>Security</h2>
-                <p>{privacyPolicy.security.description}</p>
+                <h2>Changes to This Policy</h2>
+                <p>We may update this Privacy Policy occasionally. Updates will be posted here with a revised June 16, 2025</p>
             </section>
 
             <section>
-                <h2>Changes to Privacy Policy</h2>
-                <p>{privacyPolicy.changeInPolicy.description}</p>
-                <p>{privacyPolicy.changeInPolicy.governingLaw}</p>
-                <p>{privacyPolicy.changeInPolicy.applicability}</p>
+                <h2>Contact Us</h2>
+                <p>If you have questions about this policy or your data, email us at: <a href="mailto:help@looklush.in">help@looklush.in</a></p>
             </section>
             <div className={styles.address}>
                 <h2>Looklush Aesthetic and Laser Center</h2>
                 <p>{MUMBAI_ADDRESS.address}</p>
                 <p>
                     <strong>Email: </strong>
-                    <Link target="_blank" href={`mailto:${MUMBAI_ADDRESS.email}`} >{MUMBAI_ADDRESS.email}</Link>
+                    <Link target="_blank" href={`mailto:${MUMBAI_ADDRESS.emailHelp}`} >{MUMBAI_ADDRESS.emailHelp}</Link>
                 </p>
                 <p>
                     <strong>Phone: </strong>

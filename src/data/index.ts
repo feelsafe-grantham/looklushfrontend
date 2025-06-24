@@ -6,6 +6,7 @@ export const MUMBAI_ADDRESS = {
     "101, AHIMSA HEIGHT, AHIMSA MARG, NEAR SUNDAR NAGAR, OFF, Chincholi Bunder Rd, Malad West, Mumbai, Maharashtra 400064",
   phone: "+91 93228 17696",
   email: "drpatelpoonam@gmail.com",
+  emailHelp: "help@looklush.in",
   visit_link: "https://maps.app.goo.gl/m1GjnPQs7wpRtnrt9",
 };
 export const GURUGRAM_ADDRESS = {
