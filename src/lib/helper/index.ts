@@ -33,7 +33,6 @@ export const submitFormData = async (
     }
 
     const result = await response.json();
-    console.log("Form submitted successfully:", result);
     return result; // You can handle the success response here (e.g., show a success message)
   } catch (error) {
     console.error("Error submitting form data:", error);

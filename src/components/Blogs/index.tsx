@@ -21,7 +21,7 @@ const BlogsComp = () => {
     return (
         <div>
             <LaserBurnSection />
-            <ReelContainer />
+            <ReelContainer startIndex={7} />
             <SectionHeading line1="Blog Topics" />
             <div className={styles.blogTopicsContainer} >
                 {blogTopics.map((topic) =>
