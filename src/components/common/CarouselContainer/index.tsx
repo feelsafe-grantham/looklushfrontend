@@ -19,7 +19,9 @@ async function fetchHeroImages(): Promise<HeroImagesType[]> {
 
 const CarouselContainer = async () => {
     const data = await fetchHeroImages();
-    const imgUrls = data.map((item) => item.image);
+    const sortedData = data.sort((a, b) => a.index - b.index);
+    const imgUrls = sortedData.map(item => item.image);
+
 
     if (imgUrls.length === 0) {
         return null

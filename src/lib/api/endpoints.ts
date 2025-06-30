@@ -4,6 +4,7 @@ export const ENDPOINTS = {
   //home page here
   CAROUSEL: "/home-carousel/",
   REELS: "/get-all-video-testimonials/",
+  REELSLIMIT: "/get-all-video-testimonials/:start/:end",
   HOMEVIDEO: "/page-video/home/1",
   HOMEVIDEOREEL: "/page-video/home/2",
   HOMEVIDEOSEC: "/page-video/home/3",

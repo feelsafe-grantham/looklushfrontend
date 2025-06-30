@@ -20,6 +20,7 @@ interface VideoTestimonialComments {
   message: string;
 }
 export interface VideoTestimonial {
+  index: number;
   id: Number;
   username: string;
   viewers: number;

@@ -45,7 +45,7 @@ const Home = async () => {
                 <ExperienceContainer />
             </section>
             <Suspense fallback={<ReelContainerShimmer />}>
-                <ReelContainer />
+                <ReelContainer startIndex={0} endIndex={7} />
             </Suspense>
             <section className={`${styles.sectionContainer}`}>
                 <SectionHeading
