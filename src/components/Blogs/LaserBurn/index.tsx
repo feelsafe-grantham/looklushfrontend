@@ -1,8 +1,10 @@
+"use client"
 import React from "react";
 import styles from "./LaserBurn.module.css";
-import Carousel from "@/components/common/Carousel";
-import Link from "next/link";
 import CtaButton from "@/components/ui/CtaButton";
+import Carousel from "@/components/common/Carousel";
+import { useModal } from "@/components/ui/Modal/useModal";
+import Form from "@/components/common/Form";
 
 const LaserBurnSection = () => {
   const btnLinks = [
@@ -23,6 +25,17 @@ const LaserBurnSection = () => {
       url: "",
     },
   ];
+  const { openModal, closeModal } = useModal();
+  const handleBtnClick = () => {
+    openModal(
+      {
+        header: "Schedule Appointment",
+        content: <Form />,
+        animation: "scale",
+      }
+    )
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.imageWrapper}>
@@ -39,7 +52,7 @@ const LaserBurnSection = () => {
           <button className={styles.infoButton}>{btn.label}</button>
         ))}
       </div>
-      <CtaButton newTab={false} href="/location" text="Book Now!" />
+      <CtaButton newTab={false} onClick={handleBtnClick} text="Book Now!" />
     </div>
   );
 };
