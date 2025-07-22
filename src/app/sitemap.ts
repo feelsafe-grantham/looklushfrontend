@@ -3,11 +3,11 @@ import { ENDPOINTS } from "@/lib/api/endpoints";
 import { ApiResponse, BlogType, ProblemCatType } from "@/lib/types";
 import type { MetadataRoute } from "next";
 import { generateBlogSlug } from "@/lib/helper";
+
 async function fetchBlogs() {
-  // const blogSlug = generateBlogSlug(blog?.title, blog?.id)
   try {
     const res: ApiResponse<BlogType[]> = await apiClient.get(ENDPOINTS.BLOGS);
-    return res?.data;
+    return res?.data || [];
   } catch (error) {
     console.error("Error while fetching blogs: ", error);
     return [];
@@ -15,14 +15,13 @@ async function fetchBlogs() {
 }
 
 async function fetchTreatments() {
-  // treatment.cards[] > /treatments/${generateBlogSlug(card.title, card.id)}
   try {
     const res: ApiResponse<ProblemCatType[]> = await apiClient.get(
       ENDPOINTS.TREATMENTCATEGORY
     );
-    return res.data;
+    return res?.data || [];
   } catch (error) {
-    console.error("this is error: ", error);
+    console.error("Error while fetching treatments: ", error);
     return [];
   }
 }
@@ -36,34 +35,32 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     | "monthly"
     | "yearly"
     | "never";
+
   const [blogs, treatments] = await Promise.all([
     fetchBlogs(),
     fetchTreatments(),
   ]);
 
-  const blogUrls =
-    blogs?.map((blog) => ({
-      url: `https://looklush.in/blog/${generateBlogSlug(
-        blog?.title,
-        blog?.id
-      )}`,
-      lastModified: new Date(new Date()),
-      changeFrequency: "weekly" as ChangeFrequency,
-      priority: 0.7,
-    })) || [];
-  const treatmentUrls = treatments?.map((treatment) =>
+  const blogUrls = blogs.map((blog) => ({
+    url: `https://looklush.in/blog/${generateBlogSlug(blog.title, blog.id)}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as ChangeFrequency,
+    priority: 0.7,
+  }));
+
+  const treatmentUrls = treatments.flatMap((treatment) =>
     treatment.cards.map((card) => ({
       url: `https://looklush.in/treatments/${generateBlogSlug(
         card.title,
         card.id
       )}`,
-      lastModified: new Date(new Date()),
+      lastModified: new Date(),
       changeFrequency: "weekly" as ChangeFrequency,
       priority: 0.7,
     }))
   );
 
-  const pageUrl = [
+  const staticPageUrls = [
     "https://looklush.in/",
     "https://looklush.in/treatments",
     "https://looklush.in/location",
@@ -75,16 +72,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "https://looklush.in/terms-and-conditions",
     "https://looklush.in/privacy-policy",
     "https://looklush.in/disclaimer",
-  ];
+  ].map((url) => ({
+    url,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as ChangeFrequency,
+    priority: 0.8,
+  }));
 
-  return [
-    {
-      url: "https://looklush.in",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 1,
-    },
-    ...blogUrls,
-    ...treatmentUrls,
-  ];
+  return [...staticPageUrls, ...blogUrls, ...treatmentUrls];
 }
