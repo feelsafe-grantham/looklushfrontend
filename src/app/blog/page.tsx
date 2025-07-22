@@ -13,6 +13,11 @@ export default async function Blogs() {
 
 
     return (
-        <BlogsComp />
+        <>
+            <head>
+                <link rel="canonical" href="https://looklush.in/blog" />
+            </head>
+            <BlogsComp />
+        </>
     );
 }

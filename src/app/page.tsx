@@ -8,6 +8,11 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   return (
-    <HomeComp />
+    <>
+      <head>
+        <link rel="canonical" href="https://looklush.in" />
+      </head>
+      <HomeComp />
+    </>
   );
 }

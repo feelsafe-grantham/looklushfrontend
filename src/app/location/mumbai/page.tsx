@@ -21,16 +21,21 @@ export const metadata: Metadata = {
 };
 
 export default function Location() {
-  return <div className="grid gap-5">
-    <LocationCardHor location={MUMBAI_ADDRESS} />
-    <AppointmentForm />
-    <SectionHeading line1="Visit Us" />
-    <SectionHeadPara para="Located in the heart of Mumbai, Looklush Clinic offers world-class aesthetic care with personalized attention in a calm and modern setting." />
-    <Suspense fallback={<VideoShimmer />}>
-      <VideoContainer endpoint={ENDPOINTS.LOCATIONVIDEO} />
-    </Suspense>
-    <ReviewSummary />
-    <SectionHeading line1="Frequently Asked " line2="Questions" />
-    <Faqs />
-  </div>;
+  return (<>
+
+    <head>
+      <link rel="canonical" href="https://looklush.in/mumbai" />
+    </head>
+    <div className="grid gap-5">
+      <LocationCardHor location={MUMBAI_ADDRESS} />
+      <AppointmentForm />
+      <SectionHeading line1="Visit Us" />
+      <SectionHeadPara para="Located in the heart of Mumbai, Looklush Clinic offers world-class aesthetic care with personalized attention in a calm and modern setting." />
+      <Suspense fallback={<VideoShimmer />}>
+        <VideoContainer endpoint={ENDPOINTS.LOCATIONVIDEO} />
+      </Suspense>
+      <ReviewSummary />
+      <SectionHeading line1="Frequently Asked " line2="Questions" />
+      <Faqs />
+    </div></>);
 }

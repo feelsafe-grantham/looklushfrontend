@@ -8,6 +8,11 @@ export const metadata: Metadata = {
 
 export default function Treatments() {
     return (
-        <TreatmentsComp />
+        <>
+            <head>
+                <link rel="canonical" href="https://looklush.in/treatments" />
+            </head>
+            <TreatmentsComp />
+        </>
     );
 }

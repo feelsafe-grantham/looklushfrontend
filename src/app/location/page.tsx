@@ -7,5 +7,13 @@ export const metadata: Metadata = {
 };
 
 export default function Location() {
-  return <LocationComp />;
+  return (
+    <>
+
+      <head>
+        <link rel="canonical" href="https://looklush.in/location" />
+      </head>
+      <LocationComp />
+
+    </>)
 }

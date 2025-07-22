@@ -10,6 +10,9 @@ export const metadata: Metadata = {
 export default function FAQs() {
     return (
         <>
+            <head>
+                <link rel="canonical" href="https://looklush.in/faqs" />
+            </head>
             <div className="mt-5" />
             <SectionHeading isHeading line1="Skin Care FAQs in Gurgaon" line2="for Expert Insights" />
             <Faqs />

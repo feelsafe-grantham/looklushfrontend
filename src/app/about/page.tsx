@@ -8,6 +8,11 @@ export const metadata: Metadata = {
 
 export default function About() {
     return (
-        <AboutComp />
+        <>
+            <head>
+                <link rel="canonical" href="https://looklush.in/about" />
+            </head>
+            <AboutComp />
+        </>
     );
 }
