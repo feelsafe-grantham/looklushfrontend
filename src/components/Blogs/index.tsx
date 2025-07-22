@@ -22,7 +22,7 @@ const BlogsComp = () => {
         <div>
             <LaserBurnSection />
             <ReelContainer startIndex={7} />
-            <SectionHeading line1="Blog Topics" />
+            <SectionHeading isHeading line1="Best aesthetic skin and hair" line2="clinic in Gurgaon" />
             <div className={styles.blogTopicsContainer} >
                 {blogTopics.map((topic) =>
                     <div className={styles.blogTopic}>{topic}</div>

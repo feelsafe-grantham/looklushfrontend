@@ -1,20 +1,20 @@
-import dynamic from "next/dynamic";
 import { Suspense } from "react";
 import Faqs from "../common/Faqs";
+import dynamic from "next/dynamic";
 import styles from "./Home.module.css";
 import ReelContainer from "./ReelContainer";
 import ExpertCard from "../common/ExpertCard";
-import SectionHeading from "../common/SectionHeading";
-import SectionHeadPara from "../common/SectionHeadPara";
-import CarouselContainer from "../common/CarouselContainer";
-import CarouselShimmer from "../common/Loading/CarouselShimmer";
-import CompareSliderContainer from "../common/CompareSliderContainer";
 import { ENDPOINTS } from "@/lib/api/endpoints";
 import ServicesContainer from "../ServicesContainer";
+import SectionHeading from "../common/SectionHeading";
+import SectionHeadPara from "../common/SectionHeadPara";
 import VideoShimmer from "../common/Loading/VideoShimmer";
+import CarouselContainer from "../common/CarouselContainer";
+import CarouselShimmer from "../common/Loading/CarouselShimmer";
 import ExperienceContainer from "./ExperienceSection/Container";
 import PriceTableShimmer from "../common/Loading/PriceTableShimmer";
 import PriceTableContainer from "../common/PriceTable/PriceContainer";
+import CompareSliderContainer from "../common/CompareSliderContainer";
 import CompareSliderShimmer from "../common/Loading/CompareSliderShimmer";
 import { ReelContainerShimmer } from "../common/Loading/ReelContainerShimmer";
 const VideoContainer = dynamic(() => import("../common/Video/VideoContainer"), {
@@ -31,7 +31,7 @@ const Home = async () => {
             </Suspense>
             <ExpertCard />
             <section className={`${styles.sectionContainer}`}>
-                <SectionHeading line1="Our Celebrity Clients" />
+                <SectionHeading isHeading line1="Best Skin Care Clinic in Gurgaon" line2="for Radiant Results" />
                 <SectionHeadPara para="Looklush Clinic is trusted by well-known personalities who value privacy, precision, and outstanding aesthetic results with every visit." />
                 <img
                     alt="Celebrity"

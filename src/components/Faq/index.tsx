@@ -24,6 +24,7 @@ const Faqs = () => {
   } = useFaqs();
   return (
     <div className={styles.faqContainer}>
+
       <div className={`${styles.faqSearchBarContainer}`}>
         <form onSubmit={handleSubmit}>
           <div className={`${styles.faqSearchBarWrapper}`}>

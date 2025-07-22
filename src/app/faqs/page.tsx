@@ -1,3 +1,4 @@
+import SectionHeading from "@/components/common/SectionHeading";
 import Faqs from "@/components/Faq";
 import { Metadata } from 'next';
 export const metadata: Metadata = {
@@ -8,6 +9,10 @@ export const metadata: Metadata = {
 
 export default function FAQs() {
     return (
-        <Faqs />
+        <>
+            <div className="mt-5" />
+            <SectionHeading isHeading line1="Skin Care FAQs in Gurgaon" line2="for Expert Insights" />
+            <Faqs />
+        </>
     );
 }
