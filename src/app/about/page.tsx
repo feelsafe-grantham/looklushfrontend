@@ -1,8 +1,8 @@
 import AboutComp from "@/components/About";
 import { Metadata } from 'next';
 export const metadata: Metadata = {
-    title: 'About Us | LookLush Skin & Hair Experts',
-    description: 'Learn about LookLush – a leading skin and hair clinic in Gurugram and Mumbai, driven by science, aesthetics, and care.',
+    title: 'Get to Know Looklush Aesthetic Clinic in Gurgaon',
+    description: 'Learn about Looklush, a trusted aesthetic clinic in Gurgaon. Dr. Poonam Patel offers expert skin & hair care with a caring touch. Book now!',
     keywords: ['about LookLush', 'skin experts', 'hair specialists', 'Gurugram clinic', 'Mumbai clinic'],
 };
 

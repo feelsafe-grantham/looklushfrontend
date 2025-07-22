@@ -15,8 +15,8 @@ import Faqs from "@/components/Faq";
 import ReviewSummary from "@/components/Location/ReviewSummary";
 import { GURUGRAM_ADDRESS, MUMBAI_ADDRESS } from "@/data";
 export const metadata: Metadata = {
-  title: 'Visit Our Clinics | Gurugram & Mumbai | LookLush',
-  description: 'Find LookLush clinic locations in Gurugram and Mumbai. Book an appointment at your nearest center.',
+  title: 'Aesthetic Clinic in Gurugram | Looklush Skin & Hair',
+  description: 'Visit Looklush, the top aesthetic clinic in Gurugram, for expert skin & hair treatments by Dr. Poonam Patel. Book your consultation today',
   keywords: ['LookLush locations', 'Gurugram skin clinic', 'Mumbai hair clinic', 'dermatologist near me'],
 };
 

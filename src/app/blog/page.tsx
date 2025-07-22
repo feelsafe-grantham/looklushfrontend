@@ -2,8 +2,8 @@ import BlogsComp from "@/components/Blogs";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'LookLush Blog | Skin & Hair Tips from Experts',
-    description: 'Read expert-backed guides and tips on skin care, hair care, lifestyle, and aesthetic treatments.',
+    title: 'Looklush Insights Skin Care Tips in Gurgaon',
+    description: 'Discover skin care tips in Gurgaon at Looklush. Looklush shares expert advice on skin & hair treatments. Read now for radiant results',
     keywords: ['skin care blog', 'hair care tips', 'dermatology blog Gurugram', 'Mumbai beauty advice'],
 };
 
