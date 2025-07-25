@@ -21,9 +21,9 @@
 
 .image {
   width: 100%;
-  border-radius: var(--standard-border-radius);
+  aspect-ratio: 2/1;
   object-fit: cover;
-  max-height: 500px;
+  border-radius: var(--standard-border-radius);
 }
 
 .infoContainer {
