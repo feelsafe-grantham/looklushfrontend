@@ -78,7 +78,8 @@ const Footer = () => {
                 {Array(4)
                   .fill(0)
                   .map((_, idx) => (
-                    <div key={idx} className={styles.instagramImageWrapper}>
+
+                    <Link target="_blank" href={SOCIAL_MEDIA.instagram} key={idx} className={styles.instagramImageWrapper}>
                       <img
                         src={`/images/problem${idx + 1}.jpg`}
                         alt={`Instagram ${idx + 1}`}
@@ -91,7 +92,7 @@ const Footer = () => {
                           className={styles.instagramIcon}
                         />
                       </div>
-                    </div>
+                    </Link>
                   ))}
               </div>
             </div>
