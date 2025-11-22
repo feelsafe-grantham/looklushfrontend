@@ -1,10 +1,10 @@
-import SectionHeading from '@/components/common/SectionHeading';
-import FounderCard from '@/components/OurTeam/FounderCard';
 import { Metadata } from 'next';
-import { FounderData, doctorsData, teamData } from '@/data';
+import Faqs from '@/components/common/Faqs';
 import DoctorCard from '@/components/OurTeam/DoctorCard';
 import MemberCard from '@/components/OurTeam/MemberCard';
-import Faqs from '@/components/common/Faqs';
+import FounderCard from '@/components/OurTeam/FounderCard';
+import { FounderData, doctorsData, teamData } from '@/data';
+import SectionHeading from '@/components/common/SectionHeading';
 export const metadata: Metadata = {
     title: "Meet Our Expert Team | LookLush Aesthetic Clinic",
     description:
