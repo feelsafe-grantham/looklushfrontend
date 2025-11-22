@@ -18,10 +18,10 @@ const FounderCard: React.FC<{ founder: FounderCardProps }> = ({
     return (
         <>
 
-            <div className="w-full max-w-4xl mx-auto flex flex-col md:flex-row items-start gap-6 bg-white p-6 rounded-xl shadow-sm">
+            <div className="w-full max-w-5xl mx-auto flex flex-col md:flex-row items-start gap-6 bg-white p-6 rounded-xl shadow-sm">
                 {/* Left: Image */}
                 <div className="flex-shrink-0">
-                    <div className="w-[260px] h-[300px] relative rounded-xl overflow-hidden">
+                    <div className="w-[350px] h-[452px] relative rounded-xl overflow-hidden">
                         <Image
                             src={image}
                             alt={name}
@@ -32,14 +32,14 @@ const FounderCard: React.FC<{ founder: FounderCardProps }> = ({
                 </div>
 
                 {/* Right: Text */}
-                <div className="flex flex-col justify-between">
+                <div className="flex flex-col justify-between items-center">
                     <div>
                         <h2 className="text-2xl font-semibold text-[var(--text-dark-color)]">
                             {name}
                         </h2>
                         <p className="text-sm mt-1 text-[var(--text-light-color)]">{role}</p>
 
-                        <p className="mt-4 leading-relaxed text-[var(--text-light-color)]">
+                        <p className="mt-4 text-xl leading-relaxed text-[var(--text-light-color)]">
                             {description}
                         </p>
                     </div>

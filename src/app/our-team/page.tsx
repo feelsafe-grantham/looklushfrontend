@@ -5,17 +5,29 @@ import { FounderData, doctorsData, teamData } from '@/data';
 import DoctorCard from '@/components/OurTeam/DoctorCard';
 import MemberCard from '@/components/OurTeam/MemberCard';
 export const metadata: Metadata = {
-    title: 'Get to Know Looklush Aesthetic Clinic in Gurgaon',
-    description: 'Learn about Looklush, a trusted aesthetic clinic in Gurgaon. Dr. Poonam Patel offers expert skin & hair care with a caring touch. Book now!',
-    keywords: ['about LookLush', 'skin experts', 'hair specialists', 'Gurugram clinic', 'Mumbai clinic'],
-}; export default function OurTeam() {
+    title: "Meet Our Expert Team | LookLush Aesthetic Clinic",
+    description:
+        "Get to know the expert team behind LookLush Aesthetic Clinic. Our dermatologists, cosmetologists, and aesthetic specialists provide advanced skin & hair treatments with care and precision.",
+    keywords: [
+        "LookLush team",
+        "aesthetic specialists",
+        "skin experts",
+        "hair experts",
+        "cosmetologists",
+        "dermatologists",
+        "aesthetic clinic team",
+        "Gurugram clinic staff",
+        "Mumbai clinic team"
+    ],
+};
+export default function OurTeam() {
     return (
         <>
             <head>
                 <link rel="canonical" href="https://looklush.in/our-team" />
             </head>
             <FounderCard founder={FounderData} />
-            <SectionHeading line1='Meet Our Team' />
+            {/* <SectionHeading line1='Meet Our Team' />
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {doctorsData.map((doc, index) => (
                     <DoctorCard
@@ -34,7 +46,7 @@ export const metadata: Metadata = {
                         image={member.image}
                     />
                 ))}
-            </div>
+            </div> */}
         </>
     );
 }
