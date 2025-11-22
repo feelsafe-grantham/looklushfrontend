@@ -1,13 +1,13 @@
 "use client";
 import Link from "next/link";
-import { FaChevronDown, FaChevronUp, } from "react-icons/fa";
-import { staticImages } from "@/utils/staticNames/index"
-import styles from "./Header.module.css";
 import useHeader from "./useHeader";
-import { HeaderLinkType } from "@/lib/types";
 import { contactData } from "@/data";
-import { useModal } from "@/components/ui/Modal/useModal";
+import styles from "./Header.module.css";
 import Form from "@/components/common/Form";
+import { HeaderLinkType } from "@/lib/types";
+import { staticImages } from "@/utils/staticNames/index"
+import { useModal } from "@/components/ui/Modal/useModal";
+import { FaChevronDown, FaChevronUp, } from "react-icons/fa";
 const Header = () => {
     const { links, toggleMenu, isActive, isOpen, closeMenu, closeSubLink, handleMouseEnter, handleMouseLeave, hoverLink, isMobile,
         activeSubMenu,
@@ -49,7 +49,7 @@ const Header = () => {
                 <Link href="/" >
                     <img
                         src={staticImages.logo}
-                        alt="High Tech Window Blinds logo by Vishal Interior"
+                        alt="Looklush aesthetic and laser center"
                         className={`${styles.logo} ${styles.logoheight}`}
                     />
                 </Link>

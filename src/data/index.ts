@@ -34,4 +34,53 @@ export const contactData = {
   email: "drpatelpoonam@gmail.com",
 };
 
+export const FounderData = {
+  name: "Dr. Poonam Patel",
+  image: "/images/team/poonam-patel.png",
+  role: "Founder",
+  description:
+    "India’s leading expert in aesthetic medicine Dr. Poonam Patel is a recognized Cosmetologist and aesthetician, bringing 20+ years of legacy in transforming beauty and instilling confidence.",
+  specialties: [
+    "Anti-Ageing Treatments",
+    "Hair Restoration",
+    "Clinical Dermatology",
+  ],
+};
+export const doctorsData = [
+  {
+    name: "Dr. Surbhi Chaudhary",
+    image: "/images/team/surabhi-chaudhary.png",
+    degrees: ["Cosmetologist"],
+  },
+  {
+    name: "Dr. Neeta Santosh ",
+    image: "/images/team/neeta-santosh.png",
+    degrees: ["M.B.B.S", "C.G.O"],
+  },
+  {
+    name: "Dr. Renuka Saigal",
+    image: "/images/team/renuka-saigal.png",
+    degrees: ["Skin Specialist"],
+  },
+];
+
+export const teamData = [
+  {
+    name: "Minaxi Rathod ",
+    image: "/images/team/minaxi-rathod.png",
+  },
+  {
+    name: "Tejal Pawar",
+    image: "/images/team/tejal-pawar.png",
+  },
+  {
+    name: "Sapna Sharma ",
+    image: "/images/team/sapna-sharma.png",
+  },
+  {
+    name: "Sakshi Loterkar",
+    image: "/images/team/sakshi.png",
+  },
+];
+
 export const FORMSPREE = "https://formspree.io/f/xgvyyedo";
