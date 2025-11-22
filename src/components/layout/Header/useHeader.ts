@@ -85,6 +85,11 @@ export default function useHeader() {
       subLink: [],
     },
     {
+      label: "Team",
+      url: "/our-team",
+      subLink: [],
+    },
+    {
       label: "Blog",
       url: "/blog",
       subLink: [],

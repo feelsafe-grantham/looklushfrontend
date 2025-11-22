@@ -1,0 +1,26 @@
+.mainContainer {
+  gap: 0px;
+  display: grid;
+  margin: 0px auto;
+  padding: 40px 20px;
+  grid-template-columns: 370px 1fr;
+  max-width: var(--max-width-container);
+}
+.rightSection {
+  max-width: 500px;
+  margin: auto 20px;
+  height: 80%;
+}
+@media (max-width: 750px) {
+  .mainContainer {
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+  }
+  .rightSection {
+    height: 100%;
+    max-width: 90%;
+    margin: auto 0;
+    margin: 0px auto;
+  }
+}

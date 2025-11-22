@@ -18,7 +18,7 @@ const DoctorCard: React.FC<DoctorCardProps> = ({ name, image, degrees }) => {
         w-full
       "
         >
-            <div className="w-full h-60 relative rounded-xl overflow-hidden border border-[var(--bg-theme-color)]">
+            <div className="w-full h-[250px] w-[350px] relative rounded-xl overflow-hidden border border-[var(--bg-theme-color)]">
                 <Image src={image} alt={name} fill className="object-cover" />
             </div>
 

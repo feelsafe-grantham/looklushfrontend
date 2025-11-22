@@ -40,6 +40,8 @@ export const FounderData = {
   role: "Founder",
   description:
     "India’s leading expert in aesthetic medicine Dr. Poonam Patel is a recognized Cosmetologist and aesthetician, bringing 20+ years of legacy in transforming beauty and instilling confidence.",
+  description2:
+    "India’s leading expert in aesthetic medicine Dr. Poonam Patel is a recognized Cosmetologist and aesthetician, bringing 20+ years of legacy in transforming beauty and instilling confidence.",
   specialties: [
     "Anti-Ageing Treatments",
     "Hair Restoration",

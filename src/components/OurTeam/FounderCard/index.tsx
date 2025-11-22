@@ -1,9 +1,10 @@
 import Image from "next/image";
-
+import styles from "./FounderCard.module.css"
 interface FounderCardProps {
     name: string;
     role: string;
     description: string;
+    description2: string;
     specialties: string[];
     image: string;
 }
@@ -13,12 +14,13 @@ const FounderCard: React.FC<{ founder: FounderCardProps }> = ({
     const { name,
         role,
         description,
+        description2,
         specialties,
         image, } = founder
     return (
         <>
 
-            <div className="w-full max-w-5xl mx-auto flex flex-col md:flex-row items-start gap-6 bg-white p-6 rounded-xl shadow-sm">
+            <div className={`${styles.mainContainer} bg-white p-6 rounded-xl shadow-sm`}>
                 {/* Left: Image */}
                 <div className="flex-shrink-0">
                     <div className="w-[350px] h-[452px] relative rounded-xl overflow-hidden">
@@ -32,7 +34,7 @@ const FounderCard: React.FC<{ founder: FounderCardProps }> = ({
                 </div>
 
                 {/* Right: Text */}
-                <div className="flex flex-col justify-between items-center">
+                <div className={`flex flex-col ${styles.rightSection} `}>
                     <div>
                         <h2 className="text-2xl font-semibold text-[var(--text-dark-color)]">
                             {name}
@@ -42,12 +44,18 @@ const FounderCard: React.FC<{ founder: FounderCardProps }> = ({
                         <p className="mt-4 text-xl leading-relaxed text-[var(--text-light-color)]">
                             {description}
                         </p>
+                        {/* <p className="mt-4 text-xl leading-relaxed text-[var(--text-light-color)]">
+                            {description2}
+                        </p> */}
                     </div>
 
                     {/* Specialties */}
                     <div className="mt-5 flex flex-wrap gap-2 text-sm font-semibold ">
                         {specialties.map((item, index) => (
-                            <span key={index}>{item} {index === specialties.length - 1 ? "" : "|"}</span>
+                            <>
+                                <span key={index}>{item} </span>
+                                {index === specialties.length - 1 ? "" : "|"}
+                            </>
                         ))}
                     </div>
                 </div>
