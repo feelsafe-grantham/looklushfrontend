@@ -1,67 +1,67 @@
 import Image from "next/image";
-import styles from "./FounderCard.module.css"
+import styles from "./FounderCard.module.css";
+import Link from "next/link";
 interface FounderCardProps {
-    name: string;
-    role: string;
-    description: string;
-    description2: string;
-    specialties: string[];
-    image: string;
+  name: string;
+  role: string;
+  description: string;
+  description2: string;
+  specialties: string[];
+  image: string;
+  email: string;
 }
-const FounderCard: React.FC<{ founder: FounderCardProps }> = ({
-    founder
-}) => {
-    const { name,
-        role,
-        description,
-        description2,
-        specialties,
-        image, } = founder
-    return (
-        <>
+const FounderCard: React.FC<{ founder: FounderCardProps }> = ({ founder }) => {
+  const { name, role, description, description2, specialties, image, email } =
+    founder;
+  return (
+    <>
+      <div
+        className={`${styles.mainContainer} bg-white p-6 rounded-xl shadow-sm`}
+      >
+        {/* Left: Image */}
+        <div className="flex-shrink-0">
+          <div className="w-[350px] h-[452px] relative rounded-xl overflow-hidden">
+            <Image src={image} alt={name} fill className="object-cover" />
+          </div>
+        </div>
 
-            <div className={`${styles.mainContainer} bg-white p-6 rounded-xl shadow-sm`}>
-                {/* Left: Image */}
-                <div className="flex-shrink-0">
-                    <div className="w-[350px] h-[452px] relative rounded-xl overflow-hidden">
-                        <Image
-                            src={image}
-                            alt={name}
-                            fill
-                            className="object-cover"
-                        />
-                    </div>
-                </div>
+        {/* Right: Text */}
+        <div className={`flex flex-col ${styles.rightSection} `}>
+          <div>
+            <h2 className="text-2xl font-semibold text-[var(--text-dark-color)]">
+              {name}
+            </h2>
+            <p className="text-sm mt-1 text-[var(--text-light-color)]">
+              {role}
+            </p>
 
-                {/* Right: Text */}
-                <div className={`flex flex-col ${styles.rightSection} `}>
-                    <div>
-                        <h2 className="text-2xl font-semibold text-[var(--text-dark-color)]">
-                            {name}
-                        </h2>
-                        <p className="text-sm mt-1 text-[var(--text-light-color)]">{role}</p>
-
-                        <p className="mt-4 text-xl leading-relaxed text-[var(--text-light-color)]">
-                            {description}
-                        </p>
-                        {/* <p className="mt-4 text-xl leading-relaxed text-[var(--text-light-color)]">
+            <p className="mt-4 text-xl leading-relaxed text-[var(--text-light-color)]">
+              {description}
+            </p>
+            {/* <p className="mt-4 text-xl leading-relaxed text-[var(--text-light-color)]">
                             {description2}
                         </p> */}
-                    </div>
+          </div>
 
-                    {/* Specialties */}
-                    <div className="mt-5 flex flex-wrap gap-2 text-sm font-semibold ">
-                        {specialties.map((item, index) => (
-                            <>
-                                <span key={index}>{item} </span>
-                                {index === specialties.length - 1 ? "" : "|"}
-                            </>
-                        ))}
-                    </div>
-                </div>
-            </div>
-        </>
-    );
+          {/* Specialties */}
+          <div className="mt-5 flex flex-wrap gap-2 text-sm font-semibold ">
+            {specialties.map((item, index) => (
+              <>
+                <span key={index}>{item} </span>
+                {index === specialties.length - 1 ? "" : "|"}
+              </>
+            ))}
+          </div>
+          <div className="mt-5 flex flex-wrap gap-2 text-sm font-semibold">
+            <span> Contact here: </span>
+            <Link className="text-blue-600" href={`mailto:${founder.email}`}>
+              {founder.email}
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default FounderCard;

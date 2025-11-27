@@ -5,7 +5,7 @@ export const MUMBAI_ADDRESS = {
   address:
     "101, AHIMSA HEIGHT, AHIMSA MARG, NEAR SUNDAR NAGAR, OFF, Chincholi Bunder Rd, Malad West, Mumbai, Maharashtra 400064",
   phone: "+91 93228 17696",
-  email: "marketing@looklush.in",
+  email: "help@looklush.in",
   emailHelp: "help@looklush.in",
   visit_link: "https://maps.app.goo.gl/m1GjnPQs7wpRtnrt9",
 };
@@ -16,16 +16,16 @@ export const GURUGRAM_ADDRESS = {
   address:
     "Opus mall lower ground office no -22 Plot no. 9 sec 7. Siddharth Vihar Ghaziabad 201009",
   phone: "+91 90826 40898",
-  email: "marketing@looklush.in",
+  email: "help@looklush.in",
   visit_link: "https://maps.app.goo.gl/P1k6XJHxwtPji4L39",
 };
 
 export const SOCIAL_MEDIA = {
   facebook: "https://www.facebook.com/Looklushdrpoonam",
-  instagram: "https://www.instagram.com/looklush_gurgaon/",
+  instagram: "https://www.instagram.com/looklush_express/",
   youtube: "https://www.youtube.com/@looklush4760",
   linkedin: "https://www.linkedin.com/company/looklush-india/",
-  twitter: "https://www.instagram.com/looklush_gurgaon/",
+  twitter: "https://www.instagram.com/looklush_express/",
 };
 
 export const contactData = {
@@ -47,6 +47,7 @@ export const FounderData = {
     "Hair Restoration",
     "Clinical Dermatology",
   ],
+  email: "founder@looklush.in",
 };
 export const doctorsData = [
   {

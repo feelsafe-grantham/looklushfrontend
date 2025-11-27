@@ -69,7 +69,7 @@ const Footer = () => {
                 </p>
 
                 <p className={styles.address}>
-                  <strong>GURGAON:</strong> {GURUGRAM_ADDRESS.address}
+                  <strong>GHAZIABAD:</strong> {GURUGRAM_ADDRESS.address}
                 </p>
               </div>
 

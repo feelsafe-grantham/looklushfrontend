@@ -10,7 +10,11 @@ const Treatments = () => {
     <>
       <Suspense fallback={<TreatmentPageShimmer />}>
         <div className="mt-5" />
-        <SectionHeading isHeading line1="Top Skin and Hair Treatments in Gurgaon" line2=" for Stunning Results" />
+        <SectionHeading
+          isHeading
+          line1="Top Skin and Hair Treatments in Ghaziabad"
+          line2=" for Stunning Results"
+        />
         <TreatmentsContainer />
       </Suspense>
     </>
