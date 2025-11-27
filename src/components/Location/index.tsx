@@ -12,13 +12,13 @@ import styles from "./LocationComp.module.css";
 import ReviewSummary from "./ReviewSummary";
 import VideoShimmer from "../common/Loading/VideoShimmer";
 import { ENDPOINTS } from "@/lib/api/endpoints";
-import { MUMBAI_ADDRESS, GURUGRAM_ADDRESS } from "@/data";
+import { MUMBAI_ADDRESS, GHAZIABAD_ADDRESS } from "@/data";
 import LocationCardHor from "./LocationCardHor";
 const LocationComp = () => {
   return (
     <div className={`${styles.locationContainer}`}>
       <LocationCardHor location={MUMBAI_ADDRESS} />
-      <LocationCardHor location={GURUGRAM_ADDRESS} />
+      <LocationCardHor location={GHAZIABAD_ADDRESS} />
       <AppointmentForm />
       <SectionHeading line1="Visit Us" />
       <SectionHeadPara para="Find us at a convenient location near you—our team is ready to welcome you and guide you through every step of your care." />

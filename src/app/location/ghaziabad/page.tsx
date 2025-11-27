@@ -16,14 +16,14 @@ import { Metadata } from "next";
 import { Suspense } from "react";
 import Faqs from "@/components/Faq";
 import ReviewSummary from "@/components/Location/ReviewSummary";
-import { GURUGRAM_ADDRESS, MUMBAI_ADDRESS } from "@/data";
+import { GHAZIABAD_ADDRESS, MUMBAI_ADDRESS } from "@/data";
 export const metadata: Metadata = {
-  title: "Aesthetic Clinic in Gurugram | Looklush Skin & Hair",
+  title: "Aesthetic Clinic in Ghaziabad | Looklush Skin & Hair",
   description:
-    "Visit Looklush, the top aesthetic clinic in Gurugram, for expert skin & hair treatments by Dr. Poonam Patel. Book your consultation today",
+    "Visit Looklush, the top aesthetic clinic in Ghaziabad, for expert skin & hair treatments by Dr. Poonam Patel. Book your consultation today",
   keywords: [
     "LookLush locations",
-    "Gurugram skin clinic",
+    "Ghaziabad skin clinic",
     "Mumbai hair clinic",
     "dermatologist near me",
   ],
@@ -36,7 +36,7 @@ export default function Location() {
         <link rel="canonical" href="https://looklush.in/ghaziabad" />
       </head>
       <div className="grid gap-5">
-        <LocationCardHor location={GURUGRAM_ADDRESS} />
+        <LocationCardHor location={GHAZIABAD_ADDRESS} />
         <AppointmentForm />
         <SectionHeading
           isHeading

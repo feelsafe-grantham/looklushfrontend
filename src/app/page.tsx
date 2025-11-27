@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "LookLush",
     "skin clinic",
     "hair treatment",
-    "Gurugram",
+    "Ghaziabad",
     "Mumbai",
     "dermatology",
     "PRP",

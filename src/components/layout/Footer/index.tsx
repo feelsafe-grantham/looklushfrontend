@@ -1,6 +1,6 @@
 import Form from "@/components/common/Form";
 import styles from "./Footer.module.css";
-import { MUMBAI_ADDRESS, GURUGRAM_ADDRESS, SOCIAL_MEDIA } from "@/data";
+import { MUMBAI_ADDRESS, GHAZIABAD_ADDRESS, SOCIAL_MEDIA } from "@/data";
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 const Footer = () => {
@@ -69,7 +69,7 @@ const Footer = () => {
                 </p>
 
                 <p className={styles.address}>
-                  <strong>GHAZIABAD:</strong> {GURUGRAM_ADDRESS.address}
+                  <strong>GHAZIABAD:</strong> {GHAZIABAD_ADDRESS.address}
                 </p>
               </div>
 

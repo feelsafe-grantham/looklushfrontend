@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "about LookLush",
     "skin experts",
     "hair specialists",
-    "Gurugram clinic",
+    "Ghaziabad clinic",
     "Mumbai clinic",
   ],
 };

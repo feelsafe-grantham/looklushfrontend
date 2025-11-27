@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   keywords: [
     "skin care blog",
     "hair care tips",
-    "dermatology blog Gurugram",
+    "dermatology blog Ghaziabad",
     "Mumbai beauty advice",
   ],
 };

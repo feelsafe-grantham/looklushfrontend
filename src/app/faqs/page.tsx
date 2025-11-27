@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   keywords: [
     "skin treatment FAQs",
     "hair treatment doubts",
-    "Gurugram clinic FAQs",
+    "Ghaziabad clinic FAQs",
     "Mumbai LookLush support",
   ],
 };

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "skin care",
     "laser treatment",
     "anti-aging",
-    "Gurugram skin clinic",
+    "Ghaziabad skin clinic",
     "Mumbai hair clinic",
   ],
 };

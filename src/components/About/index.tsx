@@ -11,7 +11,7 @@ const VideoContainer = dynamic(() => import("../common/Video/VideoContainer"), {
 import styles from "./About.module.css";
 import CarouselShimmer from "../common/Loading/CarouselShimmer";
 import { ENDPOINTS } from "@/lib/api/endpoints";
-import { GURUGRAM_ADDRESS, MUMBAI_ADDRESS, SOCIAL_MEDIA } from "@/data";
+import { GHAZIABAD_ADDRESS, MUMBAI_ADDRESS, SOCIAL_MEDIA } from "@/data";
 import ServiceCardContainer from "../common/ServiceCardContainer";
 import VideoShimmer from "../common/Loading/VideoShimmer";
 import Link from "next/link";
@@ -114,7 +114,7 @@ const About = () => {
       <ExpertCard />
       <div className={`${styles.locationContainer}`}>
         <LocationCard location={MUMBAI_ADDRESS} />
-        <LocationCard location={GURUGRAM_ADDRESS} />
+        <LocationCard location={GHAZIABAD_ADDRESS} />
       </div>
       <div className={`${styles.experienceContainer}`}>
         <img
@@ -160,7 +160,10 @@ const About = () => {
           "Because Your Skin Deserves the Best"
         </p>
         <p className={`${styles.visionText}`}>
-          At Looklush Aesthetic & Laser Centre, our vision is to deliver the best experience in skin and hair treatments, where client care is our first priority. We truly believe in transforming confidence through care.
+          At Looklush Aesthetic & Laser Centre, our vision is to deliver the
+          best experience in skin and hair treatments, where client care is our
+          first priority. We truly believe in transforming confidence through
+          care.
         </p>
       </div>
       <SectionHeading line1="About Us!" />
