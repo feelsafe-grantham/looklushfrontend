@@ -78,8 +78,12 @@ const Footer = () => {
                 {Array(4)
                   .fill(0)
                   .map((_, idx) => (
-
-                    <Link target="_blank" href={SOCIAL_MEDIA.instagram} key={idx} className={styles.instagramImageWrapper}>
+                    <Link
+                      target="_blank"
+                      href={SOCIAL_MEDIA.instagram}
+                      key={idx}
+                      className={styles.instagramImageWrapper}
+                    >
                       <img
                         src={`/images/problem${idx + 1}.jpg`}
                         alt={`Instagram ${idx + 1}`}
@@ -104,14 +108,28 @@ const Footer = () => {
                 </span>
               ))}
             </div>
+
+            <div className={`${styles.footerEmail}`}>
+              <span>Contact us at: </span>
+              <Link href={`mailto:${MUMBAI_ADDRESS.email}`}>
+                {MUMBAI_ADDRESS.email}
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-      <div className={`${styles.footerBottomBar} ${styles.bottomLinksContainer}`}>
-        <Link className={`${styles.bottomLinks}`} href="/terms-and-conditions">Terms & Conditions</Link>
-        <Link className={`${styles.bottomLinks}`} href="/privacy-policy">Privacy Policy</Link>
-        <Link className={`${styles.bottomLinks}`} href="/disclaimer">Disclaimer</Link>
-
+      <div
+        className={`${styles.footerBottomBar} ${styles.bottomLinksContainer}`}
+      >
+        <Link className={`${styles.bottomLinks}`} href="/terms-and-conditions">
+          Terms & Conditions
+        </Link>
+        <Link className={`${styles.bottomLinks}`} href="/privacy-policy">
+          Privacy Policy
+        </Link>
+        <Link className={`${styles.bottomLinks}`} href="/disclaimer">
+          Disclaimer
+        </Link>
       </div>
       <div className={`${styles.footerBottomBar}`}>
         &copy; 2025 Looklush . All rights reserved.

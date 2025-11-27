@@ -65,7 +65,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "https://looklush.in/treatments",
     "https://looklush.in/location",
     "https://looklush.in/location/mumbai",
-    "https://looklush.in/location/gurugram",
+    "https://looklush.in/location/ghaziabad",
     "https://looklush.in/about",
     "https://looklush.in/blog",
     "https://looklush.in/faqs",

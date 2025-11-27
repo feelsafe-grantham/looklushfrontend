@@ -74,8 +74,8 @@ export default function useHeader() {
           url: "/location/mumbai",
         },
         {
-          label: "Gurgaon",
-          url: "/location/gurugram",
+          label: "Ghaziabad",
+          url: "/location/ghaziabad",
         },
       ],
     },
