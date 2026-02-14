@@ -4,6 +4,8 @@ import TopBar from "@/components/common/TopBar";
 import { Montserrat, Sour_Gummy } from "next/font/google"
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import Script from "next/script";
+
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -21,14 +23,30 @@ const sourGummy = Sour_Gummy({
 //   title: "Looklush Beauty",
 //   description: "Looklush Beauty",
 // };
-
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
+
+      {/* Google Ads Global Tag */}
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-17058145078"></Script>
+      <Script>
+        {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-17058145078');`}
+      </Script>
+
+      {/*} Event snippet for Submit lead form conversion page */}
+      <Script>
+        {`gtag('event', 'conversion', {'send_to': 'AW-17058145078/881OCLrN9vEaELbG-sU_'});`}        
+      </Script>
+
       <body
         className={`${montserrat.variable} ${sourGummy.variable} antialiased`}
       >
@@ -36,8 +54,8 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-
       </body>
     </html>
   );
 }
+
