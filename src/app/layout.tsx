@@ -67,8 +67,23 @@ export default function RootLayout({
             src="https://www.facebook.com/tr?id=2478935065817522&ev=PageView&noscript=1"
           />
         </noscript>
-        {/* End Meta Pixel Code */}
 
+        {/* End Meta Pixel Code */}
+        {/*  Google tag (gtag.js)  */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17058145078"></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'AW-17058145078');`}
+        </script>
+
+
+        {/*  Event snippet for Submit lead form conversion page  */}
+        <script>
+          {`gtag('event', 'conversion', {'send_to': 'AW-17058145078/881OCLrN9vEaELbG-sU_'});`}
+        </script>
 
       </head>
       <body
